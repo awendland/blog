@@ -3,6 +3,7 @@ title: An Ongoing Comparison of Brackets and Sublime Text 3
 author: Alex Wendland
 layout: post
 featureimg: "brackets_256.png"
+marquee: An Ongoing Comparison of Brackets and Sublime Text 3
 ---
 ### Intro
 
