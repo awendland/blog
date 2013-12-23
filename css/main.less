@@ -1,0 +1,258 @@
+/*****************************************************************************/
+/*
+/* Fix CSS Annoyances
+/*
+/*****************************************************************************/
+/* Best of HTML5 Boilerplate http://davidwalsh.name/html5-boilerplate */
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+img { -ms-interpolation-mode: bicubic; }
+svg:not(:root) { overflow: hidden; }
+@media print {
+	img { max-width: 100% !important; }
+}
+@media print {
+	p, h2, h3 { orphans: 3; widows: 3; }
+}
+
+/* hand cursor on clickable input elements */
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+/* maxvoltar.com/archive/-webkit-font-smoothing */
+html { -webkit-font-smoothing: antialiased; }
+/* align checkboxes, radios, text inputs with their label */
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; *vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+::-moz-selection { background: rgb(83, 161, 184);; color: #fff; text-shadow: none; }
+::selection { background: rgb(83, 161, 184);; color: #fff; text-shadow: none; }
+
+html {
+    font: 1em/1.5 serif;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 300;
+    
+    background-color: rgb(249, 249, 249);
+    color: rgb(68, 68, 68);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: rgb(83, 161, 184);
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 2.25rem;
+    line-height: 1.33333;
+}
+
+h2 {
+    font-size: 1.875rem;
+    line-height: 1.6;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(83, 161, 184);
+//    font-weight: 400;
+
+    &:hover, &:focus {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+/*****************************************************************************/
+/*
+/* Custom Common
+/*
+/*****************************************************************************/
+
+.wrap {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/*****************************************************************************/
+/*
+/* Header
+/*
+/*****************************************************************************/
+
+#header {
+    nav {
+        width: 100%;
+        position: fixed;
+        background: rgba(255, 255, 255, 1.0);
+        border-bottom: 0.422em solid rgb(83, 161, 184);
+            &:after {
+                visibility: hidden;
+                display: block;
+                font-size: 0;
+                content: " ";
+                clear: both;
+                height: 0;
+            }
+        ul {
+            position: relative;
+            display: inline;
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+            float: left;
+            li {
+                float: left;
+                position: relative;
+                display: block;
+                a {
+                    display: inline-block;
+                    position: relative;
+                    padding: 0.844em 1.125em;
+                    font-weight: 400;
+                }
+                &.active {
+                    a {
+                        &:before {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            bottom: 0px;
+                            left: 50%;
+                            margin-left: -0.563em;
+                            color: rgb(83, 161, 184);
+                            border-width: 0.563em;
+                            border-style: solid;
+                            -moz-border-top-colors: none;
+                            -moz-border-right-colors: none;
+                            -moz-border-bottom-colors: none;
+                            -moz-border-left-colors: none;
+                            border-image: none;
+                            border-color: transparent transparent rgb(83, 161, 184);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #site-branding {
+        padding: 7em 0 5em;
+        text-align: center;
+        background: rgb(83, 161, 184);
+        overflow: hidden;
+        a {
+            h1 {
+                color: rgb(255,255,255);
+                margin: 0;
+                text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+                font-weight: 700;
+                font-size: 5em;
+                line-height: 1;
+            }
+            h2 {
+                color: rgb(255,255,255);
+                margin: 0;
+                letter-spacing: 4px;
+                opacity: .75;
+                font-size: 1em;
+                font-weight: 400;
+                
+            }
+        }
+    }
+}
+
+/*****************************************************************************/
+/*
+/* Footer
+/*
+/*****************************************************************************/
+
+#footer {
+    background-color: rgb(51, 51, 51);
+    color: rgb(255,255,255);
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/*****************************************************************************/
+/*
+/* Main
+/*
+/*****************************************************************************/
+
+main {
+    p {
+        text-align: justify;
+    }
+}
+
+/*****************************************************************************/
+/*
+/* Front Page
+/*
+/*****************************************************************************/
+
+.posts {
+    article {
+        padding: 1.75em 0;
+        border-bottom: 1px solid #ccc;
+        header {
+            text-align: center;
+            img {
+                max-height: 19em;
+            }
+            h1 {
+            }
+        }
+        .content {
+            .read-more {
+                text-align: center;
+                line-height: 0.25;
+                padding-top: 1em;
+                padding-bottom: 1em;
+                a {
+                    display: inline-block;
+                    position: relative;
+                    &:after, &:before {
+                        content: "";
+                        position: absolute;
+                        height: 5px;
+                        border-bottom: 1px solid rgb(83, 161, 184);
+                        border-top: 1px solid rgb(83, 161, 184);
+                        top: 0;
+                        width: 4em;
+                    }
+                    &:before {
+                        right: 100%;
+                        margin-right: 10px;
+                    }
+                    &:after {
+                        left: 100%;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    
+    article:first-child {
+        padding-top: 0em;
+    }
+    
+    article:last-child {
+        margin-bottom: 2em;
+        border-bottom: 0px;
+    }
+}

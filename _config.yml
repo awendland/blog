@@ -1,0 +1,10 @@
+#base-url: http://alexwendland.com/blog
+base-url: /
+name: Alex Wendland
+description: Enjoy
+
+markdown: rdiscount
+rdiscount:
+    extensions: [smart]
+pygments: true
+permalink: /:year/:title/

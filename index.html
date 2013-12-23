@@ -1,0 +1,29 @@
+---
+layout: default
+title: Home
+---
+
+<div id="home">
+    <div class="posts">
+        {% for post in site.posts %}
+            <article>
+                <header>
+                    {% if post.featureimg != null %}
+                        <img src="{{site.url}}/img/{{post.featureimg}}" />
+                    {% endif %}
+                    <h1><a href="{{ post.url }}">{{ post.title }}</a></h1><span class="date">{{ post.date | date_to_string }}</span>
+                </header>
+    
+                <div class="content">
+                    {{ post.content | split:'<!--break-->' | first }}
+                    {% if post.content contains '<!--break-->' %}
+                        <span class="ellipse">...</span></br>
+                        <div class="read-more">
+                            <a href="{{ post.url }}">read more</a>
+                        </div>
+                    {% endif %}
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+</div>
