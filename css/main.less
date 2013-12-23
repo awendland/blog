@@ -79,12 +79,19 @@ h4 {
 a {
     text-decoration: none;
     color: rgb(83, 161, 184);
-//    font-weight: 400;
-
     &:hover, &:focus {
         text-decoration: underline;
         cursor: pointer;
     }
+    
+    /* Keep long URLs from breaking out of container */
+    /* http://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
 }
 
 /*****************************************************************************/
@@ -442,8 +449,10 @@ main {
         text-align: center;
         img {
             max-height: 19em;
+            max-width: 90%;
         }
         h1 {
+            overflow-x: hidden;
         }
     }
     .content {

@@ -111,6 +111,14 @@ h4 {
 a {
   text-decoration: none;
   color: #53a1b8;
+  /* Keep long URLs from breaking out of container */
+  /* http://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
 a:hover,
 a:focus {
@@ -432,6 +440,10 @@ main p {
 }
 .post header img {
   max-height: 19em;
+  max-width: 90%;
+}
+.post header h1 {
+  overflow-x: hidden;
 }
 .post .content h3 {
   font-size: 1.875rem;
