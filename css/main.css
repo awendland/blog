@@ -181,16 +181,6 @@ a:focus {
 #header nav ul li.active a:hover:before {
   border-color: transparent transparent #f9f9f9;
 }
-#header nav .marquee {
-  float: right;
-  max-width: 50%;
-  line-height: 3;
-  overflow: hidden;
-}
-#header nav .marquee .scroller {
-  -webkit-animation: marquee 10s linear infinite;
-  white-space: nowrap;
-}
 #header #site-branding {
   padding: 7em 0 5em;
   text-align: center;
@@ -212,14 +202,6 @@ a:focus {
   opacity: .75;
   font-size: 1em;
   font-weight: 400;
-}
-@-webkit-keyframes marquee {
-  0% {
-    -webkit-transform: translateX(2%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-  }
 }
 /*****************************************************************************/
 /*
