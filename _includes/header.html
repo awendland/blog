@@ -1,11 +1,22 @@
 <header id="header" role="banner">
     <nav role="navigation">
         <div class="wrap">
-            <ul>
+            <ul id="nav-drawer">
                 {% for p in site.pages %}
                     <li {% if p.url == page.url %}class="active"{% endif %}><a href="{{ p.url }}">{{ p.title }}</a></li>
                 {% endfor %}
             </ul>
+            <a id="open-menu">
+                <span>&#9776;</span>
+            </a>
+            <ul class="bar-menu">
+                {% for p in site.pages %}
+                    <li {% if p.url == page.url %}class="active"{% endif %}><a href="{{ p.url }}">{{ p.title }}</a></li>
+                {% endfor %}
+            </ul>
+            <a href="#footer" class="avatar">
+                <img src="http://gravatar.com/avatar/1a9fc62b8253d894109a5a7ffb86a176?s=400">
+            </a>
         </div>
     </nav>
     <div id="site-branding">

@@ -110,7 +110,25 @@ a {
             clear: both;
             height: 0;
         }
-        ul {
+        .avatar {
+            position: absolute;
+            border-radius: 50%;
+            line-height: 0;
+            bottom: -50px;
+            right: 0.422em;
+            height: 90px;
+            margin: 2px;
+            box-shadow: 0 0px 3px 0px rgba(0,0,0,.2);
+            transition: box-shadow .25s linear;
+            &:hover {
+                box-shadow: 0 0px 0px 0.422em #53a1b8;
+            }
+            img {
+                border-radius: 50%;
+                height: 100%;
+            }
+        }
+        .bar-menu {
             position: relative;
             display: inline;
             list-style: none;
@@ -161,6 +179,64 @@ a {
                 }
             }
         }
+        #open-menu {
+            display: none;
+            margin-left: -1.5em;
+            padding: .8em 1em .6em;
+            text-decoration: none;
+            cursor: pointer;
+            user-select: none;
+            span {
+                padding: .2em 0.3em .25em;
+                font-size: 1.5em;
+                line-height: 1;
+                border-radius: 4px;
+                background: rgb(83, 161, 184);
+                color: white;
+                transition: background .3s ease;
+                &:hover {
+                    background: rgb(60, 116, 133);
+                }
+            }
+        }
+        #nav-drawer {
+            max-height: 0;
+            transition: max-height .1s linear;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin-left: -.4em;
+            &.open {
+                max-height: 400px;
+            }
+            li {
+                border-left: 4px solid #ddd;
+                padding: 4px;
+                margin: 4px 0;
+                -webkit-transition: background-color 0.2s linear;
+                -moz-transition: background-color 0.2s linear;
+                -ms-transition: background-color 0.2s linear;
+                -o-transition: background-color 0.2s linear;
+                transition: background-color 0.2s linear;
+                a {
+                    font-weight: 400;
+                    text-decoration: none;
+                }
+                &:hover {
+                    background: rgb(83, 161, 184);
+                    a {
+                        color: white;
+                    }
+                }
+                &.active {
+                    border-left: 4px solid rgb(83, 161, 184);
+                    &:hover {
+                        border-left: 4px solid rgb(60, 116, 133);
+                    }
+                }
+            }
+        }
     }
     #site-branding {
         padding: 7em 0 5em;
@@ -184,6 +260,30 @@ a {
                 font-size: 1em;
                 font-weight: 400;
                 
+            }
+        }
+    }
+}
+
+@media all and (max-width:550px) {
+    #header {
+        nav {
+            .avatar {
+                bottom: -24px;
+                height: 70px;
+            }
+            .bar-menu {
+                display: none;
+            }
+            #open-menu {
+                display: inline-block;
+            }
+        }
+        #site-branding {
+            a {
+                h1 {
+                    font-size: 3.5em;
+                }
             }
         }
     }
