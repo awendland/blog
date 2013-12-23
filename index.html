@@ -6,7 +6,7 @@ title: Home
 <div id="home">
     <div class="posts">
         {% for post in site.posts %}
-            <article>
+            <article class="post">
                 <header>
                     {% if post.featureimg != null %}
                         <img src="{{site.url}}/img/{{post.featureimg}}" />
