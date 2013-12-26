@@ -331,9 +331,6 @@ a:focus {
   line-height: 2;
   display: block;
 }
-#footer .contact {
-  padding: 1.5em 0;
-}
 #footer .contact nav {
   text-align: center;
 }
@@ -347,7 +344,7 @@ a:focus {
   -o-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
   display: inline-block;
-  margin: 0 70px;
+  margin: 10px 70px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
