@@ -283,6 +283,10 @@ a:focus {
   background: #53a1b8;
   overflow: hidden;
 }
+#header #site-branding a {
+  -ms-word-break: normal;
+  word-break: normal;
+}
 #header #site-branding a h1 {
   color: #ffffff;
   margin: 0;
