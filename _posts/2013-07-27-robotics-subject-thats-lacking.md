@@ -2,12 +2,14 @@
 title: "Robotics, a subject that's lacking"
 author: Alex Wendland
 layout: post
+published: true
 ---
+
 In light of the lack of STEM and modern technologies training, such as Programming, Computer Architecture and other High-Tech areas, I would like to do my part by starting a weekly Robotics class.
 
 ### Why have this class?
 
-Robotics is a combination of subjects that implements a wide range of advanced current technologies. It teaches skills in mechanical design, mathematics, physics, computer engineering and computer science. Besides these high-level topics, it also teaches personal skills such as complex problem-solving, decision making, goal setting, leadership and team dynamics. It prepares students to choose from a diverse range of highly-skilled fields later in life.<!--break-->
+Robotics is a combination of subjects that implements a wide range of advanced current technologies. It teaches skills in mechanical design, mathematics, physics, computer engineering and computer science. Besides these high-level topics, it also teaches personal skills such as complex problem-solving, decision making, goal setting, leadership and team dynamics. It prepares students to choose from a diverse range of highly-skilled fields later in life.
 
 ### What would the program be?
 
@@ -30,7 +32,7 @@ The program will be organized around groups consisting of 4-5 students each. Thi
 
 *   (15-30 min) Students gather as one group and are lectured about the days topic. Lectures would:
     *   Open up with a simple word introduction of the days topic
-    *   Then a live demonstration or video would be shown
+    *   Then a live demonstration or video would be shown<!--break-->
     *   The topic would be explained in greater depth through lecturing with slides and/or video explanations
     *   The students would be asked questions to gauge how well the topic was understood
     *   If the topic was not understood by everyone, students can further questions
