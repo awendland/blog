@@ -14,15 +14,16 @@
                     <li {% if p.url == page.url %}class="active"{% endif %}><a href="{{ p.url }}">{{ p.title }}</a></li>
                 {% endfor %}
             </ul>
-            <a href="#footer" class="avatar">
-                <img src="http://gravatar.com/avatar/1a9fc62b8253d894109a5a7ffb86a176?s=400">
-            </a>
         </div>
     </nav>
     <div id="site-branding">
+        <!-- {% include logo.html %} -->
         <a id="home-link" href="/" title="{{ site.name }}" rel="home">
             <h1>{{ site.name }}</h1>
-            <h2>{{ site.description}} </h2>
+            <h2>{{ site.description }}</h2>
         </a>
+    </div>
+    <div class="avatar">
+        <img src="http://gravatar.com/avatar/1a9fc62b8253d894109a5a7ffb86a176?s=400">
     </div>
 </header>
