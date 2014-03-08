@@ -68,7 +68,7 @@ html {
     font-weight: 300;
     
     background-color: rgb(249, 249, 249);
-    color: rgb(68, 68, 68);
+    color: rgb(0, 0, 0);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -140,10 +140,24 @@ a {
 /*
 /*****************************************************************************/
 
-.wrap {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 800px;
+/* Columns */
+@media (min-width: 40rem) {
+  .column {
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .column.full { width: 100%; }
+  .column.two-thirds { width: 66.7%; }
+  .column.half { width: 50%; }
+  .column.third { width: 33.3%; }
+  .column.fourth { width: 24.95%; }
+  .column.flow-opposite { float: right; }  
+}
+
+@media (min-width: 40rem) {
+  .column.flow-opposite { float: right; }
 }
 
 /*****************************************************************************/
@@ -170,6 +184,11 @@ a {
             content: " ";
             clear: both;
             height: 0;
+        }
+        .wrap {
+            max-width: 800px;
+            width: 90%;
+            margin: 0 auto;
         }
         .bar-menu {
             position: relative;
@@ -421,22 +440,18 @@ a {
 
 /*****************************************************************************/
 /*
-/* Main
+/* Layouts
 /*
 /*****************************************************************************/
-
-main {
-    .content {
-        & > p {
-            text-align: justify;
-            line-height: 1.8;
-            & > code {
-                background: white;
-                padding: 5px;
-                border: 1px dashed #ccc;
-                border-radius: 3px;
-            }
-        }
+.container {
+    width: 90%;
+    margin: 0 auto;
+    
+    &.page {
+        max-width: 800px;
+    }
+    &.page-sidebar {
+        max-width: 1200px;
     }
 }
 
@@ -450,7 +465,7 @@ main {
     article {
         border-bottom: 1px solid #ccc;
         padding-top: 1em;
-        .content {
+        .body {
             .ellipse {
                 visibility: hidden;
             }
@@ -498,7 +513,17 @@ main {
             overflow-x: hidden;
         }
     }
-    .content {
+    & > .body {
+        & > p {
+            text-align: justify;
+            line-height: 1.8;
+            & > code {
+                background: white;
+                padding: 5px;
+                border: 1px dashed #ccc;
+                border-radius: 3px;
+            }
+        }
         h3 {
             font-size: 1.875rem;
         }

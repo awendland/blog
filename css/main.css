@@ -101,7 +101,7 @@ html {
   font-family: Ubuntu, sans-serif;
   font-weight: 300;
   background-color: #f9f9f9;
-  color: #444444;
+  color: #000000;
 }
 h1,
 h2,
@@ -169,10 +169,36 @@ a:focus {
 /* Custom Common
 /*
 /*****************************************************************************/
-.wrap {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 800px;
+/* Columns */
+@media (min-width: 40rem) {
+  .column {
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .column.full {
+    width: 100%;
+  }
+  .column.two-thirds {
+    width: 66.7%;
+  }
+  .column.half {
+    width: 50%;
+  }
+  .column.third {
+    width: 33.3%;
+  }
+  .column.fourth {
+    width: 24.95%;
+  }
+  .column.flow-opposite {
+    float: right;
+  }
+}
+@media (min-width: 40rem) {
+  .column.flow-opposite {
+    float: right;
+  }
 }
 /*****************************************************************************/
 /*
@@ -197,6 +223,11 @@ a:focus {
   content: " ";
   clear: both;
   height: 0;
+}
+#header nav .wrap {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
 }
 #header nav .bar-menu {
   position: relative;
@@ -424,18 +455,18 @@ a:focus {
 }
 /*****************************************************************************/
 /*
-/* Main
+/* Layouts
 /*
 /*****************************************************************************/
-main .content > p {
-  text-align: justify;
-  line-height: 1.8;
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
-main .content > p > code {
-  background: white;
-  padding: 5px;
-  border: 1px dashed #ccc;
-  border-radius: 3px;
+.container.page {
+  max-width: 800px;
+}
+.container.page-sidebar {
+  max-width: 1200px;
 }
 /*****************************************************************************/
 /*
@@ -446,16 +477,16 @@ main .content > p > code {
   border-bottom: 1px solid #ccc;
   padding-top: 1em;
 }
-.posts article .content .ellipse {
+.posts article .body .ellipse {
   visibility: hidden;
 }
-.posts article .content .read-more {
+.posts article .body .read-more {
   text-align: center;
   line-height: 0.25;
   padding-top: 1em;
   padding-bottom: 3em;
 }
-.posts article .content .read-more a {
+.posts article .body .read-more a {
   display: inline-block;
   position: relative;
   padding: 1em;
@@ -488,10 +519,20 @@ main .content > p > code {
 .post header h1 {
   overflow-x: hidden;
 }
-.post .content h3 {
+.post > .body > p {
+  text-align: justify;
+  line-height: 1.8;
+}
+.post > .body > p > code {
+  background: white;
+  padding: 5px;
+  border: 1px dashed #ccc;
+  border-radius: 3px;
+}
+.post > .body h3 {
   font-size: 1.875rem;
 }
-.post .content h4 {
+.post > .body h4 {
   font-size: 1.5rem;
 }
 .post blockquote {
