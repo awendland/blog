@@ -63,12 +63,22 @@ input[type="checkbox"] { vertical-align: bottom; *vertical-align: baseline; }
 ::selection { background: rgb(83, 161, 184);; color: #fff; text-shadow: none; }
 
 html {
-    font: 1em/1.5 serif;
+    font: 18px/1.5 serif;
     font-family: Ubuntu, sans-serif;
     font-weight: 300;
     
     background-color: rgb(249, 249, 249);
     color: rgb(0, 0, 0);
+}
+
+@media (min-width: 40rem) {
+    html {
+        font-size: 16px;
+    }
+}
+
+code, kbd, pre, samp {
+    font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -300,8 +310,10 @@ a {
                 }
                 &.active {
                     border-left: 4px solid rgb(83, 161, 184);
+                    border-right: 4px solid rgb(83, 161, 184);
                     &:hover {
                         border-left: 4px solid rgb(60, 116, 133);
+                        border-right: 4px solid rgb(60, 116, 133);
                     }
                 }
             }
@@ -541,6 +553,7 @@ a {
         position: relative;
         padding: 1em;
         font-size: 1.2em;
+        color: #333;
         &::before {
             content: "";
             width: .5em;

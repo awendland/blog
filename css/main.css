@@ -97,11 +97,22 @@ input[type="checkbox"] {
   text-shadow: none;
 }
 html {
-  font: 1em/1.5 serif;
+  font: 18px/1.5 serif;
   font-family: Ubuntu, sans-serif;
   font-weight: 300;
   background-color: #f9f9f9;
   color: #000000;
+}
+@media (min-width: 40rem) {
+  html {
+    font-size: 16px;
+  }
+}
+code,
+kbd,
+pre,
+samp {
+  font-weight: 400;
 }
 h1,
 h2,
@@ -334,9 +345,11 @@ a:focus {
 }
 #header nav #nav-drawer li.active {
   border-left: 4px solid #53a1b8;
+  border-right: 4px solid #53a1b8;
 }
 #header nav #nav-drawer li.active:hover {
   border-left: 4px solid #3c7485;
+  border-right: 4px solid #3c7485;
 }
 #header #site-branding {
   padding: 7em 0 12em;
@@ -545,6 +558,7 @@ a:focus {
   position: relative;
   padding: 1em;
   font-size: 1.2em;
+  color: #333;
 }
 .post blockquote::before {
   content: "";
