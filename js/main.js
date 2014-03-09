@@ -1,15 +1,11 @@
 window.onload = function() {
     var menuToggle = document.getElementById("open-menu");
-    var navDrawer = document.getElementById("nav-drawer");
+    var mainContainer = document.getElementById("st-container");
     
     var isOpen = false;    
     
     menuToggle.onclick = function() {
-        if (!isOpen) {
-            navDrawer.className = "open";
-        } else {
-            navDrawer.className = "";
-        }
+        mainContainer.className = "st-container st-effect" + (isOpen ? "" : " st-menu-open");
         isOpen = !isOpen;
     };
 };

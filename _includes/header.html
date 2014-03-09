@@ -1,25 +1,4 @@
 <header id="header" role="banner">
-    <nav role="navigation">
-        <div class="wrap">
-            <ul id="nav-drawer">
-                {% for p in site.pages %}
-                    <li {% if p.url == page.url %}class="active"{% endif %}><a href="{{ p.url }}">{{ p.title }}</a></li>
-                {% endfor %}
-                <li><a href="http://alexwendland.com/lab">Lab</a></li>
-                <li><a href="http://alexwendland.com">Portfolio</a></li>
-            </ul>
-            <a id="open-menu">
-                <span></span>
-            </a>
-            <ul class="bar-menu">
-                {% for p in site.pages %}
-                    <li {% if p.url == page.url %}class="active"{% endif %}><a href="{{ p.url }}">{{ p.title }}</a></li>
-                {% endfor %}
-                <li><a href="http://alexwendland.com/lab">Lab</a></li>
-                <li><a href="http://alexwendland.com">Portfolio</a></li>
-            </ul>
-        </div>
-    </nav>
     <div id="site-branding">
         <!-- {% include logo.html %} -->
         <a id="home-link" href="/" title="{{ site.name }}" rel="home">
