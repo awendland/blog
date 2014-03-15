@@ -1,168 +1,12 @@
+@large:   ~"only screen and (min-width: 40rem)";
+
+@blue:    #53a1b8;
+
 html,
-body,
-.st-container,
-.st-pusher,
-.st-content {
-	height: 100%;
+body {
+    height: 100%;
 }
 
-.st-content {
-	overflow-y: scroll;
-	background: rgb(249,249,249);
-}
-
-.st-content,
-.st-content-inner {
-	position: relative;
-}
-
-.st-container {
-	position: relative;
-	overflow: hidden;
-}
-
-.st-pusher {
-	position: relative;
-	left: 0;
-	z-index: 99;
-	height: 100%;
-	-webkit-transition: -webkit-transform 0.5s;
-	transition: transform 0.5s;
-}
-
-.st-pusher::after {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 0;
-	height: 0;
-	background: rgba(0,0,0,0.2);
-	content: '';
-	opacity: 0;
-	-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
-	transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
-}
-
-.st-menu-open .st-pusher::after {
-	width: 100%;
-	height: 100%;
-	opacity: 1;
-	-webkit-transition: opacity 0.5s;
-	transition: opacity 0.5s;
-}
-
-.st-menu {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 100;
-	visibility: hidden;
-	width: 300px;
-	height: 100%;
-	background: #53a1b8;
-	-webkit-transition: all 0.5s;
-	transition: all 0.5s;
-    overflow-y: auto;
-}
-
-.st-menu::after {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0,0,0,0.2);
-	content: '';
-	opacity: 1;
-	-webkit-transition: opacity 0.5s;
-	transition: opacity 0.5s;
-}
-
-.st-menu-open .st-menu::after {
-	width: 0;
-	height: 0;
-	opacity: 0;
-	-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
-	transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
-}.st-effect.st-container {
-	-webkit-perspective: 1500px;
-	perspective: 1500px;
-	-webkit-perspective-origin: 0% 50%;
-	perspective-origin: 0% 50%;
-}
-
-.st-effect .st-pusher {
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-}
-
-.st-effect.st-menu-open .st-pusher {
-	-webkit-transform: translate3d(300px, 0, 0);
-	transform: translate3d(300px, 0, 0);
-}
-
-.st-effect.st-menu {
-	-webkit-transform: translate3d(-100%, 0, 0) rotateY(-90deg);
-	transform: translate3d(-100%, 0, 0) rotateY(-90deg);
-	-webkit-transform-origin: 100% 50%;
-	transform-origin: 100% 50%;
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-}
-
-.st-effect.st-menu-open .st-effect.st-menu {
-	visibility: visible;
-	-webkit-transition: -webkit-transform 0.5s;
-	transition: transform 0.5s;
-	-webkit-transform: translate3d(-100%, 0, 0) rotateY(0deg);
-	transform: translate3d(-100%, 0, 0) rotateY(0deg);
-}
-.st-menu ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.st-menu h2 {
-	margin: 0;
-    text-align: center;
-	padding: .5em;
-	color: rgba(0,0,0,0.4);
-	text-shadow: 0 0 1px rgba(0,0,0,0.1);
-	font-weight: 300;
-	font-size: 2em;
-}
-
-.st-menu ul li a {
-	display: block;
-	padding: 1em 1em 1em 1.2em;
-	outline: none;
-	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
-	color: #f3efe0;
-	text-transform: uppercase;
-	text-shadow: 0 0 1px rgba(255,255,255,0.1);
-	letter-spacing: 1px;
-	font-weight: 400;
-	-webkit-transition: background 0.3s, box-shadow 0.3s;
-	transition: background 0.3s, box-shadow 0.3s;
-    i {
-        margin-right: 1em;
-        line-height: 1;
-        font-size: 1.2em;
-        vertical-align: bottom;
-    }
-}
-
-.st-menu ul li:first-child a {
-	box-shadow: inset 0 -1px rgba(0,0,0,0.2), inset 0 1px rgba(0,0,0,0.2);
-}
-
-.st-menu ul li a:hover {
-	background: rgba(0,0,0,0.2);
-	box-shadow: inset 0 -1px rgba(0,0,0,0);
-	color: #fff;
-    text-decoration: none;
-}
 /*****************************************************************************/
 /*
 /* Fonts
@@ -180,6 +24,7 @@ body,
 /* Fix CSS Annoyances
 /*
 /*****************************************************************************/
+
 /* Best of HTML5 Boilerplate http://davidwalsh.name/html5-boilerplate */
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 img { -ms-interpolation-mode: bicubic; }
@@ -236,7 +81,7 @@ html {
     color: rgb(0, 0, 0);
 }
 
-@media (min-width: 40rem) {
+@media @large {
     html {
         font-size: 16px;
     }
@@ -262,7 +107,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.7rem;
+    font-size: 1.75rem;
     line-height: 1;
 }
 
@@ -270,6 +115,13 @@ h4 {
     font-size: 1.5rem;
 }
 
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1.1rem;
+}
 a {
     text-decoration: none;
     color: rgb(83, 161, 184);
@@ -278,14 +130,25 @@ a {
         cursor: pointer;
     }
     
-    /* Keep long URLs from breaking out of container */
-    /* http://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
-    -ms-word-break: break-all;
-    word-break: break-all;
-    word-break: break-word;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    hyphens: auto;
+    .st-content & {
+        /* Keep long URLs from breaking out of container */
+        /* http://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto;
+    }
+}
+
+ul {
+    margin: 0;
+}
+
+h5, h6 {
+    margin-top: .3em;
+    margin-bottom: .3em;
 }
 
 /*****************************************************************************/
@@ -295,7 +158,7 @@ a {
 /*****************************************************************************/
 
 /* Columns */
-@media (min-width: 40rem) {
+@media @large {
   .column {
     float: left;
     padding-left: 1rem;
@@ -310,8 +173,170 @@ a {
   .column.flow-opposite { float: right; }  
 }
 
-@media (min-width: 40rem) {
+@media @large {
   .column.flow-opposite { float: right; }
+}
+
+/*****************************************************************************/
+/*
+/* Navigation Menu
+/*
+/*****************************************************************************/
+
+.st-container,
+.st-pusher,
+.st-content {
+	height: 100%;
+}
+
+.st-content {
+	overflow-y: scroll;
+	background: rgb(249,249,249);
+}
+
+.st-content,
+.st-content-inner {
+	position: relative;
+}
+
+.st-container {
+	position: relative;
+	overflow: hidden;
+	-webkit-perspective: 1500px;
+	perspective: 1500px;
+	-webkit-perspective-origin: 0% 50%;
+	perspective-origin: 0% 50%;
+}
+
+.st-pusher {
+	position: relative;
+	left: 0;
+	z-index: 99;
+	height: 100%;
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        background: rgba(0,0,0,0.2);
+        content: '';
+        opacity: 0;
+        -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+        transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+    }
+    
+    /* Animation */
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+    /* When nav is opened */
+    .st-menu-open & {
+        -webkit-transform: translate3d(300px, 0, 0);
+        transform: translate3d(300px, 0, 0);
+        &::after {
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            -webkit-transition: opacity 0.5s;
+            transition: opacity 0.5s;
+        }
+    }
+}
+
+.st-menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	visibility: hidden;
+	width: 300px;
+	height: 100%;
+	background: #53a1b8;
+	transition: all 0.5s;
+    overflow-y: auto;
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.2);
+        content: '';
+        opacity: 1;
+        -webkit-transition: opacity 0.5s;
+        transition: opacity 0.5s;
+    }
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            a {
+                display: block;
+                padding: 1em 1em 1em 1.2em;
+                outline: none;
+                box-shadow: inset 0 -1px rgba(0,0,0,0.2);
+                color: #f3efe0;
+                text-transform: uppercase;
+                text-shadow: 0 0 1px rgba(255,255,255,0.1);
+                letter-spacing: 1px;
+                font-weight: 400;
+                -webkit-transition: background 0.3s, box-shadow 0.3s;
+                transition: background 0.3s, box-shadow 0.3s;
+                &:hover {
+                    background: rgba(0,0,0,0.2);
+                    box-shadow: inset 0 -1px rgba(0,0,0,0);
+                    color: #fff;
+                    text-decoration: none;
+                }
+                i {
+                    margin-right: 1em;
+                    line-height: 1;
+                    font-size: 1.2em;
+                    vertical-align: bottom;
+                }
+            }
+            &:first-child a {
+                box-shadow: inset 0 -1px rgba(0,0,0,0.2), inset 0 1px rgba(0,0,0,0.2);
+            }
+        }
+    }
+    h2 {
+        margin: 0;
+        text-align: center;
+        padding: .5em;
+        color: rgba(0,0,0,0.4);
+        text-shadow: 0 0 1px rgba(0,0,0,0.1);
+        font-weight: 300;
+        font-size: 2em;
+    }
+    
+    /* Animation */
+	-webkit-transition: all 0.5s;
+	-webkit-transform: translate3d(-100%, 0, 0) rotateY(-90deg);
+	transform: translate3d(-100%, 0, 0) rotateY(-90deg);
+	-webkit-transform-origin: 100% 50%;
+	transform-origin: 100% 50%;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+    /* When nav is opened */
+    .st-menu-open & {
+        visibility: visible;
+        -webkit-transition: -webkit-transform 0.5s;
+        transition: transform 0.5s;
+        -webkit-transform: translate3d(-100%, 0, 0) rotateY(0deg);
+        transform: translate3d(-100%, 0, 0) rotateY(0deg);
+        &::after {
+            width: 0;
+            height: 0;
+            opacity: 0;
+            -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+            transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+        }
+    }
 }
 
 /*****************************************************************************/
@@ -324,7 +349,7 @@ a {
     position: relative;
     margin: 0 0 8em 0;
     #site-branding {
-        padding: 7em 0 12em;
+        padding: 7em 0 9em;
         text-align: center;
         background: url("../img/cover_amazon-aerial.jpg");
         overflow: hidden;
@@ -337,8 +362,12 @@ a {
                 margin: 0;
                 text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
                 font-weight: 700;
-                font-size: 5em;
+                font-size: 3.5em;
                 line-height: 1;
+                
+                @media @large {
+                    font-size: 7em;
+                }
             }
             h2 {
                 color: rgb(255,255,255);
@@ -348,6 +377,10 @@ a {
                 font-size: 1em;
                 font-weight: 400;
             }
+        }
+        
+        @media @large {
+            padding-bottom: 12em;
         }
     }
     
@@ -378,8 +411,8 @@ a {
         position: relative;
         display: inline-block;
         cursor: pointer;
-        height: 1.6em;
-        width: 1.8em;
+        height: 1.9em;
+        width: 2.1em;
         user-select: none;
         border-radius: 4px;
         background: rgba(50, 50, 50, 0.55);
@@ -395,64 +428,67 @@ a {
         position: absolute;
         display: block;
         content: '';
-//        transition: all 500ms ease-in-out;
     }
     #open-menu span {
         left: 15%;
         right: 15%;
         top: 50%;
         margin-top: -.1em;
+        .st-menu-open & {
+            background-color: transparent;
+        }
     }
     #open-menu span:before, #open-menu span:after {
         width: 100%;
+        .st-menu-open & {
+            top: 0;
+        }
     }
     #open-menu span:before {
         top: -200%;
-    }
-    #open-menu span:after {
-        bottom: -200%;
-    }
-       /* text-decoration: none;
-        cursor: pointer;
-        user-select: none;
-        span {
-            font-family: "ico";
-            font-size: 1.5em;
-            line-height: 1;
-            color: white;
-        }
-    }*/
-}
-
-.st-menu-open {
-    #floater {
-        #open-menu span {
-          background-color: transparent;
-        }
-        #open-menu span:before, #open-menu span:after {
-          top: 0;
-        }
-        #open-menu span:before {
-            transform: rotate(45deg);
+        .st-menu-open & {
             -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
         }
-        #open-menu span:after {
+    }
+    #open-menu span:after {
+        bottom: -200%;
+        .st-menu-open & {
             -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
         }
     }
 }
 
-@media all and (max-width:550px) {
-    #header {
-        #site-branding {
-            padding-bottom: 9em;
-            a {
-                h1 {
-                    font-size: 3.5em;
-                }
-            }
+/*****************************************************************************/
+/*
+/* 404 Page
+/*
+/*****************************************************************************/
+
+#notfound {
+    text-align: center;
+    background: url("../img/cover_amazon-aerial.jpg");
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    h1 {
+        font-size: 30em;
+        margin: 0;
+        color: rgb(255,255,255);
+        text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+        font-weight: 700;
+        line-height: 1;
+    }
+    .horizontal {
+        display: none;
+    }
+    @media @large {
+        .vertical {
+            display: none;
+        }
+        .horizontal {
+            display: block;
         }
     }
 }
@@ -608,12 +644,6 @@ a {
                 border-radius: 3px;
             }
         }
-        h3 {
-            font-size: 1.875rem;
-        }
-        h4 {
-            font-size: 1.5rem;
-        }
     }
     blockquote {
         border-radius: 6px;
@@ -643,6 +673,71 @@ a {
         }
         &.small {
             font-size: 1em;
+        }
+    }
+}
+
+table {
+    tr {
+        vertical-align: top;
+        
+        border: 0 solid #ccc;
+        border-color: rgba(0, 0, 0, 0.075);
+        border-bottom-width: 1px;
+        border-top-width: 1px;
+        border-top-color: rgba(255, 255, 255, 0.75);
+        
+        &:first-child {
+            border-top-width: 0;
+            td {
+                padding-top: 0;
+            }
+        }
+        &:last-child {
+            border-bottom-width: 0;
+        }
+        
+        td {
+            padding: .5em;
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+.list {
+    padding-left: 0;
+    li {
+        list-style: none;
+        padding: .5em 0;
+        
+        border: 0 solid #ccc;
+        border-color: rgba(0, 0, 0, 0.075);
+        border-bottom-width: 1px;
+        border-top-width: 1px;
+        border-top-color: rgba(255, 255, 255, 0.75);
+        &:first-child {
+            border-top-width: 0;
+        }
+        span {
+            &:nth-child(1) {
+                display: block;
+                font-weight: 400;
+                font-size: .8em;
+            }
+            &:nth-child(2) {
+            }
+            &:nth-child(3) {
+                float: right;
+            }
+            &:nth-child(4) {
+                display: block;
+                font-style: italic;
+            }
         }
     }
 }
