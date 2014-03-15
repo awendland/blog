@@ -3,7 +3,7 @@ title: AlarmManager, BroadcastReceivers, Activities! Oh my!
 author: Alex Wendland
 layout: post
 ---
-## Intro
+### Intro
 
 This article is the result of hours of frustration, research and lack-of-understanding on my part. I went out with the simple goal of implementing a timer function using Android's AlarmManager class. With ease and efficiency, traits I have come to expect when using the Android APIs, I got it working in under 15 minutes. It was made of three classes, an activity containing the button for scheduling the alarm, a class to handle the AlarmManager interaction, and a BroadcastReceiver to handle the scheduled events. This was working excellently until I began to test this simple app's robustness in handling odd, but still possible, user-interactions.
 
@@ -11,7 +11,7 @@ Mainly, the alarm failed to trigger when the app was killed (swiped away) from t
 
 So here is the basic solution that I found to this simple problem. The example code I am providing is for the following setup: an activity exists that will schedule the AlarmManager event in its onCreate call. This activity will also have a method for canceling scheduled AlarmManager events just for the sake of easy understanding. A BroadcastReceiver will exist that will handle the *explicit intent* launched from the AlarmManager. Their will be a few modifications to the general AndroidManifest.xml file. The decision making behind of all this will be explained further on.<!--break-->
 
-## The Code
+### The Code
 
 Here is the activity:
 
@@ -145,11 +145,11 @@ Huh? Why would Android remove an event *designed* for starting killed processes
 
 And that is why they added `android:process=":remote";` to tell the Android System that, yes, this event is *really, really* important and needs to be run. (Ok, so maybe that isn't why they added it but still... it is an indirect side-affect of what `android:process=":remote"` does, and an important one at that!).
 
-## Wrap Up
+### Wrap Up
 
 And that's how you create a basic, user-proof, AlarmManager/BroadcastReceiver, scheduled logic flow in Android! Best of luck on your apps and don't bother commenting with any questions/corrections.
 
-## Tl;dr
+### Tl;dr
 
 Use `android:process=":remote"` in you receiver's AndroidManifest.xml entry for separating BroadcastReceivers from the rest of your application life cycle when dealing with AlarmManager.
 
