@@ -28,11 +28,11 @@ The program would meet on a weekly basis for educaction and practice in the ulti
 
 **FLL competitions are held in the Fall. Therefore this program will be preparing for the competition in 2014.*
 
-The program will be organized around groups consisting of 4-5 students each. This teaches the students team dynamics (in a realistic way, team members who aren't cooperative or performing will be handled separately) while keeping "cost per student per learning" ratio as efficient as possible. A typical day would go as follows:
+The program will be organized around groups consisting of 4-5 students each. This teaches the students team dynamics (in a realistic way, team members who aren't cooperative or performing will be handled separately) while keeping "cost per student per learning" ratio as efficient as possible. A typical day would go as follows:<!--break-->
 
 *   (15-30 min) Students gather as one group and are lectured about the days topic. Lectures would:
     *   Open up with a simple word introduction of the days topic
-    *   Then a live demonstration or video would be shown<!--break-->
+    *   Then a live demonstration or video would be shown
     *   The topic would be explained in greater depth through lecturing with slides and/or video explanations
     *   The students would be asked questions to gauge how well the topic was understood
     *   If the topic was not understood by everyone, students can further questions
