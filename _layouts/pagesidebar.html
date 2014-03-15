@@ -7,5 +7,6 @@ layout: default
     </div>
     <div class="sidebar column third">
         <!-- Sidebar content -->
+        {% if page.sidebar != null %}{% include {{page.sidebar}} %}{% endif %}
     </div>
 </main>
