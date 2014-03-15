@@ -133,12 +133,6 @@ body,
 	font-size: 2em;
 }
 
-@media (min-width: 40em) {
-    .st-menu h2 {
-        margin-left: -.5em;
-    }
-}
-
 .st-menu ul li a {
 	display: block;
 	padding: 1em 1em 1em 1.2em;
@@ -374,29 +368,78 @@ a {
     }
 }
 
-
 #floater {
     // Layout
     position: fixed;
     z-index: 2;
+    top: .5em;
+    left: .5em;
     #open-menu {
+        position: relative;
         display: inline-block;
-        padding: .8em 1em .6em;
-        text-decoration: none;
+        cursor: pointer;
+        height: 1.6em;
+        width: 1.8em;
+        user-select: none;
+        border-radius: 4px;
+        background: rgba(50, 50, 50, 0.55);
+        transition: background .3s ease;
+        &:hover {
+            background: rgba(120, 120, 120, 0.75);
+        }
+    }
+    #open-menu span, #open-menu span:before, #open-menu span:after {
+        border-radius: 2px;
+        height: .2em;
+        background: white;
+        position: absolute;
+        display: block;
+        content: '';
+//        transition: all 500ms ease-in-out;
+    }
+    #open-menu span {
+        left: 15%;
+        right: 15%;
+        top: 50%;
+        margin-top: -.1em;
+    }
+    #open-menu span:before, #open-menu span:after {
+        width: 100%;
+    }
+    #open-menu span:before {
+        top: -200%;
+    }
+    #open-menu span:after {
+        bottom: -200%;
+    }
+       /* text-decoration: none;
         cursor: pointer;
         user-select: none;
         span {
             font-family: "ico";
-            padding: .2em 0.3em .2em;
             font-size: 1.5em;
             line-height: 1;
-            border-radius: 4px;
-            background: rgba(50, 50, 50, 0.55);
             color: white;
-            transition: background .3s ease;
-            &:hover {
-                background: rgba(120, 120, 120, 0.75);
-            }
+        }
+    }*/
+}
+
+.st-menu-open {
+    #floater {
+        #open-menu span {
+          background-color: transparent;
+        }
+        #open-menu span:before, #open-menu span:after {
+          top: 0;
+        }
+        #open-menu span:before {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        #open-menu span:after {
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
         }
     }
 }

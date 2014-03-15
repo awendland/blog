@@ -120,11 +120,6 @@ body,
   font-weight: 300;
   font-size: 2em;
 }
-@media (min-width: 40em) {
-  .st-menu h2 {
-    margin-left: -0.5em;
-  }
-}
 .st-menu ul li a {
   display: block;
   padding: 1em 1em 1em 1.2em;
@@ -398,26 +393,73 @@ a:focus {
 #floater {
   position: fixed;
   z-index: 2;
+  top: .5em;
+  left: .5em;
+  /* text-decoration: none;
+        cursor: pointer;
+        user-select: none;
+        span {
+            font-family: "ico";
+            font-size: 1.5em;
+            line-height: 1;
+            color: white;
+        }
+    }*/
 }
 #floater #open-menu {
+  position: relative;
   display: inline-block;
-  padding: .8em 1em .6em;
-  text-decoration: none;
   cursor: pointer;
+  height: 1.6em;
+  width: 1.8em;
   user-select: none;
-}
-#floater #open-menu span {
-  font-family: "ico";
-  padding: .2em 0.3em .2em;
-  font-size: 1.5em;
-  line-height: 1;
   border-radius: 4px;
   background: rgba(50, 50, 50, 0.55);
-  color: white;
   transition: background .3s ease;
 }
-#floater #open-menu span:hover {
+#floater #open-menu:hover {
   background: rgba(120, 120, 120, 0.75);
+}
+#floater #open-menu span,
+#floater #open-menu span:before,
+#floater #open-menu span:after {
+  border-radius: 2px;
+  height: .2em;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#floater #open-menu span {
+  left: 15%;
+  right: 15%;
+  top: 50%;
+  margin-top: -0.1em;
+}
+#floater #open-menu span:before,
+#floater #open-menu span:after {
+  width: 100%;
+}
+#floater #open-menu span:before {
+  top: -200%;
+}
+#floater #open-menu span:after {
+  bottom: -200%;
+}
+.st-menu-open #floater #open-menu span {
+  background-color: transparent;
+}
+.st-menu-open #floater #open-menu span:before,
+.st-menu-open #floater #open-menu span:after {
+  top: 0;
+}
+.st-menu-open #floater #open-menu span:before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.st-menu-open #floater #open-menu span:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 @media all and (max-width: 550px) {
   #header #site-branding {
