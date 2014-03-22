@@ -719,15 +719,73 @@ table tr td:last-child {
 .list li:first-child {
   border-top-width: 0;
 }
-.list li span:nth-child(1) {
+.clubs-list {
+  padding-left: 0;
+}
+.clubs-list li {
+  list-style: none;
+  padding: .5em 0;
+  border: 0 solid #ccc;
+  border-color: rgba(0, 0, 0, 0.075);
+  border-bottom-width: 1px;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0.75);
+}
+.clubs-list li:first-child {
+  border-top-width: 0;
+}
+.clubs-list span:nth-child(1) {
   display: block;
   font-weight: 400;
   font-size: .8em;
 }
-.list li span:nth-child(3) {
+.clubs-list span:nth-child(3) {
   float: right;
 }
-.list li span:nth-child(4) {
+.clubs-list span:nth-child(4) {
   display: block;
   font-style: italic;
+}
+.skills-list {
+  padding-left: 0;
+}
+.skills-list li {
+  list-style: none;
+  padding: .5em 0;
+  border: 0 solid #ccc;
+  border-color: rgba(0, 0, 0, 0.075);
+  border-bottom-width: 1px;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0.75);
+}
+.skills-list li:first-child {
+  border-top-width: 0;
+}
+.skills-list ul {
+  padding: 0;
+}
+@media only screen and (min-width: 40rem) {
+  .skills-list ul {
+    padding-left: 1em;
+  }
+}
+.skills-list ul li:last-child {
+  border-bottom-width: 0px;
+}
+.skills-list .type {
+  font-size: .8em;
+}
+.skills-list .type::before {
+  content: "(";
+}
+.skills-list .type::after {
+  content: ")";
+}
+.skills-list .desc {
+  font-style: italic;
+  margin: .25em 0;
+}
+.skills-list .cost,
+.skills-list .stat {
+  font-size: .8em;
 }

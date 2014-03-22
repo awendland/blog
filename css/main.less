@@ -723,21 +723,61 @@ table {
         &:first-child {
             border-top-width: 0;
         }
-        span {
-            &:nth-child(1) {
-                display: block;
-                font-weight: 400;
-                font-size: .8em;
-            }
-            &:nth-child(2) {
-            }
-            &:nth-child(3) {
-                float: right;
-            }
-            &:nth-child(4) {
-                display: block;
-                font-style: italic;
-            }
+    }
+}
+
+.clubs-list {
+    .list();
+    span {
+        &:nth-child(1) {
+            display: block;
+            font-weight: 400;
+            font-size: .8em;
         }
+        &:nth-child(2) {
+        }
+        &:nth-child(3) {
+            float: right;
+        }
+        &:nth-child(4) {
+            display: block;
+            font-style: italic;
+        }
+    }
+}
+
+.skills-list {
+    .list();
+    .group-name {
+        
+    }
+    ul {
+        padding: 0;
+        
+        @media @large {
+            padding-left: 1em;
+        }
+        li:last-child {
+            border-bottom-width: 0px;
+        }
+    }
+    .name {
+        
+    }
+    .type {
+        font-size: .8em;
+        &::before{
+            content: "("
+        }
+        &::after{
+            content: ")"
+        }
+    }
+    .desc {
+        font-style: italic;
+        margin: .25em 0;
+    }
+    .cost, .stat {
+        font-size: .8em;
     }
 }

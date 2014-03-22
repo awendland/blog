@@ -1,0 +1,39 @@
+- group: "Java: Android, Google Apps Engine, Bukkit"
+  items:
+  - name: CloudSend
+    link: "http://www.cloundsend-mobile.com"
+    type: Android App
+    desc: Ties into a user's Dropbox account in order to streamline the process of sharing files.
+    cost: Free
+    stats: [21,000+ installs]
+  - name: Adobe Flash Downloader
+    type: Android App
+    desc: Assists in the downloading and install of the removed Adobe Flash Player.
+    cost: $0.99
+    stats: [7,300+ installs]
+  - name: Corona del Mar High School
+    link: "https://play.google.com/store/apps/details?id=com.ampelement.cdm"
+    type: Android App
+    desc: Android application for CDM HS. Provides easy access to most-frequently used student resources. Uses custom-built Calendar View implementation.
+    cost: Free
+    stats: [70+ active installs]
+  - name: WarpPortals
+    link: "http://dev.bukkit.org/bukkit-plugins/warp-portals/"
+    type: Minecraft/Bukkit Plugin
+    desc: Created due to lack of easy to use, feature filled plugins providing teleportation services in the game.
+    cost: Free
+    stats: [31,000+ installs, 1+ million starts]
+- group: "JavaScript: Vanilla, AngularJS, JQuery, ThreeJS"
+  items:
+  - name: Chemical Molar Mass Calculator
+    link: "https://rawgithub.com/awendland/molar-mass/master/index.html"
+    type: AngularJS Web App
+    desc: Parses chemical formula input and calculates molecular weight of compound. Uses RaphaelJS to provide pie-chart visualization. Relies on Grunt as build manager. Built based off of AngularJS principles.
+  - name: NCDM Ticket Sale
+    link: "http://alexwendland.com/ncdm/fundraising/"
+    type: JQuery w/ PHP Backend
+    desc: Ticket sale tracking website built as a single page JQuery web app with a PHP/MySQL backend. Created for record keeping of ticket sales and money collection.<span>Use "awendland" as username to demo.
+  - name: Acid-Base Neutralization Simulator
+    link: "http://alexwendland.com/threejs/titration/"
+    type: ThreeJS / Vanilla JS Web App
+    desc: Particle simulation of an Acid-Base neutralization reaction. Runs on WebGL using ThreeJS with live data reporting.
