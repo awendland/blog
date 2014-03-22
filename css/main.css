@@ -106,7 +106,7 @@ html {
   background-color: #333;
   color: #000000;
 }
-@media only screen and (min-width: 40rem) {
+@media (min-width: 40rem) {
   html {
     font-size: 16px;
   }
@@ -180,7 +180,7 @@ h6 {
 /*
 /*****************************************************************************/
 /* Columns */
-@media only screen and (min-width: 40rem) {
+@media (min-width: 40rem) {
   .column {
     float: left;
     padding-left: 1rem;
@@ -205,7 +205,7 @@ h6 {
     float: right;
   }
 }
-@media only screen and (min-width: 40rem) {
+@media (min-width: 40rem) {
   .column.flow-opposite {
     float: right;
   }
@@ -270,6 +270,12 @@ h6 {
   opacity: 1;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
+}
+@media print {
+  .st-container,
+  .st-content {
+    overflow: visible;
+  }
 }
 .st-menu {
   position: absolute;
@@ -388,7 +394,7 @@ h6 {
   font-size: 3.5em;
   line-height: 1;
 }
-@media only screen and (min-width: 40rem) {
+@media (min-width: 40rem) {
   #header #site-branding a h1 {
     font-size: 7em;
   }
@@ -401,7 +407,7 @@ h6 {
   font-size: 1em;
   font-weight: 400;
 }
-@media only screen and (min-width: 40rem) {
+@media (min-width: 40rem) {
   #header #site-branding {
     padding-bottom: 12em;
   }
@@ -505,7 +511,7 @@ h6 {
 #notfound .horizontal {
   display: none;
 }
-@media only screen and (min-width: 40rem) {
+@media (min-width: 40rem) {
   #notfound .vertical {
     display: none;
   }
@@ -571,6 +577,11 @@ h6 {
 }
 #footer .contact nav a:hover.google-plus-logo {
   background-color: #dd4b39;
+}
+@media print {
+  #footer {
+    display: none;
+  }
 }
 /*****************************************************************************/
 /*
@@ -743,7 +754,7 @@ table tr td:last-child {
 .clubs-list .time {
   font-size: .8em;
 }
-@media only screen and (min-width: 40rem) {
+@media (min-width: 40rem) {
   .clubs-list .time {
     top: .5em;
     right: 0;
@@ -773,7 +784,7 @@ table tr td:last-child {
 .skills-list ul {
   padding: 0;
 }
-@media only screen and (min-width: 40rem) {
+@media (min-width: 40rem) {
   .skills-list ul {
     padding-left: 1em;
   }
@@ -790,7 +801,7 @@ table tr td:last-child {
 .skills-list .type::after {
   content: ")";
 }
-@media only screen and (min-width: 40rem) {
+@media (min-width: 40rem) {
   .skills-list .type {
     top: .5em;
     right: 0;
