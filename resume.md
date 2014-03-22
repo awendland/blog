@@ -27,10 +27,14 @@ Class of 2015 Corona del Mar High School
 ### Clubs and Leadership
 ___
 <ul class="clubs-list">
-    <li><span>Founder and President</span><span><a href="http://alexwendland.com/tec/#/">TEC (Technology Entrepreneurship Coding) Club</a></span><span>2013 - Now</span><span>Club dedicated to connecting students interested in programming and encouraging collaboration on projects.</span></li>
-    <li><span>Founder and President</span><span><a href="http://alexwendland.com/robotics/">Eastbluff Robotics Team</a></span><span>2013 - Now</span><span>Class for elementary school students on robotics taught based off of FIRST Lego League.</span></li>
-    <li><span>Incumbent President</span><span><a href="http://ncdm.us">Youth and Government</a></span><span>2010 - Now</span><span>State-wide organization dedicated to fostering democracy in every generation. President of 180 member delegation at high school.</span></li>
-    <li><span>Representative</span><span><a href="http://www.legion.org/boysnation">Boys State</a></span><span>June 2014</span><span>At Boys State / Nation, participants learn the rights, privileges and responsibilities of franchised citizens. The training is objective and centers on the structure of city, county and state governments.</span></li>
+{% for club in site.data.clubs_leadership %}
+    <li>
+        <div class="position">{{club.position}}</div>
+        <a class="name" href="{{club.link}}">{{club.name}}</a>
+        <div class="time">{{club.time}}</div>
+        <div class="desc">{{club.desc}}</div>
+    </li>
+{% endfor %}
 </ul>
 
 ### Engineering Experience

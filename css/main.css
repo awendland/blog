@@ -710,6 +710,7 @@ table tr td:last-child {
 .list li {
   list-style: none;
   padding: .5em 0;
+  position: relative;
   border: 0 solid #ccc;
   border-color: rgba(0, 0, 0, 0.075);
   border-bottom-width: 1px;
@@ -725,6 +726,7 @@ table tr td:last-child {
 .clubs-list li {
   list-style: none;
   padding: .5em 0;
+  position: relative;
   border: 0 solid #ccc;
   border-color: rgba(0, 0, 0, 0.075);
   border-bottom-width: 1px;
@@ -734,16 +736,22 @@ table tr td:last-child {
 .clubs-list li:first-child {
   border-top-width: 0;
 }
-.clubs-list span:nth-child(1) {
-  display: block;
+.clubs-list .position {
   font-weight: 400;
   font-size: .8em;
 }
-.clubs-list span:nth-child(3) {
-  float: right;
+.clubs-list .time {
+  font-size: .8em;
 }
-.clubs-list span:nth-child(4) {
-  display: block;
+@media only screen and (min-width: 40rem) {
+  .clubs-list .time {
+    top: .5em;
+    right: 0;
+    position: absolute;
+    font-size: 1em;
+  }
+}
+.clubs-list .desc {
   font-style: italic;
 }
 .skills-list {
@@ -752,6 +760,7 @@ table tr td:last-child {
 .skills-list li {
   list-style: none;
   padding: .5em 0;
+  position: relative;
   border: 0 solid #ccc;
   border-color: rgba(0, 0, 0, 0.075);
   border-bottom-width: 1px;
@@ -780,6 +789,13 @@ table tr td:last-child {
 }
 .skills-list .type::after {
   content: ")";
+}
+@media only screen and (min-width: 40rem) {
+  .skills-list .type {
+    top: .5em;
+    right: 0;
+    position: absolute;
+  }
 }
 .skills-list .desc {
   font-style: italic;

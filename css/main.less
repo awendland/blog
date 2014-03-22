@@ -714,6 +714,7 @@ table {
     li {
         list-style: none;
         padding: .5em 0;
+        position: relative;
         
         border: 0 solid #ccc;
         border-color: rgba(0, 0, 0, 0.075);
@@ -728,21 +729,23 @@ table {
 
 .clubs-list {
     .list();
-    span {
-        &:nth-child(1) {
-            display: block;
-            font-weight: 400;
-            font-size: .8em;
+    .position {
+        font-weight: 400;
+        font-size: .8em;
+    }
+    .name {
+    }
+    .time {
+        font-size: .8em;
+        @media @large {
+            top: .5em;
+            right: 0;
+            position: absolute;
+            font-size: 1em;
         }
-        &:nth-child(2) {
-        }
-        &:nth-child(3) {
-            float: right;
-        }
-        &:nth-child(4) {
-            display: block;
-            font-style: italic;
-        }
+    }
+    .desc {
+        font-style: italic;
     }
 }
 
@@ -771,6 +774,11 @@ table {
         }
         &::after{
             content: ")"
+        }
+        @media @large {
+            top: .5em;
+            right: 0;
+            position: absolute;
         }
     }
     .desc {
