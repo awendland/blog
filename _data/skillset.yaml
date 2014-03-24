@@ -16,7 +16,7 @@
     type: Android App
     desc: Android application for CDM HS. Provides easy access to most-frequently used student resources. Uses custom-built Calendar View implementation.
     cost: Free
-    stats: [70+ active installs]
+    stats: [200+ active installs]
   - name: WarpPortals
     link: "http://dev.bukkit.org/bukkit-plugins/warp-portals/"
     type: Minecraft/Bukkit Plugin
@@ -37,3 +37,8 @@
     link: "http://alexwendland.com/threejs/titration/"
     type: ThreeJS / Vanilla JS Web App
     desc: Particle simulation of an Acid-Base neutralization reaction. Runs on WebGL using ThreeJS with live data reporting.
+- group: "Python: Flask, MatPlotLib, Twitter"
+  items:
+  - name: Twitter to Stock Correlator
+    desc: Realtime keyword analysis of filtered Twitter firehose in order to attempt to discover relationships between stock movement and tweet frequency.
+    type: Multi-threaded Python with data access layer written on Flask
