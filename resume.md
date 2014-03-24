@@ -5,7 +5,11 @@ icon: note
 ---
 ### Objective
 ___
-Invigorating summer work as an intern at FireEye in Software Research, Data Mining or Malware Research Departments.
+To learn what it takes to develop and maintain a product that detects breaches 2 weeks before they become an issue (Target Breach). To understand what it takes skill-wise, time-wise, process-wise, and management-wise to be a leader in an industry.
+
+### Summary
+___
+Dedicated, ambitious high-school student with 4+ years of experience actively maintaining released applications for over 60,000 users. Founded AMP Element in 2008 as a computer repair technician, migrated to Android application development in 2011. Eager to learn and apply new skills.
 
 ###Education
 ___
