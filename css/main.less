@@ -383,6 +383,12 @@ h5, h6 {
                 font-size: 1em;
                 font-weight: 400;
             }
+            .print-url {
+                display: none;
+                @media print {
+                    display: block;
+                }
+            }
         }
         
         @media @large {

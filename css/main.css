@@ -407,6 +407,14 @@ h6 {
   font-size: 1em;
   font-weight: 400;
 }
+#header #site-branding a .print-url {
+  display: none;
+}
+@media print {
+  #header #site-branding a .print-url {
+    display: block;
+  }
+}
 @media (min-width: 40rem) {
   #header #site-branding {
     padding-bottom: 12em;
