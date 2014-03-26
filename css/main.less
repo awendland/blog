@@ -660,6 +660,19 @@ h5, h6 {
                 border-radius: 3px;
             }
         }
+        @media print {
+            a::after {
+                content:" (" attr(href) ") ";
+                font-size:0.8em;
+                font-weight:normal;
+            }
+            a.print-link-nl::after {
+                display: block;
+            }
+            a.no-print-link::after {
+                display: none;
+            }
+        }
     }
     blockquote {
         border-radius: 6px;

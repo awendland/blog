@@ -34,7 +34,7 @@ ___
 {% for club in site.data.clubs_leadership %}
     <li>
         <div class="position">{{club.position}}</div>
-        <a class="name" href="{{club.link}}">{{club.name}}</a>
+        <a class="name print-link-nl" href="{{club.link}}">{{club.name}}</a>
         <div class="time">{{club.time}}</div>
         <div class="desc">{{club.desc}}</div>
     </li>
@@ -60,7 +60,7 @@ ___
         <ul>
         {% for skill in skillgroup.items %}
             <li>
-                {% if skill.link != null %}<a class="name" href="{{skill.link}}">{{skill.name}}</a>{% else %}<div class="name">{{skill.name}}</div>{% endif %}
+                {% if skill.link != null %}<a class="name print-link-nl" href="{{skill.link}}">{{skill.name}}</a>{% else %}<div class="name">{{skill.name}}</div>{% endif %}
                 <div class="type">{{skill.type}}</div>
                 <div class="desc">{{skill.desc}}</div>
                 {% if skill.cost != null %}<div class="cost" >{{skill.cost}}</div>{% endif %}
