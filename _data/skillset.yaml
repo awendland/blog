@@ -1,7 +1,7 @@
 - group: "Java: Android, Google Apps Engine, Bukkit"
   items:
   - name: CloudSend
-    link: "http://www.cloundsend-mobile.com"
+    link: "https://play.google.com/store/apps/details?id=com.ampelement.cloudsend"
     type: Android App
     desc: Ties into a user's Dropbox account in order to streamline the process of sharing files.
     cost: Free
