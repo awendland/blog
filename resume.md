@@ -9,7 +9,7 @@ To learn what it takes to develop and maintain a product that detects breaches 2
 
 ### Summary
 ___
-Dedicated, ambitious high-school student with 4+ years of experience actively maintaining released applications for over 60,000 users. Founded AMP Element in 2008 as a computer repair technician, migrated to Android application development in 2011. Eager to learn and apply new skills.
+Dedicated, ambitious high-school student with 4+ years of experience actively maintaining released applications for over 60,000 users. Founded AMP Element in 2008 as a computer repair technician, migrated to Android application development in 2011. Eager to learn and apply new skills. Experienced in Java with Android, Google App Engine, Tomcat, Bukkit, Desktop and MongoDB; JavaScript with AngularJS, JQuery and vanilla; Python with Flask and MatPlotLib; PHP with MySQL; HTML, CSS/LESS.
 
 ### Skills / Projects
 ___
