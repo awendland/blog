@@ -169,6 +169,9 @@ a:focus {
 ul {
   margin: 0;
 }
+li {
+  padding-top: .5em;
+}
 h5,
 h6 {
   margin-top: .3em;
