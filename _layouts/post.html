@@ -13,3 +13,8 @@ layout: page
         {{ content }}
     </div>
 </section>
+{% if page.comments == null or page.comments %}
+<section class="comments">
+    {% include disqus.html %}
+</section>
+{% endif %}
