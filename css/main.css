@@ -172,6 +172,9 @@ ul {
 li {
   padding-top: .5em;
 }
+li:first-child {
+  padding-top: 0;
+}
 h5,
 h6 {
   margin-top: .3em;
