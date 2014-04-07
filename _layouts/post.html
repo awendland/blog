@@ -3,10 +3,12 @@ layout: page
 ---
 <section class="post">
     <header>
+        <div>
         {% if page.featureimg != null %}
             <img src="{{site.url}}/img/{{page.featureimg}}" />
         {% endif %}
         <h1><a href="{{ page.url }}">{{ page.title }}</a></h1><span class="date">{{ page.date | date: "%B %-d, %Y" }}</span>
+        </div>
     </header>
 
     <div class="body">

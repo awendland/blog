@@ -5,6 +5,8 @@
 html,
 body {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 /*****************************************************************************/
@@ -649,13 +651,22 @@ h5, h6 {
 .post {
     padding-bottom: .75em;
     header {
-        text-align: center;
-        img {
-            max-height: 19em;
-            max-width: 90%;
-        }
-        h1 {
-            overflow-x: hidden;
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        div {
+            width: 100%;
+            top: 50%;
+            margin-top: -25%;
+            text-align: center;
+            position: absolute;
+            img {
+                max-height: 19em;
+                max-width: 90%;
+            }
+            h1 {
+                overflow-x: hidden;
+            }
         }
     }
     & > .body {
