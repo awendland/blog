@@ -22,18 +22,13 @@ Sublime Text 3 - <http://www.sublimetext.com/3>
 Brackets - <http://brackets.io/>
 
 #### Update 2 -- 2013-08-03 01:05 PST
+<img alt="Brackets editing a JS file" src="{{ site.url }}/img/brackets_screenshot.png" width="300" height="176" />
 
-<div id="attachment_61" style="width: 310px" class="wp-caption aligncenter">
-  <a href="{{ site.url }}/img/brackets_screenshot.png"><img alt="Brackets editing a JS file" src="{{ site.url }}/img/brackets_screenshot.png" width="300" height="176" /></a><p>
-    A screenshot of Brackets with a Javascript file open
-  </p>
-</div>
+A screenshot of Brackets with a Javascript file open
 
-<div id="attachment_62" style="width: 310px" class="wp-caption aligncenter">
-  <a href="{{ site.url }}/img/st3_screenshot.png"><img alt="ST3 Editing a JS File" src="{{ site.url }}/img/st3_screenshot.png" width="300" height="202" /></a><p>
-    A screenshot of Sublime Text 3 with that same Javascript File open
-  </p>
-</div>
+<img alt="ST3 Editing a JS File" src="{{ site.url }}/img/st3_screenshot.png" width="300" height="202" />
+
+A screenshot of Sublime Text 3 with that same Javascript File open
 
 #### Update 3 -- 2013-08-03 01:33 PST
 
