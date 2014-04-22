@@ -14,9 +14,9 @@ I'll start off with one stipulation, this argument only holds merit if the large
 
 Android has mastered all things notification; first on the list comes how it handles alerts. Android alerts user about a new notification in a subtle, non-instrusive way. It rolls the text over the statusbar then fades the statusbar back to its prior state. Unlike iOS, it never overlays the user's current screen or interrupts the user's flow.<!--break-->
 
-First observe how iOS 7 handles notifications:
+First observe how iOS handles notifications:
 
-![iOS 7 Notification Alert](/img/posts/2014-03-28_ios-notif-alert.gif)
+![iOS Notification Alert](/img/posts/2014-03-28_ios-notif-alert.png)
 
 The user's interactions with the top bar is completely disrupted! It is effective at catching the user's attention, but it can popup with no warning and cause unwanted navigation away from the user's current context.
 
@@ -71,6 +71,8 @@ Compared to how an Android app's header would look:
 ![Android Back Navigation Header](/img/posts/2014-03-28_android-back-nav-header.png)
 
 Besides providing back navigation in a more accessible manner, Android also encourages its use in many scenarios outside of just application hierchy traversal. With a tap of the back button Android popup dialogs can be quickly closed, an open notification drawer can be returned to its unopen state, an obtrusive keyboard can be removed from the screen, and websites can be quickly returned to.
+
+Here is a demo where the nav bar is closed, the keyboard is closed, then the "Compose Email" screen in Gmail is exited, all done using only the back button:
 
 ![Android Back Navigation Examples](/img/posts/2014-03-28_android-back-nav-examples.gif)
 
