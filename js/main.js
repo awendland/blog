@@ -1,7 +1,9 @@
 window.onload = function() {
     setupNavMenu();
     if (isPost()) {
-        setupImagePreviews();
+        if (!isMobile()) {
+            setupImagePreviews();
+        }
     }
 };
 
@@ -48,7 +50,7 @@ function setupImagePreviews(post) {
                                  '</div>'
         getPostElem().appendChild(imagePreview);
         
-        imagePreview.addEventListener(getClickType(), function(event) {
+        imagePreview.addEventListener("click", function(event) {
             if (!DOMUtils.hasParentClass(event.target, "image")) {
                 DOMUtils.removeElem(imagePreview);
             }
