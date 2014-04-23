@@ -3,6 +3,7 @@ window.onload = function() {
     if (isPost()) {
         if (!isMobile()) {
             setupImagePreviews();
+            setupErrorImages();
         }
     }
 };
@@ -61,6 +62,16 @@ function setupImagePreviews(post) {
     var images = post.getElementsByTagName("img");
     Utils.forEach(images, function (i, val) {
         val.addEventListener(getClickType(), function() {onImageClick(val)});
+    });
+}
+
+function setupErrorImages(post) {
+    var post = post || getPostElem();
+    var images = post.getElementsByTagName("img");
+    Utils.forEach(images, function (i, val) {
+        if (!val.complete || typeof val.naturalWidth == "undefined" || val.naturalWidth == 0) {
+            val.src = "/img/no-image.png";
+        }
     });
 }
 
