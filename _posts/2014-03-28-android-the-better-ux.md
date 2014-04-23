@@ -1,5 +1,5 @@
 ---
-title: (Draft) Android, the better UX?
+title: Android, the better UX?
 author: Alex Wendland
 layout: post
 featureimg: "posts/2014-03-28_nexus-5.png"
@@ -60,7 +60,7 @@ Android's advanced notification drawer allows for quick, appropriate access to r
 
 A sometimes overlooked feature, this attribute of Android is invaluable in its usefulness. Besides providing a visual benefit to apps, it creates a very different navigational experience for the user than what is found on iOS.
 
-To start off, I'll approach the visual benefits. Android's back button frees up actionbar/header space in apps. By keeping the action off of the header and placing it physically in the phone's button arrangement, or, as of late, in a software bar of navigation buttons, it allows for significantly more room in the app's header.
+<!---To start off, I'll approach the visual benefits. Android's back button frees up actionbar/header space in apps. By keeping the action off of the header and placing it physically in the phone's button arrangement, or, as of late, in a software bar of navigation buttons, it allows for significantly more room in the app's header.
 
 Here is how iOS implements the back-navigation:
 
@@ -70,7 +70,7 @@ Compared to how an Android app's header would look:
 
 ![Android Back Navigation Header](/img/posts/2014-03-28_android-back-nav-header.png)
 
-Besides providing back navigation in a more accessible manner, Android also encourages its use in many scenarios outside of just application hierchy traversal. With a tap of the back button Android popup dialogs can be quickly closed, an open notification drawer can be returned to its unopen state, an obtrusive keyboard can be removed from the screen, and websites can be quickly returned to.
+Besides providing back navigation in a more accessible manner, -->Android also encourages its use in many scenarios outside of just application hierchy traversal. With a tap of the back button Android popup dialogs can be quickly closed, an open notification drawer can be returned to its unopen state, an obtrusive keyboard can be removed from the screen, and websites can be quickly returned to.
 
 Here is a demo where the nav bar is closed, the keyboard is closed, then the "Compose Email" screen in Gmail is exited, all done using only the back button:
 
@@ -78,15 +78,19 @@ Here is a demo where the nav bar is closed, the keyboard is closed, then the "Co
 
 The design of the back button extends to much more than full applications and influences the whole experience of Android by providing a quick means to close the existing context. The back button brings an ease to navigation that allows the user to do what they want quicker.
 
-### Reason 4: Action Items
+### Reason 4: Action Items and the Overflow Menu
 
-The Android action bar is another item that provides both a visual benefit as well as an influence on every Android applications functionality. The Android actionbar exhibits not only the application name and icon, but a plethora of actions that can be applied to the current screen.
+The Android overflow menu is another item that exhibits an influence on every Android application's functionality. The Android actionbar contains not only the application name and icon, but a menu icon for access to a plethora of actions that can be applied to the current screen.
 
 Here is the Gmail application with a received email currently opened:
 
 ![Android Action Bar Items](/img/posts/2014-03-28_android-actionbar-gmail.png)
 
-The actions available from left to right: _Archive, Delete, Mark unread, Open overflow menu_. The overflow menu contains many more: _Move to, Change labels, Mark not important,_... and countless others. All of these items are useful actions that the user may wish to apply to an email and the most important ones are prioritized so that they require only one tap to accomplish.
+The actions available from left to right: _Archive, Delete, Mark unread, Open overflow menu_. The overflow menu contains many more:
+
+![Android Action Bar Items in the Overflow Menu](/img/posts/2014-03-28_android-actionbar-gmail-menu.png)
+
+_Move to, Change labels, Mark not important,_... and countless others. All of these items are useful actions that the user may wish to apply to an email and the most important ones are prioritized so that they require only one tap to accomplish.
 
 By keeping the actions easily accessible, Android diminishes the effort required by a user to execute them. It allows a user to quickly deal with the item at hand, be it deleting a spam email or calling someone that he/she is currently texting. These actions can be easily applied and the user can move on to his/her next thing.
 
@@ -98,7 +102,7 @@ And here's the same application on Android:
 
 ![Application on Android](/img/posts/2014-03-28_android-actionbar-application.png)
 
-The Android version makes performing actions on the content much easier than the iOS one. Even though the iOS one does have some analogous action items, it doesn't have the full breadth of options as presented in the Android one.
+The Android version makes performing actions on the content much easier than the iOS one. Even though the iOS one does have some analogous action items, it doesn't have the full breadth of options as presented in the Android one. Typically, the actions must be hidden away or parried down in order to fit.
 
 ### Reason 5: The Share Menu
 
@@ -130,7 +134,7 @@ All-in-all, Android may not get the crown f0r "Most Beautiful mobile OS" (though
 
   1. not wrenching users away from their current context with encroaching alerts
   2. providing a useful, up-to-date view of current activity
-  3. presenting a quick means to respond to that current activity
+  3. presenting a breadth of options to respond to that current activity
   4. offering direct access to actions applying to the screen at-hand
   5. creating an intrinsicly communicative framework through which every application can connect
   
