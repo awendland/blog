@@ -1,0 +1,3 @@
+<p>
+<img src="{{ include.s }}" alt="{{ include.a }}" {% if include.c != null %}class="{{include.c}}"{% endif%}/>
+</p>

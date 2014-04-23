@@ -22,11 +22,11 @@ Sublime Text 3 - <http://www.sublimetext.com/3>
 Brackets - <http://brackets.io/>
 
 #### Update 2 -- 2013-08-03 01:05 PST
-<img alt="Brackets editing a JS file" src="{{ site.url }}/img/brackets_screenshot.png" width="300" height="176" />
+{% include img a="Brackets editing a JS file" s="/img/brackets_screenshot.png" c="large" %}
 
 A screenshot of Brackets with a Javascript file open
 
-<img alt="ST3 Editing a JS File" src="{{ site.url }}/img/st3_screenshot.png" width="300" height="202" />
+{% include img a="ST3 Editing a JS File" s="/img/st3_screenshot.png" c="large" %}
 
 A screenshot of Sublime Text 3 with that same Javascript File open
 
