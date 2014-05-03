@@ -668,6 +668,11 @@ h6 {
 .post header h1 {
   overflow-x: hidden;
 }
+@media (min-width: 40rem) {
+  .post header {
+    padding: 2em 0;
+  }
+}
 .post > .body > p {
   text-align: justify;
   line-height: 1.8;
