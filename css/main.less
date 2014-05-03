@@ -659,9 +659,6 @@ h5, h6 {
         h1 {
             overflow-x: hidden;
         }
-        @media @large {
-            padding: 2em 0;
-        }
     }
     & > .body {
         & > p {
@@ -729,6 +726,14 @@ h5, h6 {
         }
         &.small {
             font-size: 1em;
+        }
+    }
+}
+
+#post {
+    header {
+        @media @large {
+            padding: 2em 0;
         }
     }
 }
