@@ -1,6 +1,7 @@
 window.onload = function() {
     setupNavMenu();
     if (isPost()) {
+        scrollToTop();
         if (!isMobile()) {
             setupImagePreviews();
             setupErrorImages();
@@ -73,6 +74,12 @@ function setupErrorImages(post) {
             val.src = "/img/no-image.png";
         }
     });
+}
+
+function scrollToTop() {
+    $('.st-content').animate({
+          scrollTop: $(getPostElem()).offset().top
+        }, 500);
 }
 
 function isPost() {
