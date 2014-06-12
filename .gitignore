@@ -1,1 +1,8 @@
+# jekyll
 _site/
+
+# dev
+css/less/**/*.css
+
+# gedit
+*~

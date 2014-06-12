@@ -1,0 +1,62 @@
+.clubs-list {
+    .list();
+    .position {
+        font-weight: 400;
+        font-size: .8em;
+    }
+    .name {
+    }
+    .time {
+        font-size: .8em;
+        @media @large {
+            top: .5em;
+            right: 0;
+            position: absolute;
+            font-size: 1em;
+        }
+    }
+    .desc {
+        font-style: italic;
+    }
+}
+
+.skills-list {
+    .list();
+    .group-name {
+
+    }
+    ul {
+        padding: 0;
+
+        @media @large {
+            padding-left: 1em;
+        }
+        li:last-child {
+            border-bottom-width: 0px;
+        }
+    }
+    .name {
+
+    }
+    .type {
+        font-size: .8em;
+        &::before{
+            content: "("
+        }
+        &::after{
+            content: ")"
+        }
+        @media @large {
+            top: .5em;
+            right: 0;
+            position: absolute;
+        }
+    }
+    .desc {
+        font-style: italic;
+        margin: .25em 0;
+    }
+    .cost, .stat {
+        font-size: .8em;
+    }
+}

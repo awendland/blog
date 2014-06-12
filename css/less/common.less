@@ -1,0 +1,94 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+::-moz-selection { background: rgb(83, 161, 184);; color: #fff; text-shadow: none; }
+::selection { background: rgb(83, 161, 184);; color: #fff; text-shadow: none; }
+
+html {
+    font: 18px/1.5 serif;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 300;
+
+    background-color: #333;
+    color: rgb(0, 0, 0);
+}
+
+@media @large {
+    html {
+        font-size: 16px;
+    }
+}
+
+code, kbd, pre, samp {
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: rgb(83, 161, 184);
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.33333;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 1.6;
+}
+
+h3 {
+    font-size: 1.75rem;
+    line-height: 1;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1.1rem;
+}
+a {
+    text-decoration: none;
+    color: rgb(83, 161, 184);
+    &:hover, &:focus {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .st-content & {
+        /* Keep long URLs from breaking out of container */
+        /* http://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto;
+    }
+}
+
+ul {
+    margin: 0;
+}
+
+li {
+    padding-top: .5em;
+
+    &:first-child {
+        padding-top: 0;
+    }
+}
+
+h5, h6 {
+    margin-top: .3em;
+    margin-bottom: .3em;
+}

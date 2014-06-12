@@ -1,0 +1,42 @@
+/*****************************************************************************/
+/*
+/* Custom Common
+/*
+/*****************************************************************************/
+
+/* Columns */
+@media @large {
+    .column {
+        float: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .column.full { width: 100%; }
+    .column.two-thirds { width: 66.7%; }
+    .column.half { width: 50%; }
+    .column.third { width: 33.3%; }
+    .column.fourth { width: 24.95%; }
+    .column.flow-opposite { float: right; }  
+}
+
+@media @large {
+    .column.flow-opposite { float: right; }
+}
+
+/*****************************************************************************/
+/*
+/* Layouts
+/*
+/*****************************************************************************/
+.container {
+    width: 90%;
+    margin: 0 auto;
+
+    &.page {
+        max-width: 800px;
+    }
+    &.page-sidebar {
+        max-width: 1200px;
+    }
+}

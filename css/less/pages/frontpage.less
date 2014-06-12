@@ -1,0 +1,40 @@
+/*****************************************************************************/
+/*
+/* Front Page
+/*
+/*****************************************************************************/
+
+.posts {
+    article {
+        border-bottom: 1px solid #ccc;
+        padding-top: 1em;
+        .body {
+            .ellipse {
+                visibility: hidden;
+            }
+            .read-more {
+                text-align: center;
+                line-height: 0.25;
+                padding-top: 1em;
+                padding-bottom: 3em;
+                a {
+                    display: inline-block;
+                    position: relative;
+                    padding: 1em;
+                    background: rgb(83, 161, 184);
+                    color: white;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+
+    article:first-child {
+        padding-top: 0em;
+    }
+
+    article:last-child {
+        margin-bottom: 2em;
+        border-bottom: 0px;
+    }
+}
