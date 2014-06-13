@@ -414,7 +414,7 @@ h6 {
   color: #53a1b8;
   border: 1px solid #53a1b8;
   border-radius: 4px;
-  transition: color .5s, background .5s;
+  transition: color .3s, background .3s;
 }
 .button:hover {
   background: #53a1b8;
@@ -427,62 +427,14 @@ h6 {
 /*****************************************************************************/
 #header {
   position: relative;
-  margin: 0 0 8em 0;
-}
-#header #site-branding {
-  padding: 7em 0 9em;
-  text-align: center;
-  background: url("../img/cover_amazon-aerial.jpg");
-  overflow: hidden;
-}
-#header #site-branding a {
-  -ms-word-break: normal;
-  word-break: normal;
-  color: #ffffff;
-}
-#header #site-branding a h1 {
-  color: #ffffff;
-  margin: 0;
-  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-  font-weight: 700;
-  font-size: 3.5em;
-  line-height: 1;
-}
-@media (min-width: 40rem) {
-  #header #site-branding a h1 {
-    font-size: 7em;
-  }
-}
-#header #site-branding a h2 {
-  color: #ffffff;
-  margin: 0;
-  letter-spacing: 4px;
-  opacity: .85;
-  font-size: 1em;
-  font-weight: 400;
-}
-#header #site-branding a .print-url {
-  display: none;
-}
-@media print {
-  #header #site-branding a .print-url {
-    display: block;
-  }
-}
-@media (min-width: 40rem) {
-  #header #site-branding {
-    padding-bottom: 12em;
-  }
+  margin: 0 0 0 0;
 }
 #header .avatar {
-  position: absolute;
-  bottom: -6.5em;
-  left: 50%;
+  margin: 0 auto;
   border-radius: 50%;
   line-height: 0;
   height: 13em;
   width: 13em;
-  margin: 0px -6.5em;
   border: 0.422em solid #f9f9f9;
 }
 #header .avatar img {
