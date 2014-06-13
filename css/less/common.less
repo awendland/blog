@@ -8,11 +8,10 @@
 
 html {
     font: 18px/1.5 serif;
-    font-family: Ubuntu, sans-serif;
-    font-weight: 300;
+    font-family: Merriweather, sans-serif;
 
-    background-color: #333;
-    color: rgb(0, 0, 0);
+    background-color: @backgroundColor;
+    color: @textColor;
 }
 
 @media @large {
@@ -26,8 +25,12 @@ code, kbd, pre, samp {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: rgb(83, 161, 184);
-    font-weight: 300;
+    color: @headerColor;
+    font-weight: 700;
+    
+    & > a {
+        color: @headerColor;
+    }
 }
 
 h1 {
