@@ -1,7 +1,9 @@
 ---
 layout: post
+showHeader: true
 title: Resume
 icon: note
+comments: false
 ---
 ### Objective
 ___
