@@ -1,7 +1,6 @@
 window.onload = function() {
     setupNavMenu();
     if (isPost()) {
-        scrollToTop();
         if (!isMobile()) {
             setupImagePreviews();
             setupErrorImages();

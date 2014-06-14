@@ -14,7 +14,9 @@
                 <div class="st-content"><!-- this is the wrapper for the content -->
                     <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
                         {% include floater.html %}
+                        {% if page.showHeader %}
                         {% include header.html %}
+                        {% endif %}
 
                         {{ content }}
 
