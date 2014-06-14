@@ -269,14 +269,14 @@ input[type="checkbox"] {
   text-shadow: none;
 }
 html {
-  font: 18px/1.5 serif;
+  font: 16px/1.5 serif;
   font-family: Merriweather, sans-serif;
   background-color: #ffffff;
   color: #333333;
 }
 @media (min-width: 40rem) {
   html {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 code,
@@ -401,10 +401,10 @@ h6 {
   width: 90%;
   margin: 0 auto;
 }
-.container.page {
+.page .container {
   max-width: 800px;
 }
-.container.page-sidebar {
+.page-sidebar .container {
   max-width: 1200px;
 }
 .button {
@@ -440,6 +440,15 @@ h6 {
 #header .avatar img {
   border-radius: 50%;
   height: 100%;
+}
+#header hr {
+  width: 90%;
+  margin: 1.5rem auto 1rem;
+}
+@media (min-width: 40rem) {
+  #header hr {
+    display: none;
+  }
 }
 #floater {
   position: fixed;
@@ -742,6 +751,12 @@ h6 {
 }
 .post header h1 {
   overflow-x: hidden;
+  font-size: 1.5rem;
+}
+@media (min-width: 40rem) {
+  .post header h1 {
+    font-size: 2.5rem;
+  }
 }
 .post > .body > p {
   text-align: left;
