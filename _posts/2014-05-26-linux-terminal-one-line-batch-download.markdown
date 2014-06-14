@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Linx Terminal Batch Download One Liner"
+title:  "Linux Terminal Batch Download One Liner"
 date:   2014-05-26 17:11:16
 ---
 
