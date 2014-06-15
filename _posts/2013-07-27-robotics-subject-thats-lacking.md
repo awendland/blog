@@ -5,7 +5,7 @@ layout: post
 published: true
 ---
 
-In light of the lack of STEM and modern technologies training, such as Programming, Computer Architecture and other High-Tech areas, I would like to do my part by starting a weekly Robotics class.
+In light of the lack of STEM and modern technologies training, such as Programming, Computer Architecture and other High-Tech areas, I would like to do my part by starting a weekly Robotics class.<!--break-->
 
 ### Why have this class?
 
@@ -28,7 +28,7 @@ The program would meet on a weekly basis for educaction and practice in the ulti
 
 **FLL competitions are held in the Fall. Therefore this program will be preparing for the competition in 2014.*
 
-The program will be organized around groups consisting of 4-5 students each. This teaches the students team dynamics (in a realistic way, team members who aren't cooperative or performing will be handled separately) while keeping "cost per student per learning" ratio as efficient as possible. A typical day would go as follows:<!--break-->
+The program will be organized around groups consisting of 4-5 students each. This teaches the students team dynamics (in a realistic way, team members who aren't cooperative or performing will be handled separately) while keeping "cost per student per learning" ratio as efficient as possible. A typical day would go as follows:
 
 *   (15-30 min) Students gather as one group and are lectured about the days topic. Lectures would:
     *   Open up with a simple word introduction of the days topic

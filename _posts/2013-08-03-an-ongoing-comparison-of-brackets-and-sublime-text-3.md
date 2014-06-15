@@ -7,11 +7,11 @@ marquee: An Ongoing Comparison of Brackets and Sublime Text 3
 ---
 ### Intro
 
-I've worked on a few frontend web projects before and mainly used Aptana Studios 3 for all my IDE/Text Editor needs. Mainly this was because Aptana is based on Eclipse and I have done a significant amount of development in Eclipse. Aptana suited most of my needs, I especially enjoyed the built in FTP syncing and code formatter, but lacks support for custom Javascript method completion and is a massive resource hog. As I began to research Angular JS to build my frontend web project on, I found that many of the tutorial creators were using Sublime Text 3. I hopped on over to the Sublime Text site and downloaded the beta. ST3 is a a much needed refresh from the traditional Eclipse-esque IDE development; it's so subtle and sleek without any of the clunk. ST3 seemed to be the answer!
+I've worked on a few frontend web projects before and mainly used Aptana Studios 3 for all my IDE/Text Editor needs. Mainly this was because Aptana is based on Eclipse and I have done a significant amount of development in Eclipse. Aptana suited most of my needs, I especially enjoyed the built in FTP syncing and code formatter, but lacks support for custom Javascript method completion and is a massive resource hog. As I began to research Angular JS to build my frontend web project on, I found that many of the tutorial creators were using Sublime Text 3. I hopped on over to the Sublime Text site and downloaded the beta. ST3 is a a much needed refresh from the traditional Eclipse-esque IDE development; it's so subtle and sleek without any of the clunk. ST3 seemed to be the answer!<!--break-->
 
 While looking around though, I found reference to another project: a project called Brackets. Upon further inquiry, I discovered something quite cool. Brackets is an open source (<a title="Github Brackets" href="https://github.com/adobe/brackets" target="_blank">Github Brackets</a>) project by Adobe. It is written almost entirely in HTML/CSS and Javascript, the very same languages that Brackets helps you code in, running in a thin native-shell so that it can access the native filesystem. Now I was stuck at a fork, do I go the tried and true method with ST3? Or do I chance the new path, unaware of what may come up, good or bad?
 
-Now begins an ongoing comparison of the two as I switch between them during my quest.<!--break-->
+Now begins an ongoing comparison of the two as I switch between them during my quest.
 
 #### Update 1 -- 2013-08-03 12:52 PST
 

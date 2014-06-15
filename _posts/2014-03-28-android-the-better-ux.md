@@ -6,13 +6,13 @@ featureimg: "posts/2014-03-28_nexus-5.png"
 ---
 ### Intro
 
-What's the best looking smartphone? Quickly the obvious response is given, "iPhone". The leader in innovation, design, functionality, usability, friendliness... et cetara. I'd like to challenge this widespread assumptions and propose that, in fact, Android provides a better net user experience.
+What's the best looking smartphone? Quickly the obvious response is given, "iPhone". The leader in innovation, design, functionality, usability, friendliness... et cetara. I'd like to challenge this widespread assumptions and propose that, in fact, Android provides a better net user experience.<!--break-->
 
 I'll start off with one stipulation, this argument only holds merit if the large amount of sub-par Android apps is ignored. Android did not impose a solid set of design guidelines until relatively recently and there are many apps that continue to look outdated. Instead, I'll focus on the new-breed of high quality apps gracing the Play Store as well as the core UX features of the Android system.
 
 ### Reason 1: Alerts
 
-Android has mastered all things notification; first on the list comes how it handles alerts. Android alerts user about a new notification in a subtle, non-instrusive way. It rolls the text over the statusbar then fades the statusbar back to its prior state. Unlike iOS, it never overlays the user's current screen or interrupts the user's flow.<!--break-->
+Android has mastered all things notification; first on the list comes how it handles alerts. Android alerts user about a new notification in a subtle, non-instrusive way. It rolls the text over the statusbar then fades the statusbar back to its prior state. Unlike iOS, it never overlays the user's current screen or interrupts the user's flow.
 
 First observe how iOS handles notifications:
 
