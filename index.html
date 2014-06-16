@@ -8,9 +8,11 @@ icon: star
     {% for post in site.posts %}
         <article class="post">
             <header>
+                {% unless forloop.first %}
                 {% if post.featureimg != null %}
                     <img src="{{site.url}}/img/{{post.featureimg}}" />
                 {% endif %}
+                {% endunless %}
                 <h1><a href="{{ post.url }}">{{ post.title }}</a></h1><span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
             </header>
 
