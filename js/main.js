@@ -10,7 +10,8 @@ window.onload = function() {
 
 function setupNavMenu() {
     var menuToggle = document.getElementById("open-menu");
-    var mainContainer = document.getElementById("st-container");
+    var menuContainer = menuToggle.parentElement;
+    var mainContainer = document.getElementsByTagName("main")[0];
     
     var isOpen = false;
     
@@ -28,13 +29,13 @@ function setupNavMenu() {
     }
     
     var toggleMenuFunc = function() {
-        if (isOpen) {
-            mainContainer.className = "st-container";
-            toggleEscapeKeyFunc(false);
-        } else {
-            mainContainer.className = "st-container st-menu-open";
-            toggleEscapeKeyFunc(true);
-        }
+        DOMUtils.toggleClass(mainContainer, "menu-open");
+        var t = menuContainer.getElementsByClassName("flyout-btn")
+        DOMUtils.toggleClass(t[0], "btn-rotate");
+        var flyoutElem = menuContainer.getElementsByClassName("flyout")[0];
+        DOMUtils.removeClass(flyoutElem, "flyout-init");
+        DOMUtils.toggleClass(flyoutElem, "expand");
+        toggleEscapeKeyFunc(!isOpen);
         isOpen = !isOpen;
     };
     
@@ -76,7 +77,7 @@ function setupErrorImages(post) {
 }
 
 function scrollToTop() {
-    $('.st-content').animate({
+    $('main').animate({
           scrollTop: $(getPostElem()).offset().top
         }, 500);
 }
@@ -100,18 +101,47 @@ var DOMUtils = (function () {
         return (f(e) ? true : f(e.parentElement));
     }
     
-    _.hasParentClass = function(e, c) {
+    _.hasParentClass = function (e, c) {
         return _.testParents(e, function(el) {
             return e.classList.contains(c);
         });
     }
     
-    _.removeElem = function(e) {
+    _.removeElem = function (e) {
         e.parentElement.removeChild(e);
     }
     
-    _.getAttr = function(e, a) {
+    _.getAttr = function (e, a) {
         return e.attributes.getNamedItem(a).nodeValue;
+    }
+    
+    var getClassList = function (e) {
+        return e.className.split(" ");
+    }
+    
+    var setClassList = function (e, classes) {
+        e.className = classes.join(" ");
+    }
+    
+    _.addClass = function (e, c) {
+        e.className = e.className + " " + c;
+        return e;
+    }
+    
+    _.removeClass = function (e, c) {
+        var classes = getClassList(e);
+        Utils.removeFromList(classes, c);
+        setClassList(e, classes);
+        return e;
+    }
+    
+    _.toggleClass = function (e, c) {
+        var classes = getClassList(e);
+        if (!Utils.removeFromList(classes, c)) {
+            classes.push(c);
+        }
+        setClassList(e, classes);
+        return e;
     }
     
     return _;
@@ -132,6 +162,14 @@ var Utils = (function () {
                 f(key, o[key]);
             }
         }  
+    };
+    
+    _.removeFromList = function (a, e) {
+        var i = a.indexOf(e);
+        if (i === -1)
+            return false;
+        a.splice(i, 1);
+        return true;
     };
     
     return _;
