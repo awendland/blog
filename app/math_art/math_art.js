@@ -33,24 +33,37 @@ function MathArt(root) {
         canvasData = ctx.getImageData(0, 0, widthInput.value, heightInput.value);
     });
 
+    // Setup textarea expandsion listeners
+    var textareaInputs = [clrFuncRed, clrFuncGreen, clrFuncBlue];
+    for (var textareaIndex = 0; textareaIndex < textareaInputs.length; textareaIndex++) {
+        textareaInputs[textareaIndex].addEventListener('input', function (event) {
+            this.setAttribute('rows', this.value.split('\n').length);
+        });
+    };
+
     // Get canvas context
     var ctx = canvas.getContext('2d'),
         canvasData = ctx.getImageData(0, 0, widthInput.value, heightInput.value);
 
-    var buildColorFunction = function mathArtBuildColorFunction(input, color) {
+    var buildColorFunction = function mathArtBuildColorFunction (input, color) {
         var func = new Function(['x', 'y'], input.value);
         return func;
     };
 
     rebuildBtn.addEventListener('click', function (event) {
+        renderInput();
+    });
+
+    // Render the inputted functions
+    var renderInput = function mathArtRenderInput () {
         var redFunc = buildColorFunction(clrFuncRed, 'red'),
             greenFunc = buildColorFunction(clrFuncGreen, 'green'),
             blueFunc = buildColorFunction(clrFuncBlue, 'blue');
         render(redFunc, greenFunc, blueFunc);
-    });
+    }
 
-    // Redraw the
-    var render = function mathArtRender(r, g, b) {
+    // Redraw the canvas
+    var render = function mathArtRender (r, g, b) {
         for (var x = 0; x < widthInput.value; x++) {
             for (var y = 0; y < heightInput.value; y++) {
                 var index = (x + y * widthInput.value) * 4;
@@ -63,4 +76,7 @@ function MathArt(root) {
         }
         ctx.putImageData(canvasData, 0, 0);
     };
+
+    // Render input for the first time
+    renderInput();
 }
