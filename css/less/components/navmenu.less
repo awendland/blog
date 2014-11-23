@@ -11,9 +11,16 @@
 @d5: (@r * 4);
 @d6: (@r * 5);
 
-@r: 18deg;
+@r: -18deg;
 @n: 6;
 
+.navmenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
 .flyout-wrap {
   position: relative;
   height: 191px;
@@ -28,7 +35,7 @@
       display: block;
       height: 170px;
       background: yellow;
-      transform-origin: (25px / 2) bottom;
+      transform-origin: (25px / 2) top;
 
       // Transform loop
       .loop (@i) when (@i < @n + 1) {
@@ -80,24 +87,28 @@
 
   // Normal
   .flyout li a {
-    top: 150px;
+    top: 10px;
     animation: contract .35s ease-out 1 backwards;
+    transition: opacity .6s;
+    opacity: 0;
+    pointer-events: none;
   }
 
   // Active
   .flyout.expand li a {
-    top: 10px;
+    top: 150px;
     animation: expand .6s ease 1 backwards;
+    opacity: 1;
   }
 
   // Clicked
   .flyout.fade li a.clicked {
-    top: 10px;
+    top: 150px;
     animation: clicked .5s ease-out 1 forwards;
   }
 
   .flyout.fade li a:not(.clicked) {
-    top: 10px;  animation: fade .5s ease-out 1 forwards;
+    top: 150px;  animation: fade .5s ease-out 1 forwards;
 
     span {
       opacity: .1;
@@ -122,7 +133,7 @@
   .flyout-btn {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 30px;
     z-index: 9999;
     width:  36px;
     height: 36px;
@@ -153,16 +164,15 @@
     }
 
   .ani-expand {
-    0%   { top: 150px; }
-    50%  { top: -10px; }
-    70%  { top: 15px; }
-    100% { top: 10px; }
+    0%   { top: 10px; }
+    50%  { top: 175px; }
+    100% { top: 150px; }
   }
 
   .ani-contract {
-    0%   { top: 10px; }
-    40%  { top: -25px; }
-    100% { top: 150px; }
+    0%   { top: 150px; }
+    40%  { top: 175px; }
+    100% { top: 10px; }
   }
 
   .ani-clicked {

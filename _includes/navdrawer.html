@@ -1,0 +1,12 @@
+<ul>
+    <h2><i class="icon icon-paperplane"></i><br/>Alex Wendland</h2>
+    <ul>
+        {% for p in site.pages %}
+        {% if p.noshow == null %}
+            <li {% if p.url == page.url %}class="active"{% endif %}><a href="{{ p.url }}"><i class="icon icon-{{p.icon}}"></i>{{ p.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+        <li><a href="http://alexwendland.com/lab"><i class="icon icon-lab"></i>Lab</a></li>
+        <li><a href="http://alexwendland.com"><i class="icon icon-eye"></i>Portfolio</a></li>
+    </ul>
+</ul>
