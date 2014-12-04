@@ -1,5 +1,6 @@
 window.onload = function() {
-    setupNavMenu();
+    setupFadeNav();
+    setupNavButton();
     if (isPost()) {
         if (!isMobile()) {
             setupImagePreviews();
@@ -8,7 +9,39 @@ window.onload = function() {
     }
 };
 
-function setupNavMenu() {
+function setupFadeNav() {
+    var delta = 5;
+    var navbar = document.querySelector(".navbar"),
+        body = document.querySelector("body");
+    var lastScrollTop = 0;
+    var didScroll = false;
+    window.addEventListener('scroll', function() {
+        didScroll = true;
+    });
+
+    setInterval(function() {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+
+    function hasScrolled() {
+        var scrollTop = body.scrollTop;
+        if (Math.abs(scrollTop - lastScrollTop) < delta)
+            return;
+        if (scrollTop < lastScrollTop) {
+            DOMUtils.removeClass(navbar, "hide");
+        } else {
+            if (scrollTop > navbar.offsetHeight){
+                DOMUtils.addClass(navbar, "hide");
+            }
+        }
+        lastScrollTop = scrollTop;
+    }
+}
+
+function setupNavButton() {
     var menuToggle = document.getElementById("open-menu");
     var menuContainer = menuToggle.parentElement;
     var mainContainer = document.getElementsByTagName("main")[0];
@@ -30,11 +63,9 @@ function setupNavMenu() {
     
     var toggleMenuFunc = function() {
         DOMUtils.toggleClass(mainContainer, "menu-open");
-        var t = menuContainer.getElementsByClassName("flyout-btn")
-        DOMUtils.toggleClass(t[0], "btn-rotate");
-        var flyoutElem = menuContainer.getElementsByClassName("flyout")[0];
-        DOMUtils.removeClass(flyoutElem, "flyout-init");
-        DOMUtils.toggleClass(flyoutElem, "expand");
+        var navmenuElem = menuContainer.getElementsByClassName("navmenu");
+        DOMUtils.toggleClass(navmenuElem[0], "open");
+        var navMenuFlyoutElem = navmenuElem.getElementsByClassName("flyout");
         toggleEscapeKeyFunc(!isOpen);
         isOpen = !isOpen;
     };
@@ -124,7 +155,9 @@ var DOMUtils = (function () {
     }
     
     _.addClass = function (e, c) {
-        e.className = e.className + " " + c;
+        if (e.className.indexOf(c) === -1) {
+            e.className = e.className + " " + c;
+        }
         return e;
     }
     

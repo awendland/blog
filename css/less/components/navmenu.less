@@ -4,225 +4,44 @@
 /*
 /*****************************************************************************/
 
-@d1: (@r * 0);
-@d2: (@r * 1);
-@d3: (@r * 2);
-@d4: (@r * 3);
-@d5: (@r * 4);
-@d6: (@r * 5);
-
-@r: -18deg;
-@n: 6;
-
-.navmenu {
+.navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   z-index: 9999;
-}
-.flyout-wrap {
-  position: relative;
-  height: 191px;
+  top: 0;
+  transition: top 0.2s ease-in-out;
+  height: 50px;
 
-  .flyout {
-    position: relative;
-    margin: 0 0 1px 6px;
-    line-height: 0;
+  background: rgba(255, 255, 255, .95);
+  width: 100%;
 
-    & > li {
-      position: absolute;
-      display: block;
-      height: 170px;
-      background: yellow;
-      transform-origin: (25px / 2) top;
-
-      // Transform loop
-      .loop (@i) when (@i < @n + 1) {
-
-        &:nth-of-type(@{i}) { transform: rotate(@r * (@i - 1)); }
-
-        .loop(@i + 1);
-      }
-
-      .loop(1);
-
-      a {
-        position: absolute;
-        display: block;
-        width:  26px;
-        height: 26px;
-        overflow: hidden;
-        text-indent: -99999px;
-        background: #444;
-        border: 3px solid #fff;
-        border-radius: 50%;
-        box-shadow: rgba(0, 0, 0, .4) 0 0 5px 0, rgba(0, 0, 0, .2) 0 0 0 1px, inset rgba(0, 0, 0, .5) 0 0 2px 0;
-
-        &:active {
-          background: #000;
-          border-color: #555;
-
-          span {
-            opacity: .3;
-          }
-        }
-
-        span {
-          display: block;
-          width:  26px;
-          height: 26px;
-          background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16px' height='16px'><path fill='#fff' d='M11.045,9.879l1.906,6.114l-4.949-3.791L3.059,16l1.9-6.117L0,6.114l6.123,0.013L7.998,0l1.879,6.12L16,6.104L11.045,9.879z'/></svg>") no-repeat center center;
-          background-size: 16px 16px;
-          // mask-image: url(star.svg);
-        }
-      }
-    }
+  &.hide {
+    top: -50px;
   }
-
-  // Triggers
-  .flyout-init li {
-    display: none;
-  }
-
-  // Normal
-  .flyout li a {
-    top: 10px;
-    animation: contract .35s ease-out 1 backwards;
-    transition: opacity .6s;
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  // Active
-  .flyout.expand li a {
-    top: 150px;
-    animation: expand .6s ease 1 backwards;
-    opacity: 1;
-  }
-
-  // Clicked
-  .flyout.fade li a.clicked {
-    top: 150px;
-    animation: clicked .5s ease-out 1 forwards;
-  }
-
-  .flyout.fade li a:not(.clicked) {
-    top: 150px;  animation: fade .5s ease-out 1 forwards;
-
-    span {
-      opacity: .1;
-      transition: opacity .5s ease;
-    }
-  }
-
-  // Animation loop
-  .loop (@i) when (@i < @n + 1) {
-
-    .flyout li:nth-of-type(@{i}) a                     { animation-delay: (.20s - .04s * (@i - 1)); }
-    .flyout li:nth-of-type(@{i}) a:not(.clicked) span  { animation: ~"spin@{i}-contract .9s ease-out 1 backwards"; }
-    .flyout.expand li:nth-of-type(@{i}) a              { animation-delay: (.04s * (@i - 1)); }
-    .flyout.expand li:nth-of-type(@{i}) a span         { transform: rotate(-(@r * (@i - 1))); animation: ~"spin@{i}-expand .6s ease-out 1 backwards"; }
-    .flyout.fade li:nth-of-type(@{i}) a.clicked span   { transform: rotate(-(@r * (@i - 1))); }
-
-    .loop(@i + 1);
-  }
-
-  .loop(1);
 
   .flyout-btn {
-    position: absolute;
-    top: 0;
-    left: 30px;
-    z-index: 9999;
-    width:  36px;
-    height: 36px;
-    overflow: hidden;
-    text-indent: -99999px;
-    background: #f76f54;
-    background: linear-gradient(top, #f76f54 0, #dd3535 49%, #d32121 51%, #c61f1f 100%);
-    border: 4px solid #fff;
-    border-radius: 50%;
-    outline: none;
-    box-shadow: rgba(0, 0, 0, .3) 0 3px 8px 0, rgba(0, 0, 0, .2) 0 0 0 1px, inset rgba(0, 0, 0, .3) 0 0 0 1px, inset rgba(255, 255, 255, .3) 0 1px 0 1px;
-
-    &:hover {
-      // never mind
-    }
-
-    span {
+    height: 44px;
+    width: 44px;
+    border-radius: 0.25em;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid;
+    display: block;
+  }
+  .flyout {
+    padding-left: 0;
+    display: none;
+    &.open {
       display: block;
-      width:  36px;
-      height: 36px;
-      // background: url(cross.svg) no-repeat center center;
-      background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='20px' height='20px'><g><path fill='#fff' d='M20,11.402c0,0.453-0.367,0.82-0.822,0.82H0.82c-0.453,0-0.82-0.367-0.82-0.82V8.598 c0-0.454,0.367-0.821,0.82-0.821h18.357C19.633,7.776,20,8.144,20,8.598V11.402z'/><path fill='#fff' d='M8.598,20c-0.453,0-0.821-0.367-0.821-0.82V0.821c0-0.452,0.368-0.82,0.821-0.82h2.804 c0.453,0,0.82,0.368,0.82,0.82V19.18c0,0.453-0.367,0.82-0.82,0.82H8.598z'/></g></svg>") no-repeat center center;
-      transition: transform .4s ease;
+    }
+    li {
+      list-style: none;
+      a {
+        i {
+
+        }
+        span {
+
+        }
+      }
     }
   }
-    .flyout-btn.btn-rotate span {
-      transform: rotate(-135deg);
-    }
-
-  .ani-expand {
-    0%   { top: 10px; }
-    50%  { top: 175px; }
-    100% { top: 150px; }
-  }
-
-  .ani-contract {
-    0%   { top: 150px; }
-    40%  { top: 175px; }
-    100% { top: 10px; }
-  }
-
-  .ani-clicked {
-    0%   { opacity: 1; transform: scale(1); }
-    100% { opacity: 0; transform: scale(5); }
-  }
-
-  @keyframes expand   { .ani-expand }
-  @keyframes contract { .ani-contract }
-
-  // a small trick
-  @keyframes clicked  {
-    0%   { transform: scale(1); opacity: 1; top: 10px; }
-    90%  {                                  top: 10px; }
-    99%  { transform: scale(6); opacity: 0; top: 150px; }
-    100% { transform: scale(0); }
-  }
-
-  @keyframes fade  {
-    0%   { transform: scale(1); opacity: 1; top: 10px; }
-    90%  {                      opacity: 0; top: 10px; }
-    99%  { transform: scale(0);             top: 150px; }
-    100% { transform: scale(0); }
-  }
-
-  // LESS still don't support loop with @keyframes, more info:
-  // https://github.com/less/less.js/issues/1264
-  .ani-spin1-expand   { 0% { transform: rotate((0 - @d1)); } 60% { transform: rotate((-360deg - @d1)); } 100% { transform: rotate((-360deg - @d1)); } }
-  .ani-spin2-expand   { 0% { transform: rotate((0 - @d2)); } 60% { transform: rotate((-360deg - @d2)); } 100% { transform: rotate((-360deg - @d2)); } }
-  .ani-spin3-expand   { 0% { transform: rotate((0 - @d3)); } 60% { transform: rotate((-360deg - @d3)); } 100% { transform: rotate((-360deg - @d3)); } }
-  .ani-spin4-expand   { 0% { transform: rotate((0 - @d4)); } 60% { transform: rotate((-360deg - @d4)); } 100% { transform: rotate((-360deg - @d4)); } }
-  .ani-spin5-expand   { 0% { transform: rotate((0 - @d5)); } 60% { transform: rotate((-360deg - @d5)); } 100% { transform: rotate((-360deg - @d5)); } }
-  .ani-spin6-expand   { 0% { transform: rotate((0 - @d6)); } 60% { transform: rotate((-360deg - @d6)); } 100% { transform: rotate((-360deg - @d6)); } }
-  .ani-spin1-contract { 0% { transform: rotate((0 - @d1)); } 50% { transform: rotate(  360deg); }        100% { transform: rotate(  360deg); } }
-  .ani-spin2-contract { 0% { transform: rotate((0 - @d2)); } 50% { transform: rotate(  360deg); }        100% { transform: rotate(  360deg); } }
-  .ani-spin3-contract { 0% { transform: rotate((0 - @d3)); } 50% { transform: rotate(  360deg); }        100% { transform: rotate(  360deg); } }
-  .ani-spin4-contract { 0% { transform: rotate((0 - @d4)); } 50% { transform: rotate(  360deg); }        100% { transform: rotate(  360deg); } }
-  .ani-spin5-contract { 0% { transform: rotate((0 - @d5)); } 50% { transform: rotate(  360deg); }        100% { transform: rotate(  360deg); } }
-  .ani-spin6-contract { 0% { transform: rotate((0 - @d6)); } 50% { transform: rotate(  360deg); }        100% { transform: rotate(  360deg); } }
-
-  @keyframes spin1-expand   { .ani-spin1-expand }
-  @keyframes spin2-expand   { .ani-spin2-expand }
-  @keyframes spin3-expand   { .ani-spin3-expand }
-  @keyframes spin4-expand   { .ani-spin4-expand }
-  @keyframes spin5-expand   { .ani-spin5-expand }
-  @keyframes spin6-expand   { .ani-spin6-expand }
-  @keyframes spin1-contract { .ani-spin1-contract }
-  @keyframes spin2-contract { .ani-spin2-contract }
-  @keyframes spin3-contract { .ani-spin3-contract }
-  @keyframes spin4-contract { .ani-spin4-contract }
-  @keyframes spin5-contract { .ani-spin5-contract }
-  @keyframes spin6-contract { .ani-spin6-contract }
 }
