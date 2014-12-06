@@ -14,3 +14,10 @@
         </div>
     </div>
 </footer>
+
+<!-- Include custom post JS -->
+{% for js in page.custom.js %}
+<script src="{{js}}" type="text/javascript"></script>{% endfor %}
+<!-- Include custom post CSS -->
+{% for css in page.custom.css %}
+<link rel="stylesheet" href="{{css}}">{% endfor %}

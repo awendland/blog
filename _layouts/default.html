@@ -4,29 +4,14 @@
         {% include head.html %}
     </head>
     <body>
-        <div id="st-container" class="st-container">
+        {% include navmenu.html %}
+        
+        {% if page.showHeader %}
+        {% include header.html %}
+        {% endif %}
 
-            <!-- content push wrapper -->
-            <div class="st-pusher">
-                <nav class="st-menu">
-                    {% include navdrawer.html %}
-                </nav>
-                <div class="st-content"><!-- this is the wrapper for the content -->
-                    <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
-                        {% include floater.html %}
-                        {% if page.showHeader %}
-                        {% include header.html %}
-                        {% endif %}
+        {{ content }}
 
-                        {{ content }}
-
-                        {% include footer.html %}
-                        <!-- the content -->
-                    </div><!-- /st-content-inner -->
-                </div><!-- /st-content -->
-
-            </div><!-- /st-pusher -->
-
-        </div><!-- /st-container -->
+        {% include footer.html %}
     </body>
 </html>

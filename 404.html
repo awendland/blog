@@ -40,24 +40,10 @@ noshow: true
 		</script>
     </head>
     <body>
-        <div id="st-container" class="st-container">
-
-            <!-- content push wrapper -->
-            <div class="st-pusher">
-                <nav class="st-menu">
-                    {% include navdrawer.html %}
-                </nav>
-                <div class="st-content"><!-- this is the wrapper for the content -->
-                    <div id="notfound" class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
-                        {% include floater.html %}
-						<h1 class="horizontal">404</h1>
-						<h1 class="vertical"><div>4</div><div>0</div><div>4</div></h1>
-                        <!-- the content -->
-                    </div><!-- /st-content-inner -->
-                </div><!-- /st-content -->
-
-            </div><!-- /st-pusher -->
-
-        </div><!-- /st-container -->
+        {% include navmenu.html %}
+        <div id="notfound">
+            <h1 class="horizontal">404</h1>
+            <h1 class="vertical"><div>4</div><div>0</div><div>4</div></h1>
+        </div>
     </body>
 </html>

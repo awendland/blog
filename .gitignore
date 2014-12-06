@@ -1,6 +1,8 @@
 # jekyll
 _site/
 
+node_modules/
+
 # dev
 css/less/**/*.css
 
