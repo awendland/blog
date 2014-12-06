@@ -1,7 +1,9 @@
 <div class="navbar">
-    <nav class="flyout-wrap">
-        <a class="flyout-btn" id="open-menu">|||</a>
-        <ul class="flyout">
+    <div class="navmenu">
+        <div class="toggle-cont">
+            <a class="toggle-btn" id="open-menu"></a>
+        </div>
+        <nav class="flyout">
             {% for p in site.pages %}{% if p.noshow == null %}
             <li {% if p.url == page.url %}class="active"{% endif %}>
                 <a href="{{ p.url }}">
@@ -22,6 +24,6 @@
                     <span>Portfolio</span>
                 </a>
             </li>
-        </ul><!-- .flyout -->
-    </nav><!-- .flyout-wrap -->
+        </nav>
+    </div>
 </div>

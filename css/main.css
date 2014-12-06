@@ -258,12 +258,12 @@ input[type="checkbox"] {
 /*
 /*****************************************************************************/
 ::-moz-selection {
-  background: #53a1b8;
+  background: rgba(0, 0, 0, 0.9);
   color: #fff;
   text-shadow: none;
 }
 ::selection {
-  background: #53a1b8;
+  background: rgba(0, 0, 0, 0.9);
   color: #fff;
   text-shadow: none;
 }
@@ -272,6 +272,9 @@ html {
   font-family: Merriweather, serif;
   background-color: #ffffff;
   color: #333333;
+}
+body {
+  padding-top: 50px;
 }
 @media (min-width: 40rem) {
   html {
@@ -300,6 +303,7 @@ h4 > a,
 h5 > a,
 h6 > a {
   color: #333333;
+  border-width: 0;
 }
 h1 {
   font-size: 2.5rem;
@@ -324,7 +328,7 @@ h6 {
 }
 a {
   text-decoration: none;
-  color: #53a1b8;
+  color: black;
 }
 a:hover,
 a:focus {
@@ -341,6 +345,20 @@ main a {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+}
+p > a {
+  border: 0.15em dashed rgba(51, 51, 51, 0.5);
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  -webkit-transition: border .1s;
+  transition: border .1s;
+}
+p > a:hover,
+p > a:focus {
+  text-decoration: none;
+  cursor: pointer;
+  border-color: #333333;
 }
 ul {
   margin: 0;
@@ -411,19 +429,19 @@ h6 {
   display: inline-block;
   position: relative;
   padding: 1em;
-  color: #53a1b8;
-  border: 1px solid #53a1b8;
+  color: #000000;
+  border: 1px solid #000000;
   border-radius: 4px;
   -webkit-transition: color .3s, background .3s;
   transition: color .3s, background .3s;
 }
 .button:hover {
-  background: #53a1b8;
+  background: #000000;
   color: white;
 }
 .card {
-  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), inset 0 0 1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), inset 0 0 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   padding: 10px;
 }
 /*****************************************************************************/
@@ -525,39 +543,112 @@ h6 {
 }
 /*****************************************************************************/
 /*
-/* Navigation Menu
+/* Navigation Bar and Menu
 /*
 /*****************************************************************************/
 .navbar {
   position: fixed;
   z-index: 9999;
   top: 0;
-  -webkit-transition: top 0.2s ease-in-out;
-  transition: top 0.2s ease-in-out;
+  -webkit-transition: top 0.2s ease-in-out, background 0.4s ease-in-out;
+  transition: top 0.2s ease-in-out, background 0.4s ease-in-out;
   height: 50px;
-  background: rgba(255, 255, 255, 0.95);
+  background: #000000;
   width: 100%;
 }
 .navbar.hide {
   top: -50px;
 }
-.navbar .flyout-btn {
-  height: 44px;
-  width: 44px;
+.navbar.top {
+  background: #000000;
+}
+.navmenu .toggle-cont {
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  -webkit-transition: background .4s;
+  transition: background .4s;
+}
+.navmenu .toggle-cont:active {
+  background: rgba(255, 255, 255, 0.5);
+}
+.navmenu .toggle-cont .toggle-btn {
+  height: 30px;
+  width: 30px;
+  display: block;
   border-radius: 0.25em;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid;
-  display: block;
+  -webkit-box-shadow: inset 0 0 0 4px white;
+  box-shadow: inset 0 0 0 4px white;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
 }
-.navbar .flyout {
+.navmenu .toggle-cont .toggle-btn:hover {
+  -webkit-box-shadow: inset 0 0 0 15px #ffffff;
+  box-shadow: inset 0 0 0 15px #ffffff;
+}
+.navmenu .flyout {
   padding-left: 0;
-  display: none;
+  width: 200px;
+  opacity: 0;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+  pointer-events: none;
+  background: white;
+  -webkit-box-shadow: 4px 0 4px -4px rgba(0, 0, 0, 0.3), 0 4px 4px -4px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 0 4px -4px rgba(0, 0, 0, 0.3), 0 4px 4px -4px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-top-width: 0;
+  border-left-width: 0;
+  border-radius: 0 0 2px 0;
 }
-.navbar .flyout.open {
-  display: block;
-}
-.navbar .flyout li {
+.navmenu .flyout li {
   list-style: none;
+  font-size: 90%;
+  padding: 0 0 0 12px;
+}
+.navmenu .flyout li a {
+  display: block;
+  color: black;
+  padding: .25em 0;
+}
+.navmenu .flyout li a i {
+  -webkit-transition: -webkit-transform .7s ease;
+  transition: transform .7s ease;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.navmenu .flyout li a span {
+  margin-left: 10px;
+}
+.navmenu .flyout li a:hover,
+.navmenu .flyout li a:focus {
+  text-decoration: none;
+}
+.navmenu .flyout li a:hover i,
+.navmenu .flyout li a:focus i {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.navmenu .flyout li a:hover span,
+.navmenu .flyout li a:focus span {
+  text-decoration: underline;
+}
+.menu-open .navmenu .toggle-cont {
+  background: white;
+}
+.menu-open .navmenu .toggle-cont .toggle-btn {
+  -webkit-box-shadow: inset 0 0 0 4px black;
+  box-shadow: inset 0 0 0 4px black;
+}
+.menu-open .navmenu .toggle-cont .toggle-btn:hover {
+  -webkit-box-shadow: inset 0 0 0 15px #000000;
+  box-shadow: inset 0 0 0 15px #000000;
+}
+.menu-open .navmenu .flyout {
+  opacity: 1;
+  pointer-events: all;
 }
 /*****************************************************************************/
 /*
@@ -565,7 +656,7 @@ h6 {
 /*
 /*****************************************************************************/
 #footer {
-  background-color: #333333;
+  background-color: #000000;
   color: #ffffff;
 }
 #footer .info {
@@ -697,7 +788,7 @@ h6 {
 .post blockquote::before {
   content: "";
   width: .5em;
-  background: #53a1b8;
+  background: #000000;
   height: 105%;
   position: absolute;
   top: -2.5%;

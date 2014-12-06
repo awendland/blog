@@ -1,0 +1,106 @@
+/*****************************************************************************/
+/*
+/* Navigation Bar and Menu
+/*
+/*****************************************************************************/
+
+.navbar {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  transition: top 0.2s ease-in-out, background 0.4s ease-in-out;
+  height: @navbarHeight;
+
+  background: rgba(0, 0, 0, 1);
+  width: 100%;
+
+  &.hide {
+    top: -@navbarHeight;
+  }
+
+  &.top {
+    background: rgba(0, 0, 0, 1);
+  }
+}
+
+@navbuttonSize: 30px;
+.navmenu {
+    .toggle-cont {
+      padding: (@navbarHeight - @navbuttonSize) / 2;
+      width: @navbarHeight;
+      height: @navbarHeight;
+      transition: background .4s;
+      &:active {
+        background: rgba(255, 255, 255, .5);
+      }
+      .toggle-btn {
+        height: @navbuttonSize;
+        width: @navbuttonSize;
+        display: block;
+        border-radius: 0.25em;
+        box-shadow: inset 0 0 0 4px white;
+        transition: box-shadow .5s;
+        &:hover {
+          box-shadow: inset 0 0 0 @navbuttonSize/2 white;
+        }
+      }
+    }
+
+    .flyout {
+      padding-left: 0;
+      width: 200px;
+      opacity: 0;
+      transition: opacity .5s;
+      pointer-events: none;
+      background: white;
+      box-shadow: 4px 0 4px -4px rgba(0, 0, 0, 0.3), 0 4px 4px -4px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(0,0,0,.5);
+      border-top-width: 0;
+      border-left-width: 0;
+      border-radius: 0 0 2px 0;
+      li {
+        list-style: none;
+        font-size: 90%;
+        padding: 0 0 0 12px;
+        a {
+          display: block;
+          color: black;
+          padding: .25em 0;
+          i {
+            transition: transform .7s ease;
+            transform-origin: 50% 50%;
+          }
+          span {
+            margin-left: 10px;
+          }
+          &:hover, &:focus {
+            text-decoration: none;
+            i {
+              transform: rotate(360deg);
+            }
+            span {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .menu-open {
+    .navmenu {
+      .toggle-cont {
+        background: white;
+        .toggle-btn {
+          box-shadow: inset 0 0 0 4px black;
+          &:hover {
+            box-shadow: inset 0 0 0 @navbuttonSize/2 black;
+          }
+        }
+      }
+      .flyout {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }

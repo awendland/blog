@@ -3,8 +3,8 @@
 /* Common
 /*
 /*****************************************************************************/
-::-moz-selection { background: rgb(83, 161, 184);; color: #fff; text-shadow: none; }
-::selection { background: rgb(83, 161, 184);; color: #fff; text-shadow: none; }
+::-moz-selection { background: rgba(0, 0, 0, .9); color: #fff; text-shadow: none; }
+::selection { background: rgba(0, 0, 0, .9); color: #fff; text-shadow: none; }
 
 html {
     font: 16px/1.5 serif;
@@ -12,6 +12,10 @@ html {
 
     background-color: @backgroundColor;
     color: @textColor;
+}
+
+body {
+    padding-top: @navbarHeight;
 }
 
 @media @large {
@@ -30,6 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 
     & > a {
         color: @headerColor;
+        border-width: 0;
     }
 }
 
@@ -61,7 +66,7 @@ h6 {
 }
 a {
     text-decoration: none;
-    color: rgb(83, 161, 184);
+    color: black;
     &:hover, &:focus {
         text-decoration: underline;
         cursor: pointer;
@@ -76,6 +81,18 @@ a {
         -webkit-hyphens: auto;
         -moz-hyphens: auto;
         hyphens: auto;
+    }
+}
+p > a {
+    border: .15em dashed fade(@textColor, 50%);
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    transition: border .1s;
+    &:hover, &:focus {
+        text-decoration: none;
+        cursor: pointer;
+        border-color: @textColor;
     }
 }
 

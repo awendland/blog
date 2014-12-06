@@ -10,7 +10,7 @@ window.onload = function() {
 };
 
 function setupFadeNav() {
-    var delta = 5;
+    var delta = 10;
     var navbar = document.querySelector(".navbar"),
         body = document.querySelector("body");
     var lastScrollTop = 0;
@@ -33,9 +33,8 @@ function setupFadeNav() {
         if (scrollTop < lastScrollTop) {
             DOMUtils.removeClass(navbar, "hide");
         } else {
-            if (scrollTop > navbar.offsetHeight){
+            if (scrollTop > navbar.offsetHeight && document.body.className.indexOf("menu-open") === -1)
                 DOMUtils.addClass(navbar, "hide");
-            }
         }
         lastScrollTop = scrollTop;
     }
@@ -43,8 +42,8 @@ function setupFadeNav() {
 
 function setupNavButton() {
     var menuToggle = document.getElementById("open-menu");
-    var menuContainer = menuToggle.parentElement;
-    var mainContainer = document.getElementsByTagName("main")[0];
+    var menu = document.querySelector(".navmenu");
+    var mainContainer = document.body;
     
     var isOpen = false;
     
@@ -63,11 +62,8 @@ function setupNavButton() {
     
     var toggleMenuFunc = function() {
         DOMUtils.toggleClass(mainContainer, "menu-open");
-        var navmenuElem = menuContainer.getElementsByClassName("navmenu");
-        DOMUtils.toggleClass(navmenuElem[0], "open");
-        var navMenuFlyoutElem = navmenuElem.getElementsByClassName("flyout");
-        toggleEscapeKeyFunc(!isOpen);
         isOpen = !isOpen;
+        toggleEscapeKeyFunc(isOpen);
     };
     
     menuToggle.addEventListener(isMobile() ? "touchstart" : "click", toggleMenuFunc);
