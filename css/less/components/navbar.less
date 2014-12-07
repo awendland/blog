@@ -52,16 +52,18 @@
     .flyout {
       padding-left: 0;
       opacity: 0;
-      transform: scale(.5);
-      transform-origin: top left;
       transition: opacity .5s, transform .4s;
       pointer-events: none;
       background: white;
       @media @notlarge {
+        transform-origin: top;
+        transform: scale(.5);
         font-size: 1.7rem;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
       }
       @media @large {
+        transform-origin: top left;
+        transform: translateX(-100%);
         width: 200px;
         box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
         border-radius: 0 0 2px 0;
