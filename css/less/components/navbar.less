@@ -8,14 +8,15 @@
   position: fixed;
   z-index: 9999;
   top: 0;
-  transition: top 0.2s ease-in-out, background 0.4s ease-in-out;
+  transform: translateY(0);
+  transition: transform 0.2s ease-in-out, background 0.4s ease-in-out;
   height: @navbarHeight;
 
   background: rgba(0, 0, 0, 1);
   width: 100%;
 
   &.hide {
-    top: -@navbarHeight;
+    transform: translateY(-@navbarHeight);
   }
 
   &.top {
@@ -26,6 +27,8 @@
 @navbuttonSize: 30px;
 .navmenu {
     .toggle-cont {
+      position: relative;
+      z-index: 9999+1;
       padding: (@navbarHeight - @navbuttonSize) / 2;
       width: @navbarHeight;
       height: @navbarHeight;
@@ -48,20 +51,24 @@
 
     .flyout {
       padding-left: 0;
-      width: 200px;
       opacity: 0;
-      transition: opacity .5s;
+      transform: scale(.5);
+      transform-origin: top left;
+      transition: opacity .5s, transform .4s;
       pointer-events: none;
       background: white;
-      box-shadow: 4px 0 4px -4px rgba(0, 0, 0, 0.3), 0 4px 4px -4px rgba(0, 0, 0, 0.3);
-      border: 1px solid rgba(0,0,0,.5);
-      border-top-width: 0;
-      border-left-width: 0;
-      border-radius: 0 0 2px 0;
+      @media @notlarge {
+        font-size: 1.7rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+      }
+      @media @large {
+        width: 200px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+        border-radius: 0 0 2px 0;
+      }
       li {
         list-style: none;
-        font-size: 90%;
-        padding: 0 0 0 12px;
+        padding: 0 0 0 1em;
         a {
           display: block;
           color: black;
@@ -83,6 +90,14 @@
             }
           }
         }
+        &.active {
+          a {
+            span {
+              background: black;
+              color: white;
+            }
+          }
+        }
       }
     }
   }
@@ -100,6 +115,7 @@
       }
       .flyout {
         opacity: 1;
+        transform: scale(1);
         pointer-events: all;
       }
     }

@@ -550,19 +550,26 @@ h6 {
   position: fixed;
   z-index: 9999;
   top: 0;
-  -webkit-transition: top 0.2s ease-in-out, background 0.4s ease-in-out;
-  transition: top 0.2s ease-in-out, background 0.4s ease-in-out;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: -webkit-transform 0.2s ease-in-out, background 0.4s ease-in-out;
+  transition: transform 0.2s ease-in-out, background 0.4s ease-in-out;
   height: 50px;
   background: #000000;
   width: 100%;
 }
 .navbar.hide {
-  top: -50px;
+  -webkit-transform: translateY(-50px);
+  -ms-transform: translateY(-50px);
+  transform: translateY(-50px);
 }
 .navbar.top {
   background: #000000;
 }
 .navmenu .toggle-cont {
+  position: relative;
+  z-index: 10000;
   padding: 10px;
   width: 50px;
   height: 50px;
@@ -588,23 +595,36 @@ h6 {
 }
 .navmenu .flyout {
   padding-left: 0;
-  width: 200px;
   opacity: 0;
-  -webkit-transition: opacity .5s;
-  transition: opacity .5s;
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-transition: opacity .5s, -webkit-transform .4s;
+  transition: opacity .5s, transform .4s;
   pointer-events: none;
   background: white;
-  -webkit-box-shadow: 4px 0 4px -4px rgba(0, 0, 0, 0.3), 0 4px 4px -4px rgba(0, 0, 0, 0.3);
-  box-shadow: 4px 0 4px -4px rgba(0, 0, 0, 0.3), 0 4px 4px -4px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  border-top-width: 0;
-  border-left-width: 0;
-  border-radius: 0 0 2px 0;
+}
+@media (max-width: 40rem) {
+  .navmenu .flyout {
+    font-size: 1.7rem;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  }
+}
+@media (min-width: 40rem) {
+  .navmenu .flyout {
+    width: 200px;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    border-radius: 0 0 2px 0;
+  }
 }
 .navmenu .flyout li {
   list-style: none;
-  font-size: 90%;
-  padding: 0 0 0 12px;
+  padding: 0 0 0 1em;
 }
 .navmenu .flyout li a {
   display: block;
@@ -635,6 +655,10 @@ h6 {
 .navmenu .flyout li a:focus span {
   text-decoration: underline;
 }
+.navmenu .flyout li.active a span {
+  background: black;
+  color: white;
+}
 .menu-open .navmenu .toggle-cont {
   background: white;
 }
@@ -648,6 +672,9 @@ h6 {
 }
 .menu-open .navmenu .flyout {
   opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
   pointer-events: all;
 }
 /*****************************************************************************/
