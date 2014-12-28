@@ -37,6 +37,10 @@
     link: "http://alexwendland.com/threejs/titration/"
     type: ThreeJS / Vanilla JS Web App
     desc: Particle simulation of an Acid-Base neutralization reaction. Runs on WebGL using ThreeJS with live data reporting.
+  - name: JSON Tree Visualizer
+    link: "http://awendland.github.io/angular-json-tree/"
+    type: AngularJS Web App
+    desc: Formats inputted JSON and constructs an expandable tree. Uses angular-json-tree from bower.
 - group: "Python: Flask, MatPlotLib, Twitter"
   items:
   - name: Twitter to Stock Correlator
