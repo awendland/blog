@@ -9,7 +9,7 @@ I just did a minor revamp of the TEC Club homepage in order to include a live, J
 
 I was inspired by the new [Mavenlink](http://mavenlink.com) brand refresh, the dashboard of which I have placed an image of here:
 
-![Mavenlink Dashboard after 2015 refresh](http://www.motocms.com/wp-content/uploads/2015/02/mavelink.jpg) 
+![Mavenlink Dashboard after 2015 refresh](http://www.motocms.com/wp-content/uploads/2015/02/mavelink.jpg)<!--break--> 
 
 I was inspired by the logo in particular:
 
