@@ -553,6 +553,11 @@ h6 {
 .navbar.top {
   background: #000000;
 }
+@media print {
+  .navbar {
+    display: none;
+  }
+}
 .navmenu .toggle-cont {
   position: relative;
   z-index: 10000;
@@ -1143,6 +1148,15 @@ pre,
 .posts article:last-child {
   margin-bottom: 2em;
   border-bottom: 0px;
+}
+.print-social-links {
+  display: none;
+  text-align: center;
+}
+@media print {
+  .print-social-links {
+    display: block;
+  }
 }
 .clubs-list {
   padding-left: 0;
