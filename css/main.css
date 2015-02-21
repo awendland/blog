@@ -346,20 +346,6 @@ main a {
   -ms-hyphens: auto;
   hyphens: auto;
 }
-p > a {
-  border: 0.15em dashed rgba(51, 51, 51, 0.5);
-  border-top-width: 0;
-  border-left-width: 0;
-  border-right-width: 0;
-  -webkit-transition: border .1s;
-  transition: border .1s;
-}
-p > a:hover,
-p > a:focus {
-  text-decoration: none;
-  cursor: pointer;
-  border-color: #333333;
-}
 ul {
   margin: 0;
 }
@@ -744,6 +730,20 @@ h6 {
   padding: 2px 5px;
   border: 1px dashed #ccc;
   border-radius: 3px;
+}
+.post > .body a {
+  border: 0.15em dashed rgba(51, 51, 51, 0.5);
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  -webkit-transition: border .1s;
+  transition: border .1s;
+}
+.post > .body a:hover,
+.post > .body a:focus {
+  text-decoration: none;
+  cursor: pointer;
+  border-color: #333333;
 }
 .post > .body img {
   display: block;
