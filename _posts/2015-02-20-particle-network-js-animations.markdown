@@ -28,11 +28,11 @@ This evolved into an interactive version and eventually the version that can be 
 
 You can delve into the [CodePens](http://codepen.io) in order to see the JS, CSS and HTML workings of the effect. I currently (2015-02-20) have three projects related to it:
 
-- Initial Mavenlink creation [http://codepen.io/awendland/pen/XJExGv]()
-- Performance testing version [http://codepen.io/awendland/pen/wBmLxN]()
-- Draft 1 TEC Club animation [http://codepen.io/awendland/pen/wBmLRO]()
+- Initial Mavenlink creation [http://codepen.io/awendland/pen/XJExGv](http://codepen.io/awendland/pen/XJExGv)
+- Performance testing version [http://codepen.io/awendland/pen/wBmLxN](http://codepen.io/awendland/pen/wBmLxN)
+- Draft 1 TEC Club animation [http://codepen.io/awendland/pen/wBmLRO](http://codepen.io/awendland/pen/wBmLRO)
 
 The current production code for the animation on the TEC Club website can be found at
 
-- [http://cdmtecclub.com/scripts/network-anim.js]()
-- [http://cdmtecclub.com/styles/network-anim.css]()
+- [http://cdmtecclub.com/scripts/network-anim.js](http://cdmtecclub.com/scripts/network-anim.js)
+- [http://cdmtecclub.com/styles/network-anim.css](http://cdmtecclub.com/styles/network-anim.css)
