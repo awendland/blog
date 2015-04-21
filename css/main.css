@@ -281,6 +281,11 @@ body {
     font-size: 18px;
   }
 }
+@media print {
+  html {
+    font-size: 12px;
+  }
+}
 code,
 kbd,
 pre,
