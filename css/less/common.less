@@ -16,6 +16,10 @@ html {
 
 body {
     padding-top: @navbarHeight;
+
+    @media print {
+        padding-top: 0;
+    }
 }
 
 @media @large {

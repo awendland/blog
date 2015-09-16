@@ -58,13 +58,26 @@
             }
         }
         @media print {
+            a:not(.button) {
+                border: none;
+            }
             a::after {
-                content:" (" attr(href) ") ";
+                content:"(" attr(href) ")";
                 font-size:0.8em;
                 font-weight:normal;
+                border: 1px dashed fade(@textColor, 50%);
+                border-top-width: 0;
+                border-left-width: 0;
+                border-right-width: 0;
+                margin-left: 1ex;
+            }
+            a.print-link-ib::after {
+                display: inline-block;
+                margin-left: 0;
             }
             a.print-link-nl::after {
                 display: block;
+                margin-left: 0;
             }
             a.no-print-link::after {
                 display: none;

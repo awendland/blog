@@ -1,11 +1,17 @@
 ---
 layout: post
-showHeader: true
+showHeader: false
 title: Resume
 icon: note
 comments: false
 ---
+
+<div class="initiate-print-box">
+  <a onclick="window.print()" class="button initiate-print">Print</a>
+</div>
+
 <div class="print-social-links">
+  <span class="obscure">moc.dnaldnewxela@em</span> | <span class="obscure">9495-934 )949(</span></br>
   <a href="http://www.linkedin.com/in/alexrwendland">LinkedIn: Alex Wendland</a></br>
   <a href="https://github.com/awendland/">Github: @awendland</a></br>
   <a href="https://twitter.com/AlexRWendland">Twitter: @AlexRWendland</a></br>
@@ -14,17 +20,16 @@ comments: false
 </div>
 ### Summary
 ___
-Dedicated, ambitious high-school student with 4+ years of experience actively maintaining released applications for over 60,000 users. Founded AMP Element in 2008 as a computer repair technician, migrated to Android application development in 2011. Interned at [FireEye](http://fireeye.com) as a full-stack software developer. Eager to learn and apply new skills. Experienced in Java with Android, Google App Engine, Tomcat, Bukkit, Desktop and MongoDB; JavaScript with AngularJS, JQuery, Three.js and vanilla; Python with Flask and MatPlotLib; PHP with MySQL; HTML, CSS/LESS.
+College student with 6+ years of experience actively maintaining released applications for over 100,000 users. Founded [AMP Element](http://ampelement.com) in 2008 as a computer repair technician, migrated to Android application development in 2011, and hired employees in 2015. Interned at [FireEye](http://fireeye.com) as a full-stack software developer. Eager to learn and apply new skills. Experienced in Java with Android, Spring, Bukkit, MySQL and MongoDB; JavaScript with AngularJS, JQuery, Three.js and vanilla; Python 2 & 3 with Flask, MatPlotLib, Cassandra; PHP with MySQL; modern HTML 5, CSS/LESS/SASS; Swift for iOS; Digital Ocean with Ubuntu, nginx; Go (golang); AWS with Beanstalk, RDS, S3.
 
 ### Engineering Experience
 ___
 <table>
-    <tr><td><a href="http://fireeye.com">FireEye</a> (Malware Research Development Intern):</td><td><table>
-        <tr><td>2014</td><td>Full-stack software engineer working on in-house systems for malware research and analysis. Re-wrote internal malware-querying application into modern AngularJS/LESS based webapp with a RESTful Python/Flask backend using Cassandra as DB.</td></tr>
+    <tr><td><a href="http://ampelement.com" class="print-link-ib">AMP Element</a> (CEO):</td><td><table>
+        <tr><td>2014 - 2015</td><td>Lead a team of three to construct a Java Spring backed location aware, messaging platform w/ native clients on Android and iOS (Swift).</td></tr>
     </table></td></tr>
-    <tr><td>AMP Element:</td><td><table>
-        <tr><td>2009 - 2011</td><td>Focus on working as a computer technician due to intense interest in computer design and functionality.</td></tr>
-        <tr><td>2011 - present</td><td>Focus on Google Android application development.</td></tr>
+    <tr><td><a href="http://fireeye.com" class="print-link-ib after-char-padding-left">FireEye</a> (Malware Research Development Intern):</td><td><table>
+        <tr><td>2014</td><td>Full-stack software engineer working on in-house systems for malware research and analysis. Re-wrote internal malware-querying application into modern AngularJS/LESS based webapp with a RESTful Python/Flask backend using Cassandra as DB.</td></tr>
     </table></td></tr>
 </table>
 
@@ -38,7 +43,7 @@ ___
         <ul>
         {% for skill in skillgroup.items %}
             <li>
-                {% if skill.link != null %}<a class="name print-link-nl" href="{{skill.link}}">{{skill.name}}</a>{% else %}<div class="name">{{skill.name}}</div>{% endif %}
+                {% if skill.link != null %}<a class="name" href="{{skill.link}}">{{skill.name}}</a>{% else %}<div class="name">{{skill.name}}</div>{% endif %}
                 <div class="type">{{skill.type}}</div>
                 <div class="desc">{{skill.desc}}</div>
                 {% if skill.cost != null %}<div class="cost" >{{skill.cost}}</div>{% endif %}
@@ -49,7 +54,8 @@ ___
     </li>
 {% endfor %}
 </ul>
-  
+
+<!---
 ### Clubs and Leadership
 ___
 <ul class="clubs-list">
@@ -62,23 +68,15 @@ ___
     </li>
 {% endfor %}
 </ul>
+-->
 
 ### Education
 ___
-Class of 2015 Corona del Mar High School
+Harvard College - Class of 2019
 
 ##### Relevant Coursework:
 
+  * [COMPSCI 61](http://cs61.seas.harvard.edu/): Systems Programming and Machine Organization
+  * [ENG-SCI 50](http://isites.harvard.edu/course/colgsas-4499): Introduction to Electrical Engineering
   * AP Calculus BC
-  * AP Statistics
-  * AP Chemistry
-  * AP Physics
-  * AP World History and AP US History
-  * AP Literature
-  * Honors level for english, prior maths and prior sciences
   * Self studied for AP Computer Science exam
-  
-##### GPA
-  
-  * 4.0 unweighted cumulative
-  * 4.353 weighted cumulative

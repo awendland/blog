@@ -1,11 +1,11 @@
-- group: "Java: Android, Google Apps Engine, Bukkit"
+- group: "Java: Android, Spring, Bukkit, MySQL"
   items:
   - name: CloudSend
     link: "https://play.google.com/store/apps/details?id=com.ampelement.cloudsend"
     type: Android App
     desc: Ties into a user's Dropbox account in order to streamline the process of sharing files.
     cost: Free
-    stats: ["41,000+ installs"]
+    stats: ["96,000+ installs"]
   - name: Adobe Flash Downloader
     type: Android App
     desc: Assists in the downloading and install of the removed Adobe Flash Player.
@@ -22,7 +22,7 @@
     type: Minecraft/Bukkit Plugin
     desc: Created due to lack of easy to use, feature filled plugins providing teleportation services in the game.
     cost: Free
-    stats: ["69,000+ installs", "3+ million starts"]
+    stats: ["116,000+ installs", "5.6+ million starts"]
 - group: "JavaScript: Vanilla, AngularJS, JQuery, ThreeJS"
   items:
   - name: Chemical Molar Mass Calculator

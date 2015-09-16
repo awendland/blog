@@ -1,4 +1,4 @@
-window.onload = function() {
+window.addEventListener('load', function() {
     setupFadeNav();
     setupNavButton();
     if (isPost()) {
@@ -7,7 +7,16 @@ window.onload = function() {
             setupErrorImages();
         }
     }
-};
+    unobscureText();
+});
+
+function unobscureText() {
+    var obscuredElems = document.querySelectorAll('.obscure');
+    for (var obscureIndex = 0; obscureIndex < obscuredElems.length; obscureIndex++) {
+        var obscured = obscuredElems[obscureIndex];
+        obscured.innerHTML = obscured.innerHTML.split('').reverse().join('');
+    }
+}
 
 function setupFadeNav() {
     var delta = 10;

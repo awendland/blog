@@ -35,10 +35,8 @@
     }
     ul {
         padding: 0;
+        padding-left: 1em;
 
-        @media @large {
-            padding-left: 1em;
-        }
         li:last-child {
             border-bottom-width: 0px;
         }
@@ -66,5 +64,49 @@
     }
     .cost, .stat {
         font-size: .8em;
+    }
+}
+
+.initiate-print-box {
+    text-align: center;
+    line-height: 0.25;
+}
+
+@media print {
+    body {
+        font: 12px/1.2 serif;
+        .post > .body > p {
+            margin: .2em 0;
+            line-height: 1.2;
+        }
+    }
+
+    h3 {
+        margin: .2em 0;
+    }
+
+    #post > header {
+        padding: 0;
+
+        > h1 > a::before {
+            content: "Alex Wendland's ";
+        }
+    }
+    
+    .initiate-print-box {
+        display: none;
+    }
+
+    .skills-list {
+        .desc {
+            margin: 0;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+    }
+
+    li {
+        padding-top: 0;
     }
 }
