@@ -568,6 +568,9 @@ h6 {
     display: none;
   }
 }
+.navmenu {
+  pointer-events: none;
+}
 .navmenu .toggle-cont {
   position: relative;
   z-index: 10000;
@@ -576,6 +579,7 @@ h6 {
   height: 50px;
   -webkit-transition: background .4s;
           transition: background .4s;
+  pointer-events: auto;
 }
 .navmenu .toggle-cont:active {
   background: rgba(255, 255, 255, 0.5);
@@ -1254,7 +1258,11 @@ pre,
 .skills-list .stat {
   font-size: .8em;
 }
+.print-header {
+  display: none;
+}
 .initiate-print-box {
+  margin-top: -1em;
   text-align: center;
   line-height: 0.25;
 }
@@ -1269,11 +1277,14 @@ pre,
   h3 {
     margin: .2em 0;
   }
-  #post > header {
+  #post header {
     padding: 0;
   }
-  #post > header > h1 > a::before {
-    content: "Alex Wendland's ";
+  #post header:first-child {
+    display: none;
+  }
+  .print-header {
+    display: block;
   }
   .initiate-print-box {
     display: none;
@@ -1283,6 +1294,9 @@ pre,
   }
   .skills-list li:last-child {
     border-bottom: none;
+  }
+  .skills-list li {
+    padding: .1em 0;
   }
   li {
     padding-top: 0;

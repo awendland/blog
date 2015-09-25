@@ -27,8 +27,9 @@
   }
 }
 
-@navbuttonSize: 30px;
-.navmenu {
+  @navbuttonSize: 30px;
+  .navmenu {
+    pointer-events: none;
     .toggle-cont {
       position: relative;
       z-index: 9999+1;
@@ -36,6 +37,7 @@
       width: @navbarHeight;
       height: @navbarHeight;
       transition: background .4s;
+      pointer-events: auto;
       &:active {
         background: rgba(255, 255, 255, .5);
       }

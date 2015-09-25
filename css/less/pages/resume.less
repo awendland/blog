@@ -67,7 +67,12 @@
     }
 }
 
+.print-header {
+    display: none;
+}
+
 .initiate-print-box {
+    margin-top: -1em;
     text-align: center;
     line-height: 0.25;
 }
@@ -85,12 +90,15 @@
         margin: .2em 0;
     }
 
-    #post > header {
+    #post header {
         padding: 0;
-
-        > h1 > a::before {
-            content: "Alex Wendland's ";
+        &:first-child {
+            display: none;
         }
+    }
+
+    .print-header {
+        display: block;
     }
     
     .initiate-print-box {
@@ -103,6 +111,9 @@
         }
         li:last-child {
             border-bottom: none;
+        }
+        li {
+            padding: .1em 0;
         }
     }
 

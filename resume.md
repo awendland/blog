@@ -5,7 +5,7 @@ title: Resume
 icon: note
 comments: false
 ---
-
+<header class="print-header"><h1><span>Alex Wendland</span></h1></header>
 <div class="initiate-print-box">
   <a onclick="window.print()" class="button initiate-print">Print</a>
 </div>
