@@ -20,17 +20,15 @@ comments: false
 </div>
 ### Summary
 ___
-College student with 6+ years of experience actively maintaining released applications for over 100,000 users. Founded [AMP Element](http://ampelement.com) in 2008 as a computer repair technician, migrated to Android application development in 2011, and hired employees in 2015. Interned at [FireEye](http://fireeye.com) as a full-stack software developer. Eager to learn and apply new skills. Experienced in Java with Android, Spring, Bukkit, MySQL and MongoDB; JavaScript with AngularJS, JQuery, Three.js and vanilla; Python 2 & 3 with Flask, MatPlotLib, Cassandra; PHP with MySQL; modern HTML 5, CSS/LESS/SASS; Swift for iOS; Digital Ocean with Ubuntu, nginx; Go (golang); AWS with Beanstalk, RDS, S3.
+College student with 6+ years of experience actively maintaining released applications for over 100,000 users. Founded [AMP Element](http://ampelement.com) in 2008 as a computer repair technician, migrated to Android application development in 2011, and hired employees in 2015. Interned at [FireEye](http://fireeye.com) as a full-stack software developer. Eager to learn and apply new skills in an exciting workplace building meaningful products.
+
+Experienced in Java with Android, Spring, Bukkit, MySQL and MongoDB; JavaScript with AngularJS, JQuery, Three.js and vanilla; Python 2 & 3 with Flask, MatPlotLib, Cassandra; PHP with MySQL; modern HTML 5, CSS/LESS/SASS; Swift for iOS; Digital Ocean with Ubuntu, nginx; Go (golang); AWS with Beanstalk, RDS, S3.
 
 ### Engineering Experience
 ___
-<table>
-    <tr><td><a href="http://ampelement.com" class="print-link-ib">AMP Element</a> (CEO):</td><td><table>
-        <tr><td>2014 - 2015</td><td>Lead a team of three to construct a Java Spring backed location aware, messaging platform w/ native clients on Android and iOS (Swift).</td></tr>
-    </table></td></tr>
-    <tr><td><a href="http://fireeye.com" class="print-link-ib after-char-padding-left">FireEye</a> (Malware Research Development Intern):</td><td><table>
-        <tr><td>2014</td><td>Full-stack software engineer working on in-house systems for malware research and analysis. Re-wrote internal malware-querying application into modern AngularJS/LESS based webapp with a RESTful Python/Flask backend using Cassandra as DB.</td></tr>
-    </table></td></tr>
+<table class="experience-table">
+    <tr><td><a href="http://ampelement.com" class="print-link-ib">AMP Element</a><em class="experience--position">(CEO)</em></td><td>2014 - 2015</td><td>Lead a team of three to construct a cross-platform service providing realtime messaging, live location tracking, synced calendar and shared task lists to families. Native clients on Android (Java) and iOS (Swift) were backed by a Spring 4 (Java 8) server. ReactiveX and dependency injection paradigms were used on both client applications which reduced development time and allowed for new developers to quickly get up to speed on unfamiliar codebases. The modular backend ran on AWS's Elastic Beanstalk and interfaced with a MySQL/Aurora DB on AWS's RDS, allowing it to scale smoothly as traffic rose.</td></tr>
+    <tr><td><a href="http://fireeye.com" class="print-link-ib after-char-padding-left">FireEye</a><em class="experience--position">(Malware Research Development Intern)</em></td><td>2014</td><td>Full-stack software engineer working on in-house systems for malware research and analysis. Re-wrote internal application with 50 TB of malware samples into a modern AngularJS/LESS based web app with a RESTful Python/Flask backend using Cassandra as DB. Improved response time by 500%, doubled number of available query attributes, reduced user support requests 80%, improved feature development time by two-fold, and added 95% test coverage.</td></tr>
 </table>
 
 ### Skills / Projects
@@ -74,7 +72,7 @@ ___
 ___
 Harvard College - Class of 2019
 
-##### Relevant Coursework:
+**Relevant Coursework:**
 
   * [COMPSCI 61](http://cs61.seas.harvard.edu/): Systems Programming and Machine Organization
   * [ENG-SCI 50](http://isites.harvard.edu/course/colgsas-4499): Introduction to Electrical Engineering

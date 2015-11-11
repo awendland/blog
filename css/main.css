@@ -1177,6 +1177,21 @@ pre,
     display: block;
   }
 }
+@media print {
+  .experience-table td:nth-child(1) {
+    width: 20%;
+  }
+  .experience-table td:nth-child(2) {
+    width: 10%;
+  }
+  .experience-table td:nth-child(3) {
+    width: 70%;
+  }
+}
+.experience-table .experience--position {
+  margin-top: .5em;
+  display: block;
+}
 .clubs-list {
   padding-left: 0;
 }
