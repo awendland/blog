@@ -22,7 +22,7 @@ comments: false
 ___
 College student with 6+ years of experience actively maintaining released applications for over 100,000 users. Founded [AMP Element](http://ampelement.com) in 2008 as a computer repair technician, migrated to Android application development in 2011, and hired employees in 2015. Interned at [FireEye](http://fireeye.com) as a full-stack software developer. Eager to learn and apply new skills in an exciting workplace building meaningful products.
 
-Experienced in Java with Android, Spring, Bukkit, MySQL and MongoDB; JavaScript with AngularJS, JQuery, Three.js and vanilla; Python 2 & 3 with Flask, MatPlotLib, Cassandra; PHP with MySQL; modern HTML 5, CSS/LESS/SASS; Swift for iOS; Digital Ocean with Ubuntu, nginx; Go (golang); AWS with Beanstalk, RDS, S3.
+Experienced in Java with Android, Spring, Bukkit, MySQL and MongoDB; JavaScript with React, AngularJS, JQuery, Three.js and vanilla; Python 2 & 3 with Flask, MatPlotLib, Cassandra; PHP with MySQL; modern HTML 5, CSS/LESS/SASS; Swift for iOS; Digital Ocean with Ubuntu, nginx; Go (golang); AWS with Beanstalk, RDS, S3.
 
 ### Engineering Experience
 ___
@@ -76,5 +76,7 @@ Harvard College - Class of 2019
 
   * [COMPSCI 61](http://cs61.seas.harvard.edu/): Systems Programming and Machine Organization
   * [ENG-SCI 50](http://isites.harvard.edu/course/colgsas-4499): Introduction to Electrical Engineering
+  * [Math 21b](http://sites.fas.harvard.edu/~math21b/): Linear Algebra and Differential Equations
+  * [COMPSCI 51](http://cs51.io): Abstraction and Design in Computation
   * AP Calculus BC
   * Self studied for AP Computer Science exam

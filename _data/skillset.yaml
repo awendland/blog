@@ -23,8 +23,13 @@
     desc: Created due to lack of easy to use, feature filled plugins providing teleportation services in the game.
     cost: Free
     stats: ["116,000+ installs", "5.6+ million starts"]
-- group: "JavaScript: Vanilla, AngularJS, JQuery, ThreeJS"
+- group: "JavaScript: Vanilla, React, AngularJS, JQuery, ThreeJS"
   items:
+  - name: HCS Datamatch
+    link: "https://datamatch.hcs.harvard.edu/"
+    type: React Web App
+    desc: Harvard undergraduate Valentine's Day date making application. A React frontend with Immutable.js, Redux state written in TypeScript interacting with a Ruby on Rails backend. Built using Gulp, browserify, npm dependency management.
+    stats: ["4,500+ active undergrads"]
   - name: Chemical Molar Mass Calculator
     link: "https://rawgithub.com/awendland/molar-mass/master/index.html"
     type: AngularJS Web App
