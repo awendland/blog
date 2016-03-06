@@ -18,15 +18,25 @@ comments: false
   <a href="https://www.facebook.com/aXwendland">Facebook: @aXwendland</a></br>
   <a href="http://codepen.io/awendland/">CodePen: @awendland</a></br></br></br>
 </div>
+
 ### Summary
 ___
-College student with 6+ years of experience actively maintaining released applications for over 100,000 users. Founded [AMP Element](http://ampelement.com) in 2008 as a computer repair technician, migrated to Android application development in 2011, and hired employees in 2015. Interned at [FireEye](http://fireeye.com) as a full-stack software developer. Eager to learn and apply new skills in an exciting workplace building meaningful products.
+
+College student with 6+ years of experience actively maintaining released applications for over 100,000 users. Founded [AMP Element](http://ampelement.com) in 2008 as a computer repair technician, migrated to Android application development in 2011, and hired employees in 2015. Interned at [FireEye](http://fireeye.com) as a full-stack software developer. Currently building up a virtual reality healthcare startup called [Luminopia](http://luminopia.org). Eager to learn and apply new skills in an exciting workplace building meaningful products.
 
 Experienced in Java with Android, Spring, Bukkit, MySQL and MongoDB; JavaScript with React, AngularJS, JQuery, Three.js and vanilla; Python 2 & 3 with Flask, MatPlotLib, Cassandra; PHP with MySQL; modern HTML 5, CSS/LESS/SASS; Swift for iOS; Digital Ocean with Ubuntu, nginx; Go (golang); AWS with Beanstalk, RDS, S3.
 
 ### Engineering Experience
 ___
 <table class="experience-table">
+    <tr><td><a href="http://luminopia.org" class="print-link-ib">Luminopia</a><em class="experience--position">(CTO)</em></td><td>2015 - Present</td><td>
+    Cofounded a healthcare startup using virtual reality to treat neurological eye disorders. Currently incubating in the Harvard Innovaiton Lab VIP program.
+    <ul>
+      <li>Conducted dozens of meetings with head doctors at nationally renowned hospitals</li>
+      <li>Prepared and presented business and technology pitch decks to venture capital firms</li>
+      <li>Organized and led customer market research with potential patients</li>
+    </ul>
+    </td></tr>
     <tr><td><a href="http://ampelement.com" class="print-link-ib">AMP Element</a><em class="experience--position">(CEO)</em></td><td>2014 - 2015</td><td>Lead a team of three to construct a cross-platform service providing realtime messaging, live location tracking, synced calendar and shared task lists to families. Native clients on Android (Java) and iOS (Swift) were backed by a Spring 4 (Java 8) server. ReactiveX and dependency injection paradigms were used on both client applications which reduced development time and allowed for new developers to quickly get up to speed on unfamiliar codebases. The modular backend ran on AWS's Elastic Beanstalk and interfaced with a MySQL/Aurora DB on AWS's RDS, allowing it to scale smoothly as traffic rose.</td></tr>
     <tr><td><a href="http://fireeye.com" class="print-link-ib after-char-padding-left">FireEye</a><em class="experience--position">(Malware Research Development Intern)</em></td><td>2014</td><td>Full-stack software engineer working on in-house systems for malware research and analysis. Re-wrote internal application with 50 TB of malware samples into a modern AngularJS/LESS based web app with a RESTful Python/Flask backend using Cassandra as DB. Improved response time by 500%, doubled number of available query attributes, reduced user support requests 80%, improved feature development time by two-fold, and added 95% test coverage.</td></tr>
 </table>
@@ -53,30 +63,16 @@ ___
 {% endfor %}
 </ul>
 
-<!---
-### Clubs and Leadership
-___
-<ul class="clubs-list">
-{% for club in site.data.clubs_leadership %}
-    <li>
-        <div class="position">{{club.position}}</div>
-        <a class="name print-link-nl" href="{{club.link}}">{{club.name}}</a>
-        <div class="time">{{club.time}}</div>
-        <div class="desc">{{club.desc}}</div>
-    </li>
-{% endfor %}
-</ul>
--->
-
 ### Education
 ___
+
 Harvard College - Class of 2019
 
 **Relevant Coursework:**
 
   * [COMPSCI 61](http://cs61.seas.harvard.edu/): Systems Programming and Machine Organization
   * [ENG-SCI 50](http://isites.harvard.edu/course/colgsas-4499): Introduction to Electrical Engineering
-  * [Math 21b](http://sites.fas.harvard.edu/~math21b/): Linear Algebra and Differential Equations
+  * [MATH 21B](http://sites.fas.harvard.edu/~math21b/): Linear Algebra and Differential Equations
   * [COMPSCI 51](http://cs51.io): Abstraction and Design in Computation
   * AP Calculus BC
   * Self studied for AP Computer Science exam
