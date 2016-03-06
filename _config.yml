@@ -6,7 +6,7 @@ description: Enjoy
 markdown: rdiscount
 rdiscount:
     extensions: [smart]
-highlighter: pygments
+highlighter: rouge
 permalink: /:year/:title/
 
 safe: true
