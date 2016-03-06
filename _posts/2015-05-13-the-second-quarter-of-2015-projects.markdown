@@ -82,7 +82,7 @@ Technical:
 
 [reddit-wallpaper](https://github.com/awendland/reddit-wallpaper) - _(Desktop Backgrounds) Python_ - GitHub
 
-I've always enjoyed fresh, beautiful desktop backgrounds, and when I heard about Reddit's [/r/CityPorn](http://reddit.com/r/CityPorn) and [/r/SpacePorn](http://reddit.com/r/SpacePorn) I was excited! These subreddits curate gorgeous photos of Cities or Space or etc, (no, they aren't actual porn, just nice high-res photos). After stumbling upon [reddit-background by Ricky Harris](https://github.com/rconradharris/reddit-background) I finally bit the bullet and decided to write the program I always wanted. Using Ricky's implementation for handling user config, command-line arguments, and interacting with the Reddit APIs, I adapted a program that:
+I've always enjoyed fresh, beautiful desktop backgrounds, and when I heard about Reddit's curated images for [Cities](http://reddit.com/r/CityPorn) and [Space](http://reddit.com/r/SpacePorn) I was excited! After stumbling upon [reddit-background by Ricky Harris](https://github.com/rconradharris/reddit-background) I finally bit the bullet and decided to write the program I always wanted. Using Ricky's implementation for handling user config, command-line arguments, and interacting with the Reddit APIs, I adapted a program that:
 
 * Downloads the latest, high-quality images from the subreddit to a folder
 * Caches the downloads by hashing the image URLs
