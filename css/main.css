@@ -268,8 +268,8 @@ input[type="checkbox"] {
 html {
   font: 16px/1.5 serif;
   font-family: Merriweather, serif;
-  background-color: #ffffff;
-  color: #333333;
+  background-color: white;
+  color: #333;
 }
 body {
   padding-top: 50px;
@@ -301,7 +301,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #333333;
+  color: #333;
   font-weight: 700;
 }
 h1 > a,
@@ -310,7 +310,7 @@ h3 > a,
 h4 > a,
 h5 > a,
 h6 > a {
-  color: #333333;
+  color: #333;
   border-width: 0;
 }
 h1 {
@@ -423,14 +423,14 @@ h6 {
   display: inline-block;
   position: relative;
   padding: 1em;
-  color: #000000;
-  border: 1px solid #000000;
+  color: black;
+  border: 1px solid black;
   border-radius: 4px;
   -webkit-transition: color .3s, background .3s;
-          transition: color .3s, background .3s;
+  transition: color .3s, background .3s;
 }
 .button:hover {
-  background: #000000;
+  background: black;
   color: white;
 }
 .card {
@@ -489,7 +489,7 @@ h6 {
   border-radius: 4px;
   background: rgba(50, 50, 50, 0.55);
   -webkit-transition: background .3s ease;
-          transition: background .3s ease;
+  transition: background .3s ease;
 }
 #floater #open-menu:hover {
   background: rgba(120, 120, 120, 0.75);
@@ -526,16 +526,14 @@ h6 {
 }
 .st-menu-open #floater #open-menu span:before {
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 #floater #open-menu span:after {
   bottom: -200%;
 }
 .st-menu-open #floater #open-menu span:after {
   -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-      transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 /*****************************************************************************/
 /*
@@ -547,17 +545,17 @@ h6 {
   z-index: 9999;
   top: 0;
   -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
           transform: translateY(0);
-  -webkit-transition: -webkit-transform 0.2s ease-in-out, background 0.4s ease-in-out;
-          transition: transform 0.2s ease-in-out, background 0.4s ease-in-out;
+  -webkit-transition: background 0.4s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: background 0.4s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background 0.4s ease-in-out;
+  transition: transform 0.2s ease-in-out, background 0.4s ease-in-out, -webkit-transform 0.2s ease-in-out;
   height: 50px;
   background: #000000;
   width: 100%;
 }
 .navbar.hide {
   -webkit-transform: translateY(-50px);
-      -ms-transform: translateY(-50px);
           transform: translateY(-50px);
 }
 .navbar.top {
@@ -578,7 +576,7 @@ h6 {
   width: 50px;
   height: 50px;
   -webkit-transition: background .4s;
-          transition: background .4s;
+  transition: background .4s;
   pointer-events: auto;
 }
 .navmenu .toggle-cont:active {
@@ -591,26 +589,26 @@ h6 {
   border-radius: 0.25em;
   box-shadow: inset 0 0 0 4px white;
   -webkit-transition: box-shadow 0.5s;
-          transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s;
 }
 .navmenu .toggle-cont .toggle-btn:hover {
-  box-shadow: inset 0 0 0 15px #ffffff;
+  box-shadow: inset 0 0 0 15px white;
 }
 .navmenu .flyout {
   padding-left: 0;
   opacity: 0;
   -webkit-transition: opacity .5s, -webkit-transform .4s;
-          transition: opacity .5s, transform .4s;
+  transition: opacity .5s, -webkit-transform .4s;
+  transition: opacity .5s, transform .4s;
+  transition: opacity .5s, transform .4s, -webkit-transform .4s;
   pointer-events: none;
   background: white;
 }
 @media (max-width: 40rem) {
   .navmenu .flyout {
     -webkit-transform-origin: top;
-        -ms-transform-origin: top;
             transform-origin: top;
     -webkit-transform: scale(0.5);
-        -ms-transform: scale(0.5);
             transform: scale(0.5);
     font-size: 1.7rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
@@ -619,10 +617,8 @@ h6 {
 @media (min-width: 40rem) {
   .navmenu .flyout {
     -webkit-transform-origin: top left;
-        -ms-transform-origin: top left;
             transform-origin: top left;
     -webkit-transform: translateX(-100%);
-        -ms-transform: translateX(-100%);
             transform: translateX(-100%);
     width: 200px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
@@ -640,9 +636,10 @@ h6 {
 }
 .navmenu .flyout li a i {
   -webkit-transition: -webkit-transform .7s ease;
-          transition: transform .7s ease;
+  transition: -webkit-transform .7s ease;
+  transition: transform .7s ease;
+  transition: transform .7s ease, -webkit-transform .7s ease;
   -webkit-transform-origin: 50% 50%;
-      -ms-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
 }
 .navmenu .flyout li a span {
@@ -655,7 +652,6 @@ h6 {
 .navmenu .flyout li a:hover i,
 .navmenu .flyout li a:focus i {
   -webkit-transform: rotate(360deg);
-      -ms-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 .navmenu .flyout li a:hover span,
@@ -673,12 +669,11 @@ h6 {
   box-shadow: inset 0 0 0 4px black;
 }
 .menu-open .navmenu .toggle-cont .toggle-btn:hover {
-  box-shadow: inset 0 0 0 15px #000000;
+  box-shadow: inset 0 0 0 15px black;
 }
 .menu-open .navmenu .flyout {
   opacity: 1;
   -webkit-transform: scale(1);
-      -ms-transform: scale(1);
           transform: scale(1);
   pointer-events: all;
 }
@@ -688,7 +683,7 @@ h6 {
 /*
 /*****************************************************************************/
 #footer {
-  background-color: #000000;
+  background-color: black;
   color: #ffffff;
 }
 #footer .info {
@@ -782,13 +777,13 @@ h6 {
   border-left-width: 0;
   border-right-width: 0;
   -webkit-transition: border .1s;
-          transition: border .1s;
+  transition: border .1s;
 }
 .post > .body a:not(.button):hover,
 .post > .body a:not(.button):focus {
   text-decoration: none;
   cursor: pointer;
-  border-color: #333333;
+  border-color: #333;
 }
 .post > .body img {
   display: block;
@@ -845,7 +840,7 @@ h6 {
 .post blockquote::before {
   content: "";
   width: .5em;
-  background: #000000;
+  background: black;
   height: 105%;
   position: absolute;
   top: -2.5%;
@@ -1241,6 +1236,9 @@ pre,
 }
 .skills-list li:first-child {
   border-top-width: 0;
+}
+.skills-list .group-name {
+  font-weight: bold;
 }
 .skills-list ul {
   padding: 0;
