@@ -32,12 +32,17 @@ ___
     <tr><td><a href="http://luminopia.org" class="print-link-ib">Luminopia</a><em class="experience--position">(CTO)</em></td><td>2015 - Present</td><td>
     Cofounded a healthcare startup using virtual reality to treat neurological eye disorders. Currently incubating in the Harvard Innovaiton Lab VIP program.
     <ul>
-      <li>Conducted dozens of meetings with head doctors at nationally renowned hospitals</li>
-      <li>Prepared and presented business and technology pitch decks to venture capital firms</li>
-      <li>Organized and led customer market research with potential patients</li>
+        <li>Conducted dozens of meetings with head doctors at nationally renowned hospitals</li>
+        <li>Prepared and presented business and technology pitch decks to venture capital firms</li>
+        <li>Organized and led customer market research with potential patients</li>
+        <li>Built two virtual reality prototypes:
+            <ol>
+                <li>Platform agnostic web demo using TypeScript, Canvas, SASS, Gulp and Device Orientation APIs.</li>
+                <li>iOS based Swift with high precision gyroscope stablization and GPU based realtime video processing</li>
+            </ol>
     </ul>
     </td></tr>
-    <tr><td><a href="http://ampelement.com" class="print-link-ib">AMP Element</a><em class="experience--position">(CEO)</em></td><td>2014 - 2015</td><td>Lead a team of three to construct a cross-platform service providing realtime messaging, live location tracking, synced calendar and shared task lists to families. Native clients on Android (Java) and iOS (Swift) were backed by a Spring 4 (Java 8) server. ReactiveX and dependency injection paradigms were used on both client applications which reduced development time and allowed for new developers to quickly get up to speed on unfamiliar codebases. The modular backend ran on AWS's Elastic Beanstalk and interfaced with a MySQL/Aurora DB on AWS's RDS, allowing it to scale smoothly as traffic rose.</td></tr>
+    <tr><td><a href="http://ampelement.com" class="print-link-ib">AMP Element</a><em class="experience--position">(CTO)</em></td><td>2014 - 2015</td><td>Lead a team of three to construct a cross-platform service providing realtime messaging, live location tracking, synced calendar and shared task lists to families. Native clients on Android (Java) and iOS (Swift) were backed by a Spring 4 (Java 8) server. ReactiveX and dependency injection paradigms were used on both client applications which reduced development time and allowed for new developers to quickly get up to speed on unfamiliar codebases. The modular backend ran on AWS's Elastic Beanstalk and interfaced with a MySQL/Aurora DB on AWS's RDS, allowing it to scale smoothly as traffic rose.</td></tr>
     <tr><td><a href="http://fireeye.com" class="print-link-ib after-char-padding-left">FireEye</a><em class="experience--position">(Malware Research Development Intern)</em></td><td>2014</td><td>Full-stack software engineer working on in-house systems for malware research and analysis. Re-wrote internal application with 50 TB of malware samples into a modern AngularJS/LESS based web app with a RESTful Python/Flask backend using Cassandra as DB. Improved response time by 500%, doubled number of available query attributes, reduced user support requests 80%, improved feature development time by two-fold, and added 95% test coverage.</td></tr>
 </table>
 
