@@ -40,6 +40,7 @@ ___
                 <li>Platform agnostic web demo using TypeScript, Canvas, SASS, Gulp and Device Orientation APIs.</li>
                 <li>iOS based Swift with high precision gyroscope stablization and GPU based realtime video processing</li>
             </ol>
+        </li>
     </ul>
     </td></tr>
     <tr><td><a href="http://ampelement.com" class="print-link-ib">AMP Element</a><em class="experience--position">(CTO)</em></td><td>2014 - 2015</td><td>Lead a team of three to construct a cross-platform service providing realtime messaging, live location tracking, synced calendar and shared task lists to families. Native clients on Android (Java) and iOS (Swift) were backed by a Spring 4 (Java 8) server. ReactiveX and dependency injection paradigms were used on both client applications which reduced development time and allowed for new developers to quickly get up to speed on unfamiliar codebases. The modular backend ran on AWS's Elastic Beanstalk and interfaced with a MySQL/Aurora DB on AWS's RDS, allowing it to scale smoothly as traffic rose.</td></tr>

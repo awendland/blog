@@ -37,7 +37,7 @@
   - name: NCDM Ticket Sale
     link: "http://alexwendland.com/ncdm/fundraising/"
     type: JQuery w/ PHP Backend
-    desc: Ticket sale tracking website built as a single page JQuery web app with a PHP/MySQL backend. Created for record keeping of ticket sales and money collection.<span>Use "awendland" as username to demo.
+    desc: Ticket sale tracking website built as a single page JQuery web app with a PHP/MySQL backend. Created for record keeping of ticket sales and money collection. Use "awendland" as username to demo.
   - name: Acid-Base Neutralization Simulator
     link: "http://alexwendland.com/threejs/titration/"
     type: ThreeJS / Vanilla JS Web App
