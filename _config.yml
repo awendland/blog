@@ -3,9 +3,7 @@ base-url: /
 name: Alex Wendland
 description: Enjoy
 
-markdown: rdiscount
-rdiscount:
-    extensions: [smart]
+markdown: kramdown
 highlighter: rouge
 permalink: /:year/:title/
 
