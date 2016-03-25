@@ -5,7 +5,7 @@ date:   2015-05-13 18:38:45
 featureimg: "posts/2015-05-13_mcconnell-glossary-output.png"
 ---
 
-Following the spirit of [The Second Quarter of 2015: Items](../http://localhost:4000/2015/the-second-quarter-of-2015-projects/), I'm going to also post an infrequent summary of the projects that I have been working on and other transgressions that have occurred as of late.
+Following the spirit of [The Second Quarter of 2015: Items](../../2015/the-second-quarter-of-2015-projects/), I'm going to also post an infrequent summary of the projects that I have been working on and other transgressions that have occurred as of late.
 
 <!--
 For my future reference, here's the expected format:
@@ -32,7 +32,7 @@ Technical:
 
 [**McConnell Brue Macroeconomics Glossary**](https://github.com/awendland/mcconnell-brue-economics-terms) - _(School) Python_  - GitHub
 
-I was getting tired of constantly searching through my textbook's glossary for the definition of macroeconomics terms, so I found a digital version of the textbook, RegEx-ed the definitions out of it, and wrote this _"Python program for defining macroeconomics terms using the McConnell Brue Economics textbook. This program allows for searching the glossary and supports fuzzy-matching (every search will return a term, whichever is the closest)._
+I was getting tired of constantly searching through my textbook's glossary for the definition of macroeconomics terms, so I found a digital version of the textbook, RegEx-ed the definitions out of it, and wrote this _"Python program for defining macroeconomics terms using the McConnell Brue Economics textbook. This program allows for searching the glossary and supports fuzzy-matching (every search will return a term, whichever is the closest)."_
 
 * It is made to be run from the commandline
 * It can take terms to define as arguments or it can parse a text file with a list of terms to bulk define
