@@ -1,4 +1,27 @@
-@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic);
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Merriweather Italic'), local('Merriweather-Italic'), url(https://fonts.gstatic.com/s/merriweather/v19/u-4m0qyriQwlOrhSvowK_l5-eRZOf-c.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Merriweather Bold Italic'), local('Merriweather-BoldItalic'), url(https://fonts.gstatic.com/s/merriweather/v19/u-4l0qyriQwlOrhSvowK_l5-eR71Wvf4jvk.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Merriweather Regular'), local('Merriweather-Regular'), url(https://fonts.gstatic.com/s/merriweather/v19/u-440qyriQwlOrhSvowK_l5-fCZJ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Merriweather Bold'), local('Merriweather-Bold'), url(https://fonts.gstatic.com/s/merriweather/v19/u-4n0qyriQwlOrhSvowK_l52xwNZWMf_.ttf) format('truetype');
+}
 /*****************************************************************************/
 /*
 /* Fonts
@@ -237,6 +260,8 @@ input[type="checkbox"] {
 *,
 *:before,
 *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .clearfix:before,
@@ -351,8 +376,7 @@ main a {
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
-  -ms-hyphens: auto;
-      hyphens: auto;
+  hyphens: auto;
 }
 ul {
   margin: 0;
@@ -426,7 +450,6 @@ h6 {
   color: black;
   border: 1px solid black;
   border-radius: 4px;
-  -webkit-transition: color .3s, background .3s;
   transition: color .3s, background .3s;
 }
 .button:hover {
@@ -482,13 +505,9 @@ h6 {
   cursor: pointer;
   height: 1.9em;
   width: 2.1em;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   border-radius: 4px;
   background: rgba(50, 50, 50, 0.55);
-  -webkit-transition: background .3s ease;
   transition: background .3s ease;
 }
 #floater #open-menu:hover {
@@ -544,19 +563,14 @@ h6 {
   position: fixed;
   z-index: 9999;
   top: 0;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-transition: background 0.4s ease-in-out, -webkit-transform 0.2s ease-in-out;
-  transition: background 0.4s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transform: translateY(0);
   transition: transform 0.2s ease-in-out, background 0.4s ease-in-out;
-  transition: transform 0.2s ease-in-out, background 0.4s ease-in-out, -webkit-transform 0.2s ease-in-out;
   height: 50px;
   background: #000000;
   width: 100%;
 }
 .navbar.hide {
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-50px);
+  transform: translateY(-50px);
 }
 .navbar.top {
   background: #000000;
@@ -575,7 +589,6 @@ h6 {
   padding: 10px;
   width: 50px;
   height: 50px;
-  -webkit-transition: background .4s;
   transition: background .4s;
   pointer-events: auto;
 }
@@ -588,7 +601,6 @@ h6 {
   display: block;
   border-radius: 0.25em;
   box-shadow: inset 0 0 0 4px white;
-  -webkit-transition: box-shadow 0.5s;
   transition: box-shadow 0.5s;
 }
 .navmenu .toggle-cont .toggle-btn:hover {
@@ -597,29 +609,22 @@ h6 {
 .navmenu .flyout {
   padding-left: 0;
   opacity: 0;
-  -webkit-transition: opacity .5s, -webkit-transform .4s;
-  transition: opacity .5s, -webkit-transform .4s;
   transition: opacity .5s, transform .4s;
-  transition: opacity .5s, transform .4s, -webkit-transform .4s;
   pointer-events: none;
   background: white;
 }
 @media (max-width: 40rem) {
   .navmenu .flyout {
-    -webkit-transform-origin: top;
-            transform-origin: top;
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform-origin: top;
+    transform: scale(0.5);
     font-size: 1.7rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   }
 }
 @media (min-width: 40rem) {
   .navmenu .flyout {
-    -webkit-transform-origin: top left;
-            transform-origin: top left;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform-origin: top left;
+    transform: translateX(-100%);
     width: 200px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
     border-radius: 0 0 2px 0;
@@ -635,12 +640,8 @@ h6 {
   padding: .25em 0;
 }
 .navmenu .flyout li a i {
-  -webkit-transition: -webkit-transform .7s ease;
-  transition: -webkit-transform .7s ease;
   transition: transform .7s ease;
-  transition: transform .7s ease, -webkit-transform .7s ease;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
 }
 .navmenu .flyout li a span {
   margin-left: 10px;
@@ -651,8 +652,7 @@ h6 {
 }
 .navmenu .flyout li a:hover i,
 .navmenu .flyout li a:focus i {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 .navmenu .flyout li a:hover span,
 .navmenu .flyout li a:focus span {
@@ -673,8 +673,7 @@ h6 {
 }
 .menu-open .navmenu .flyout {
   opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   pointer-events: all;
 }
 /*****************************************************************************/
@@ -702,9 +701,15 @@ h6 {
   height: 64px;
   background-color: #ffffff;
   -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
   display: inline-block;
   margin: 10px 70px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -776,7 +781,6 @@ h6 {
   border-top-width: 0;
   border-left-width: 0;
   border-right-width: 0;
-  -webkit-transition: border .1s;
   transition: border .1s;
 }
 .post > .body a:not(.button):hover,
@@ -875,6 +879,9 @@ h6 {
   padding: 2em;
   overflow: overlay;
   min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .image-preview .image-holder img {
   /* nada */
