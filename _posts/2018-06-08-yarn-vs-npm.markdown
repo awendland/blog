@@ -55,8 +55,10 @@ Three major pain points w/ NPM on this one:
 3. The `npm install` output is just ugly compared to Yarn. Yarn's informative, condensed, easy to follow, and all around polished. NPM looks like a complete mess, makes it hard to understand things, and is even worse when not in a TTY.
 
 ![Yarn installing things in a beautiful manner](/img/posts/2018-06-08_yarn_install.gif)
+*Yarn installing things in a beautiful manner*
 
 ![NPM vomiting out information](/img/posts/2018-06-08_npm_install.png)
+*NPM vomiting out information*
 
 4. NPM reformats your `package.json`. Personally, I like to put blank lines around scripts in the `package.json` to group things together visually, but no no no, running `npm i` will edit your `package.json` and remove them, even if it makes no other change.
 

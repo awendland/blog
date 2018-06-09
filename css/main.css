@@ -804,6 +804,10 @@ h6 {
 .post > .body img.large {
   max-width: 100%;
 }
+.post > .body img + em {
+  display: block;
+  text-align: center;
+}
 @media print {
   .post > .body a:not(.button) {
     border: none;

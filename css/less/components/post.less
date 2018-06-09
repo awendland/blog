@@ -56,6 +56,12 @@
             &.large {
                 max-width: 100%;
             }
+            // Center italicized text that immediately follows an
+            // image AKA poor man's caption
+            & + em {
+                display: block;
+                text-align: center;
+            }
         }
         @media print {
             a:not(.button) {
