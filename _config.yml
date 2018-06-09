@@ -1,6 +1,7 @@
 #base-url: http://alexwendland.com/blog
 base-url: /
 name: Alex Wendland
+title: Alex Wendland
 description: Enjoy
 
 markdown: kramdown

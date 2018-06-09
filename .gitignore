@@ -1,6 +1,9 @@
 # jekyll
 _site/
 
+# dockerized jekyll cache
+.vendor/
+
 node_modules/
 
 # dev
