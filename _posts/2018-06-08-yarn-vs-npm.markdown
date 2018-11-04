@@ -11,24 +11,26 @@ Spoiler: I'm going to be trying out `npm` for projects moving forward.<!--break-
 
 ---
 
+_This post was edited on Nov. 4th, 2018. You can find the previous version at [archive.org](https://web.archive.org/web/20181104211429/https://blog.alexwendland.com/2018/yarn-vs-npm/)._
+
 ## Backstory
 
 Just jump to [Comparison](#comparison) if you aren't interested in some brief rambling.
 
 ### My Biases
 
-I like to keep the number of packages I have to a minimum, and similarly I like to keep the number of install steps to as few as possible. NPM has come bundled with Node since 2013 (don't cite me on this, but that date sounds about right), while Yarn is a separate entity (though it's been included in the Node Docker image [for quite some time](https://github.com/nodejs/docker-node/commit/a86d32ab9a687de2c68cdcc4aafcd9d27e96106a)). As a result, I'd like to just rely upon NPM if possible, because they're doing all the package hosting anyways. It's easier to just use one entity's set of tools/services.
+I like to keep the number of packages I have to a minimum, and similarly I like to keep the number of install steps to as few as possible. NPM has come bundled with Node since around 2013 (don't cite me on that, but it's rougly correct), while Yarn is a separate entity (though it's been included in the Node Docker image [for quite some time](https://github.com/nodejs/docker-node/commit/a86d32ab9a687de2c68cdcc4aafcd9d27e96106a)). As a result, I'd like to just rely upon NPM if possible, because they're doing all the package hosting, and I prefer to as few entities as possible for tools/services.
 
 ### Why Yarn?
 
 Quick back story to why I ever used Yarn.
 
-First off, if you looked at that link for the Yarn inclusion in the Node Docker image above, you'd see that Yarn was added in very early on in it's release. Clearly, Yarn was solving a real problem in the node package community—a problem that every JavaScript team I've been on has felt. In some ways it's frustrating that NPM has taken so long to address the issues that Yarn resolved, but that's in the past, and now we're in a new era of usable JS package management (despite the death-by-dependency syndrome that everything seems to be infected with, AKA, there are waayyyy too many dependencies used by most things).
+First off, if you looked at that link for the Yarn inclusion in the Node Docker image above, you'd see that Yarn was added in very early on in it's release. Clearly, Yarn was solving a real problem in the node package community—a problem that every JavaScript team I've been on has felt. In some ways it's frustrating that NPM has taken so long to address the issues that Yarn resolved, but many of those concerns are in the past.
 
 Now we can expect:
 
-* Locked packages, not just top-level packages, but all packages + dependents, in a project.
-* Caching of packages so that long network interactions aren't required every install.
+* Locked package versions, not just top-level packages, but all packages + dependents, in a project.
+* Caching of packages so that long network interactions aren't required for every install.
 
 It doesn't sound like much, but the first feature is critical when you want to ensure the reproducibility and reliability of your application.
 
@@ -38,9 +40,9 @@ I'm taking a look at a couple things for each package manager:
 
 * Ease of use (as subjectively judged by me)
 * Speed (tested against my projects)
-* Extra bells and whistles (that interest me for my use case)
+* Extra bells and whistles (that interest me for my use cases)
 
-You'll notice a lot of me's and my's in there, that's because this comparison is primarily for an audience of me, and secondarily for an audience of anyone with similar needs. I'm not trying to make claims about one being better than the other in every situation, and I would expect a reasonable person to disagree with my outcome. With that aside, here's some comparison:
+You'll notice a lot of me's and my's in there, that's because this comparison is primarily for an audience of me, and secondarily for an audience of anyone with similar needs. I'm not trying to make claims about one being better than the other in every situation, and I would expect a reasonable person to disagree with my outcome. With that aside, here're some comparisons:
 
 ### Ease of use
 
@@ -52,7 +54,7 @@ Three major pain points w/ NPM on this one:
 
 2. You have to prefix all scripts with `npm run` instead of just `yarn`, and if you want to pass arguments to the underlying script you have to use `npm run $SCRIPT -- $ARGS` instead of `yarn $SCRIPT $ARGS`. These are minor annoyances, but after getting used to how lenient Yarn is here, it's a bit annoying to switch back.
 
-3. The `npm install` output is just ugly compared to Yarn. Yarn's informative, condensed, easy to follow, and all around polished. NPM looks like a complete mess, makes it hard to understand things, and is even worse when not in a TTY.
+3. The `npm install` output is uglier than Yarn's. Yarn is informative, condensed, easy to follow, and polished. NPM looks messy, makes it hard to understand things, and is even worse when not in a TTY.
 
 ![Yarn installing things in a beautiful manner](/img/posts/2018-06-08_yarn_install.gif)
 *Yarn installing things in a beautiful manner*
@@ -60,9 +62,9 @@ Three major pain points w/ NPM on this one:
 ![NPM vomiting out information](/img/posts/2018-06-08_npm_install.png)
 *NPM vomiting out information*
 
-4. NPM reformats your `package.json`. Personally, I like to put blank lines around scripts in the `package.json` to group things together visually, but no no no, running `npm i` will edit your `package.json` and remove them, even if it makes no other change.
+4. NPM reformats your `package.json`. Personally, I like to put blank lines around scripts in the `package.json` to group things together visually, but unfortunately, running `npm i` will edit your `package.json` and remove them, even if it makes no other change.
 
-So, my initial claims of using NPM moving forward are not based on it's superior ease-of-use, unfortunately.
+So, my initial claims of using NPM moving forward are not based on it's superior ease-of-use, sadly.
 
 ### Speed
 
@@ -91,11 +93,11 @@ I'm executing `npm i` vs. `yarn` in a project with around 2400 dependencies (wit
 
 The error outputs for the non-install hooks appeared to be the same for each tool. However, npm informed me about several package vulnerabilities during the install process, and recommended running `npm audit` to learn more.
 
-Before each yarn test I renamed `/Users/$USER/Library/Caches/Yarn/v1` (the output of `yarn cache dir`) to a separate folder to effectively wipe the cache (but let me get it back later).
+Before each yarn test I renamed `/Users/$USER/Library/Caches/Yarn/v1` (the output of `yarn cache dir`) to a separate folder to effectively wipe the cache (but letting me get it back later).
 
 ### Bells and Whistles
 
-Both package managers bring some extra features to the table (that interest me).
+Both package managers bring some extra features to the table.
 
 **Yarn** provides `yarn licenses ls` which I've leveraged in a pre-commit script to ensure that every package to the project has an acceptable license for our commercial use case. NPM doesn't have an equivalent, but there are several packages that provide this functionality (loosely ranked by my first-glance impression of their READMEs):
 
@@ -118,9 +120,10 @@ I switched over to **NPM**.
 
 * It is integrated w/ npm audit.
 * It is the first-party tool of the node package library.
-* It's faster (shockingly) than Yarn.
+* It's faster (shockingly) than Yarn (in initial install scenarios w/ no cache to use).
 
 All of this comes with two big caveats:
 
 1. These were the results given my specific project, NPM may be slower in other instances.
 2. I haven't yet dealt with NPM enough to know how bad the ease-of-use stuff really is. Maybe a week from now I'll be tearing my hair out and post an update complaining about it to no end.
+   * Update 2018-11-04: I miss Yarn's better UX. It would be nice if the NPM team would make improvements in this realm.
