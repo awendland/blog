@@ -776,6 +776,12 @@ h6 {
   border: 1px dashed #ccc;
   border-radius: 3px;
 }
+.post > .body pre code {
+  background: none;
+  padding: none;
+  border: none;
+  border-radius: none;
+}
 .post > .body a:not(.button) {
   border: 0.1em dashed rgba(55, 119, 174, 0.5);
   border-top-width: 0;
