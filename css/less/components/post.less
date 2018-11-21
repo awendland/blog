@@ -33,7 +33,7 @@
             border-radius: 3px;
         }
         a:not(.button) {
-            border: .15em dashed fade(@textColor, 50%);
+            border: .1em dashed fade(@linkColor, 50%);
             border-top-width: 0;
             border-left-width: 0;
             border-right-width: 0;
@@ -41,7 +41,7 @@
             &:hover, &:focus {
                 text-decoration: none;
                 cursor: pointer;
-                border-color: @textColor;
+                border-color: @linkColor;
             }
         }
         img {
@@ -87,6 +87,22 @@
             }
             a.no-print-link::after {
                 display: none;
+            }
+        }
+        .footnotes {
+            &::before {
+                content: '';
+                border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+                width: 100%;
+                display: block;
+                margin-top: 2em;
+            }
+            p {
+                margin: 0;
+            }
+            a.reversefootnote {
+                margin-left: 0.5em;
+                border-bottom: none;
             }
         }
     }

@@ -361,7 +361,7 @@ h6 {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: #3777ae;
 }
 a:hover,
 a:focus {
@@ -382,15 +382,15 @@ ul {
   margin: 0;
 }
 li {
-  padding-top: .5em;
+  padding-top: 0.5em;
 }
 li:first-child {
   padding-top: 0;
 }
 h5,
 h6 {
-  margin-top: .3em;
-  margin-bottom: .3em;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
 }
 /*****************************************************************************/
 /*
@@ -450,7 +450,7 @@ h6 {
   color: black;
   border: 1px solid black;
   border-radius: 4px;
-  transition: color .3s, background .3s;
+  transition: color 0.3s, background 0.3s;
 }
 .button:hover {
   background: black;
@@ -496,8 +496,8 @@ h6 {
 #floater {
   position: fixed;
   z-index: 2;
-  top: .5em;
-  left: .5em;
+  top: 0.5em;
+  left: 0.5em;
 }
 #floater #open-menu {
   position: relative;
@@ -508,7 +508,7 @@ h6 {
   user-select: none;
   border-radius: 4px;
   background: rgba(50, 50, 50, 0.55);
-  transition: background .3s ease;
+  transition: background 0.3s ease;
 }
 #floater #open-menu:hover {
   background: rgba(120, 120, 120, 0.75);
@@ -517,7 +517,7 @@ h6 {
 #floater #open-menu span:before,
 #floater #open-menu span:after {
   border-radius: 2px;
-  height: .2em;
+  height: 0.2em;
   background: white;
   position: absolute;
   display: block;
@@ -589,7 +589,7 @@ h6 {
   padding: 10px;
   width: 50px;
   height: 50px;
-  transition: background .4s;
+  transition: background 0.4s;
   pointer-events: auto;
 }
 .navmenu .toggle-cont:active {
@@ -609,7 +609,7 @@ h6 {
 .navmenu .flyout {
   padding-left: 0;
   opacity: 0;
-  transition: opacity .5s, transform .4s;
+  transition: opacity 0.5s, transform 0.4s;
   pointer-events: none;
   background: white;
 }
@@ -637,10 +637,10 @@ h6 {
 .navmenu .flyout li a {
   display: block;
   color: black;
-  padding: .25em 0;
+  padding: 0.25em 0;
 }
 .navmenu .flyout li a i {
-  transition: transform .7s ease;
+  transition: transform 0.7s ease;
   transform-origin: 50% 50%;
 }
 .navmenu .flyout li a span {
@@ -686,7 +686,7 @@ h6 {
   color: #ffffff;
 }
 #footer .info {
-  padding: .5em 0 0 0;
+  padding: 0.5em 0 0 0;
   text-align: center;
 }
 #footer .info span {
@@ -746,7 +746,7 @@ h6 {
 /*
 /*****************************************************************************/
 .post {
-  padding-bottom: .75em;
+  padding-bottom: 0.75em;
 }
 .post header {
   text-align: center;
@@ -759,7 +759,7 @@ h6 {
   overflow-x: hidden;
   font-size: 1.5rem;
   max-width: 850px;
-  margin: .7em auto;
+  margin: 0.7em auto;
 }
 @media (min-width: 40rem) {
   .post header h1 {
@@ -777,17 +777,17 @@ h6 {
   border-radius: 3px;
 }
 .post > .body a:not(.button) {
-  border: 0.15em dashed rgba(51, 51, 51, 0.5);
+  border: 0.1em dashed rgba(55, 119, 174, 0.5);
   border-top-width: 0;
   border-left-width: 0;
   border-right-width: 0;
-  transition: border .1s;
+  transition: border 0.1s;
 }
 .post > .body a:not(.button):hover,
 .post > .body a:not(.button):focus {
   text-decoration: none;
   cursor: pointer;
-  border-color: #333;
+  border-color: #3777ae;
 }
 .post > .body img {
   display: block;
@@ -834,6 +834,20 @@ h6 {
     display: none;
   }
 }
+.post > .body .footnotes::before {
+  content: '';
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  width: 100%;
+  display: block;
+  margin-top: 2em;
+}
+.post > .body .footnotes p {
+  margin: 0;
+}
+.post > .body .footnotes a.reversefootnote {
+  margin-left: 0.5em;
+  border-bottom: none;
+}
 .post blockquote {
   border-radius: 6px;
   margin: 1em;
@@ -847,7 +861,7 @@ h6 {
 }
 .post blockquote::before {
   content: "";
-  width: .5em;
+  width: 0.5em;
   background: black;
   height: 105%;
   position: absolute;
@@ -908,7 +922,7 @@ table tr:last-child {
   border-bottom-width: 0;
 }
 table tr td {
-  padding: .5em;
+  padding: 0.5em;
 }
 table tr td:first-child {
   padding-left: 0;
@@ -921,7 +935,7 @@ table tr td:last-child {
 }
 .list li {
   list-style: none;
-  padding: .5em 0;
+  padding: 0.5em 0;
   position: relative;
   border: 0 solid #ccc;
   border-color: rgba(0, 0, 0, 0.075);
@@ -1195,7 +1209,7 @@ pre,
   }
 }
 .experience-table .experience--position {
-  margin-top: .5em;
+  margin-top: 0.5em;
   display: block;
 }
 .clubs-list {
@@ -1203,7 +1217,7 @@ pre,
 }
 .clubs-list li {
   list-style: none;
-  padding: .5em 0;
+  padding: 0.5em 0;
   position: relative;
   border: 0 solid #ccc;
   border-color: rgba(0, 0, 0, 0.075);
@@ -1216,14 +1230,14 @@ pre,
 }
 .clubs-list .position {
   font-weight: 400;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 .clubs-list .time {
-  font-size: .8em;
+  font-size: 0.8em;
 }
 @media (min-width: 40rem) {
   .clubs-list .time {
-    top: .5em;
+    top: 0.5em;
     right: 0;
     position: absolute;
     font-size: 1em;
@@ -1237,7 +1251,7 @@ pre,
 }
 .skills-list li {
   list-style: none;
-  padding: .5em 0;
+  padding: 0.5em 0;
   position: relative;
   border: 0 solid #ccc;
   border-color: rgba(0, 0, 0, 0.075);
@@ -1259,7 +1273,7 @@ pre,
   border-bottom-width: 0px;
 }
 .skills-list .type {
-  font-size: .8em;
+  font-size: 0.8em;
 }
 .skills-list .type::before {
   content: "(";
@@ -1269,18 +1283,18 @@ pre,
 }
 @media (min-width: 40rem) {
   .skills-list .type {
-    top: .5em;
+    top: 0.5em;
     right: 0;
     position: absolute;
   }
 }
 .skills-list .desc {
   font-style: italic;
-  margin: .25em 0;
+  margin: 0.25em 0;
 }
 .skills-list .cost,
 .skills-list .stat {
-  font-size: .8em;
+  font-size: 0.8em;
 }
 .print-header {
   display: none;
@@ -1295,11 +1309,11 @@ pre,
     font: 12px/1.2 serif;
   }
   body .post > .body > p {
-    margin: .2em 0;
+    margin: 0.2em 0;
     line-height: 1.2;
   }
   h3 {
-    margin: .2em 0;
+    margin: 0.2em 0;
   }
   #post header {
     padding: 0;
@@ -1320,7 +1334,7 @@ pre,
     border-bottom: none;
   }
   .skills-list li {
-    padding: .1em 0;
+    padding: 0.1em 0;
   }
   li {
     padding-top: 0;
