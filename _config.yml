@@ -10,3 +10,6 @@ permalink: /:year/:title/
 
 safe: true
 lsi: false
+
+# TODO leverage https://github.com/envygeeks/jekyll-assets which is part of github-pages
+
