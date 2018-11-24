@@ -882,31 +882,28 @@ h6 {
 .image-preview .image-holder img {
   /* nada */
 }
+table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+table th {
+  font-weight: 600;
+}
+table th,
+table td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+table thead tr {
+  background-color: #eceff0;
+}
 table tr {
-  vertical-align: top;
-  border: 0 solid #ccc;
-  border-color: rgba(0, 0, 0, 0.075);
-  border-bottom-width: 1px;
-  border-top-width: 1px;
-  border-top-color: rgba(255, 255, 255, 0.75);
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
 }
-table tr:first-child {
-  border-top-width: 0;
-}
-table tr:first-child td {
-  padding-top: 0;
-}
-table tr:last-child {
-  border-bottom-width: 0;
-}
-table tr td {
-  padding: 0.5em;
-}
-table tr td:first-child {
-  padding-left: 0;
-}
-table tr td:last-child {
-  padding-right: 0;
+table tr:nth-child(2n) {
+  background-color: #f6f8fa;
 }
 .list {
   padding-left: 0;
