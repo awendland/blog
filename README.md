@@ -1,7 +1,11 @@
-# Personal Website
+# Alex W.'s Blog
 
-## Setup
+[blog.alexwendland.com](https://blog.alexwendland.com)
 
-Run `docker run --rm --volume="$PWD:/srv/jekyll" --volume="$PWD/.vendor/bundle:/usr/local/bundle" -it -p "4000:4000" jekyll/jekyll:3.7 jekyll serve` to auto build and serve the site locally.
+## Dev
 
-To update the stylesheets, use `lessc main.less main.css`. `lessc` can be installed w/ `npm i -g less`.
+Built using [Gatsby.js](https://gatsbyjs.org) after I saw a nice tweet about it. Things have been
+really easy with it so far, so yay!
+
+For future me: checkout the scripts in `package.json` to do what you need. It's a standard
+Node.js/yarn environment.
