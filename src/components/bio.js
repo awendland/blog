@@ -33,7 +33,7 @@ function Bio() {
               <a href={`https://twitter.com/${social.twitter}`}>
                 Twitter handle
               </a>
-              , a <a href={`https://githubb.com/${social.github}`}>GitHub</a>,
+              , a <a href={`https://github.com/${social.github}`}>GitHub</a>,
               some{' '}
               <a href={`https://linkedin.com/in/${social.linkedin}`}>
                 LinkedIn
@@ -41,7 +41,7 @@ function Bio() {
               , ol'{' '}
               <a href={`https://facebook.com/${social.facebook}`}>Facebook</a>,
               or a hip{' '}
-              <a href={`https://instgram.com/${social.instagram}`}>Instagram</a>{' '}
+              <a href={`https://instagram.com/${social.instagram}`}>Instagram</a>{' '}
               if you're interested.
             </p>
           </div>
