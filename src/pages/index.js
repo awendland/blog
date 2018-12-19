@@ -33,11 +33,17 @@ class BlogIndex extends React.Component {
         'College Kickoff',
         Object.assign([], {
           placeholder: `
-            Woohoo! Fun college things! One of those fun college things was 
+            Woohoo! Fun college things! One of those fun college things was
+            <a href="https://datamatch.hcs.harvard.edu">Datamatch</a>, a website started in 1994 at
+            Harvard where people fill out a questionaire and then are matched with their perfect soulmate
+            on Valentine's Day and given a free meal with them. I also worked with
+            <a href="https://www.harvardconsulting.org/">Harvard College Consulting Group</a>,
+            looking at user retention for a big 3 cable company, but it was severely lacking in romance.
             `,
         }),
       ],
       ['High School', Object.assign([], { placeholder: `` })],
+      ['Middle School', Object.assign([], { placeholder: `` })],
     ])
     posts.reduce((groups, post) => {
       const era = post.node.frontmatter.era || 'Latest'
