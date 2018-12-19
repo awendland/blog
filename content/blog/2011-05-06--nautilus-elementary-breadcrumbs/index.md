@@ -17,7 +17,7 @@ Nautilus Elementary lacked the nice breadcrumb layout when on the default Ambian
 >
 > _**Then set Nautilus Elementary to use Breadcrumbs by going to Edit > Preferences, on the Tweaks tab enable "Show like breadcrumbs":**_
 
-> **![nautilus elementary tweaks](http://lh4.ggpht.com/_1QSDkzYY2vc/S9IThzsaiAI/AAAAAAAAA40/YNUgVuqlk-Q/s400/Selection_006.png)**
+> **![nautilus elementary tweaks](https://lh4.ggpht.com/_1QSDkzYY2vc/S9IThzsaiAI/AAAAAAAAA40/YNUgVuqlk-Q/s400/Selection_006.png)**
 > 
 > **Finally, you may need to restart Nautilus:**
 >

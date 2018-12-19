@@ -13,7 +13,7 @@ I followed this guide to greatly improve the Ubuntu Natty Narwhal notification s
 >
 > [ ](http://www.webupd8.org/2011/05/how-to-use-standard-gnome-notification.html)
 >
-> ![GNOME Notifications](http://lh6.googleusercontent.com/_1QSDkzYY2vc/TcFZ1JKorOI/AAAAAAAAESo/pemlRta9AbY/s800/notif0.png)
+> ![GNOME Notifications](https://lh6.googleusercontent.com/_1QSDkzYY2vc/TcFZ1JKorOI/AAAAAAAAESo/pemlRta9AbY/s800/notif0.png)
 >
 > [ ](http://www.webupd8.org/2011/05/how-to-use-standard-gnome-notification.html)[ ](http://www.webupd8.org/2011/05/how-to-use-standard-gnome-notification.html)
 >
@@ -39,15 +39,15 @@ I followed this guide to greatly improve the Ubuntu Natty Narwhal notification s
 >
 > If you use the "standard" theme, the GNOME Notifications will respect your current GTK theme colors.** Here are some screenshots:** \- Pop-up Notifications "Ubuntu theme" (multiple notifications): 
 >
-> ![Gnome notifications](http://lh6.googleusercontent.com/_1QSDkzYY2vc/TcFZ2EVUZxI/AAAAAAAAESs/69oKgt-jLpY/s400/notif-multi.png)
+> ![Gnome notifications](https://lh6.googleusercontent.com/_1QSDkzYY2vc/TcFZ2EVUZxI/AAAAAAAAESs/69oKgt-jLpY/s400/notif-multi.png)
 >
 > \- Pop-up Notifications "standard" theme, some random GTK theme: 
 >
-> ![Gnome notifications](http://lh3.googleusercontent.com/_1QSDkzYY2vc/TcFZ1ZGMEzI/AAAAAAAAESk/fb4JHGJbtFk/s400/notif1.png)
+> ![Gnome notifications](https://lh3.googleusercontent.com/_1QSDkzYY2vc/TcFZ1ZGMEzI/AAAAAAAAESk/fb4JHGJbtFk/s400/notif1.png)
 >
 > \- Pop-up Notifications "standard" theme, some other random GTK theme: 
 >
-> ![Gnome notifications Ubuntu](http://lh5.googleusercontent.com/_1QSDkzYY2vc/TcFZ1YN-e0I/AAAAAAAAESg/BMn-72CYdkA/s400/notif2.png)
+> ![Gnome notifications Ubuntu](https://lh5.googleusercontent.com/_1QSDkzYY2vc/TcFZ1YN-e0I/AAAAAAAAESg/BMn-72CYdkA/s400/notif2.png)
 >
 > ## Revert the changes
 >

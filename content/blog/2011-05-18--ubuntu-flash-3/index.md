@@ -11,7 +11,7 @@ Finally! I have tried so many so called "solutions" to get Ubuntu and Flash to p
 >
 > _Thanks to a partnership between Google and Adobe Google’s Chrome browser ships with a built-in version of Flash that is more recent than that available to download individually. This ensures better performance and better protection._
 >
-> ![Google Chrome ships with an more recent version of Flash than available to download](http://cdn.omgubuntu.co.uk/wp-content/uploads/2010/11/Selection_006-500x225.png)
+> ![Google Chrome ships with an more recent version of Flash than available to download](https://cdn.omgubuntu.co.uk/wp-content/uploads/2010/11/Selection_006-500x225.png)
 >
 > _Using it in Firefox is simple although the trick requires you to have Google Chrome installed in-order to recieve the automatic upgrades to the Flash plugin. No big deal – head to [Google.com/chrome](http://google.com/chrome) and download the relevant .deb file for your system. Once installed proceed with the steps below, courtesy of reader David H._
 >
@@ -23,11 +23,11 @@ Finally! I have tried so many so called "solutions" to get Ubuntu and Flash to p
 >     * _**sudo ln -s /opt/google/chrome/libgcflashplayer.so ./**_
 > _Now open Firefox, head to the ‘Add-ons > Plugins’ menu and disable the default version of Flash (if any)._
 >
-> ![](http://cdn.omgubuntu.co.uk/wp-content/uploads/2010/11/Add-ons_007-500x390.png)
+> ![](https://cdn.omgubuntu.co.uk/wp-content/uploads/2010/11/Add-ons_007-500x390.png)
 >
 > _Now you can enjoy an auto-updated Flash player in Mozilla Firefox so long as you keep Google Chrome updated via Update Manager._
 >
-> ![](http://cl.ly/3W471L0c331r0q373X12/Screen_shot_2010-11-29_at_6.57.41_PM.png)
+> ![](https://cl.ly/3W471L0c331r0q373X12/Screen_shot_2010-11-29_at_6.57.41_PM.png)
 
 Then, if you already have it installed, unistall any Flash stuff from the Ubuntu Software Center. Finally, procede to install the software called **Adobe Flash Plugin** (under version my was listed as 10.2.159.1ubuntu1 (flashplugin-installer)):
 
