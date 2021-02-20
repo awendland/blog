@@ -10,45 +10,83 @@ class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
 
-    const groupedPosts = new Map([
-      ['Back to College', Object.assign([], { placeholder: `` })],
-      [
-        '3 Year Startup Hiatus',
-        Object.assign([], {
-          placeholder: `
-            Co-founder and CTO at <a href="https://luminopia.com">Luminopia</a>, where we were working to cure lazy
-            eye (the team's working on even more now!). Checkout some coverage of an early
-            <a href="https://vector.childrenshospital.org/2017/04/virtual-reality-headsets-could-treat-amblyopia/">
-            clinical trial we ran at BCH</a>, a <a href="https://theophthalmologist.com/business-profession/no-more-playing-pirate">
-            writeup by the Ophthalmologist</a>, some <a href="https://medcitynews.com/2017/03/pediatric-medical-innovation-priorities/">
-            SXSW coverage</a>. Plus, The Crimson asked me for a
-            <a href="https://www.thecrimson.com/article/2017/2/21/virtual-reality-cover/#article-nav-section-3">
-            brief statement</a> and HBS wrote-up a <a href="https://hbr.org/product/luminopia-improving-treatment-for-visual-disorders/517065-PDF-ENG">
-            case study on us</a>, if that's your thing.`,
-        }),
-      ],
-      [
-        'College Kickoff',
-        Object.assign([], {
-          placeholder: `
-            Woohoo! Fun college things! One of those fun college things was
-            <a href="https://datamatch.hcs.harvard.edu">Datamatch</a>, a website started in 1994 at
-            Harvard where people fill out a questionaire and then are matched with their perfect soulmate
-            on Valentine's Day and given a free meal with them. I also worked with
-            <a href="https://www.harvardconsulting.org/">Harvard College Consulting Group</a>,
-            looking at user retention for a big 3 cable company, but it was severely lacking in romance.
-            `,
-        }),
-      ],
-      ['High School', Object.assign([], { placeholder: `` })],
-      ['Middle School', Object.assign([], { placeholder: `` })],
-    ])
-    posts.reduce((groups, post) => {
-      const era = post.node.frontmatter.era || 'Latest'
-      return groups.set(era, [...(groups.get(era) || []), post])
-    }, groupedPosts)
+    const entries = [
+      /*
+      {
+        date: __ISO 8601 formatted date which will be used for lexicographical sorting__,
+        jsx: __some JSX entity__,
+      }
+      */
+    ]
+
+    const posts = data.allMarkdownRemark.edges
+    for (const { node: post } of posts) {
+      const title = post.frontmatter.title || post.fields.slug
+      entries.push({
+        date: String(post.frontmatter.isoDate),
+        jsx: (
+          <div
+            key={post.fields.slug}
+            style={{
+              marginBottom: rhythm(0.25),
+              display: 'flex',
+              alignItems: 'flex-end',
+            }}
+          >
+            <time
+              datetime={post.frontmatter.isoDate}
+              title={post.frontmatter.isoDate}
+              style={{
+                display: `inline-block`,
+                width: `6em`,
+                flexShrink: '0',
+                opacity: `0.6`,
+                fontSize: rhythm(0.45),
+                lineHeight: rhythm(1),
+              }}
+            >
+              {post.frontmatter.date}
+            </time>
+            <Link
+              style={{
+                boxShadow: 'none',
+                whiteSpace: 'nowrap',
+                textOverflow: 'ellipsis',
+                overflow: 'hidden',
+              }}
+              to={post.fields.slug}
+            >
+              {title}
+            </Link>
+          </div>
+        ),
+      })
+    }
+
+    const blurbs = data.allBlurbsYaml.edges
+    for (const { node: blurb } of blurbs) {
+      entries.push({
+        date: String(blurb.date),
+        jsx: (
+          <>
+            {blurb.heading ? (
+              <h3 key={String(blurb.date) + '-heading'}>{blurb.heading}</h3>
+            ) : (
+              ''
+            )}
+            {blurb.paragraph_html ? (
+              <p
+                key={String(blurb.date) + '-content'}
+                dangerouslySetInnerHTML={{ __html: blurb.paragraph_html }}
+              />
+            ) : (
+              ''
+            )}
+          </>
+        ),
+      })
+    }
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -57,63 +95,7 @@ class BlogIndex extends React.Component {
           keywords={['blog', 'web', 'tech', 'harvard', 'startup']}
         />
         <Bio />
-        {Array.from(groupedPosts.entries()).map(([era, group]) => {
-          let section
-          if (group.length < 1) {
-            section = (
-              <div
-                key={era}
-                dangerouslySetInnerHTML={{ __html: group.placeholder }}
-              />
-            )
-          } else {
-            section = group.map(({ node }) => {
-              const title = node.frontmatter.title || node.fields.slug
-              return (
-                <div
-                  key={node.fields.slug}
-                  style={{
-                    marginBottom: rhythm(0.25),
-                    display: 'flex',
-                    alignItems: 'flex-end',
-                  }}
-                >
-                  <time
-                    datetime={node.frontmatter.isoDate}
-                    title={node.frontmatter.isoDate}
-                    style={{
-                      display: `inline-block`,
-                      width: `6em`,
-                      flexShrink: '0',
-                      opacity: `0.6`,
-                      fontSize: rhythm(0.45),
-                      lineHeight: rhythm(1),
-                    }}
-                  >
-                    {node.frontmatter.date}
-                  </time>
-                  <Link
-                    style={{
-                      boxShadow: 'none',
-                      whiteSpace: 'nowrap',
-                      textOverflow: 'ellipsis',
-                      overflow: 'hidden',
-                    }}
-                    to={node.fields.slug}
-                  >
-                    {title}
-                  </Link>
-                </div>
-              )
-            })
-          }
-          return (
-            <div key={era}>
-              <h3>{era}</h3>
-              {section}
-            </div>
-          )
-        })}
+        {entries.sort((a, b) => -1 * a.date.localeCompare(b.date)).map(e => e.jsx)}
       </Layout>
     )
   }
@@ -141,6 +123,15 @@ export const pageQuery = graphql`
             title
             era
           }
+        }
+      }
+    }
+    allBlurbsYaml {
+      edges {
+        node {
+          date
+          heading
+          paragraph_html
         }
       }
     }

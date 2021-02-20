@@ -13,7 +13,24 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-transformer-yaml`,
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        // Intended to store YAML items in subdirs, which will be made available
+        // in the GraphQL schema. For example:
+        //   content/data/blurbs/{2020-09-18.yaml,2021-02-19.yaml}
+        // will produce
+        //   allBlurbsYaml: {edges: [{node: { __contents__ }}, ...]}
+        // in the GraphQL schema.
+        path: `${__dirname}/content/blurbs`,
+      }
+    },
+    {
+      // Intended to store Markdown documents which will be made available in
+      // allMarkdownRemark. You can filter just these documents using something
+      // like `allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/projects/"}})`.
+      // See https://github.com/gatsbyjs/gatsby/issues/1634 for more ideas.
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
