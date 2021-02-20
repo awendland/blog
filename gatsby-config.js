@@ -62,9 +62,9 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-goatcounter`,
       options: {
-        trackingId: `UA-42552740-2`,
+        code: `awendland`,
       },
     },
     `gatsby-plugin-feed`,
