@@ -3,8 +3,21 @@
   "description": "Alex Wendland's Blog",
   "version": "1.0.0",
   "author": "Alex Wendland <me@alexwendland.com>",
-  "bugs": {
-    "url": "https://github.com/awendland/gatsby-starter-blog/issues"
+  "homepage": "https://blog.alexwendland.com",
+  "license": "UNLICENSED",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awendland/awendland.github.io"
+  },
+  "scripts": {
+    "dev": "gatsby develop",
+    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
+    "start": "echo \"Use 'yarn dev' to create a localhost instance\"",
+    "build": "gatsby build",
+    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   },
   "dependencies": {
     "gatsby": "^2.0.19",
@@ -43,21 +56,5 @@
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.11.1",
     "prettier": "^1.14.2"
-  },
-  "homepage": "https://blog.alexwendland.com",
-  "license": "UNLICENSED",
-  "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
-  },
-  "scripts": {
-    "dev": "gatsby develop",
-    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
-    "start": "echo \"Use 'yarn dev' to create a localhost instance\"",
-    "build": "gatsby build",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
 }
