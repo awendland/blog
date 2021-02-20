@@ -15,14 +15,14 @@ module.exports = {
   plugins: [
     `gatsby-transformer-yaml`,
     {
+      // Intended to store YAML items in subdirs, which will be made available
+      // in the GraphQL schema. For example:
+      //   content/data/blurbs/{2020-09-18.yaml,2021-02-19.yaml}
+      // will produce
+      //   allBlurbsYaml: {edges: [{node: { __contents__ }}, ...]}
+      // in the GraphQL schema.
       resolve: `gatsby-source-filesystem`,
       options: {
-        // Intended to store YAML items in subdirs, which will be made available
-        // in the GraphQL schema. For example:
-        //   content/data/blurbs/{2020-09-18.yaml,2021-02-19.yaml}
-        // will produce
-        //   allBlurbsYaml: {edges: [{node: { __contents__ }}, ...]}
-        // in the GraphQL schema.
         path: `${__dirname}/content/blurbs`,
       }
     },
@@ -35,6 +35,16 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: 'blog',
+      },
+    },
+    {
+      // Fetches posts from Collected Notes. See https://collectednotes.com/awendland.
+      // Thanks to the extra parsing in gatsby-node.js, these should be available under
+      // allCollectedNote and in allMarkdownRemark (look for parent.internal.type == "CollectedNote")
+      resolve: "gatsby-source-remote-file",
+      options: {
+        url: "https://collectednotes.com/awendland.json",
+        name: "collectedNotes",
       },
     },
     {

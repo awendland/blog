@@ -41,7 +41,9 @@ function Bio() {
               , ol'{' '}
               <a href={`https://facebook.com/${social.facebook}`}>Facebook</a>,
               or a hip{' '}
-              <a href={`https://instagram.com/${social.instagram}`}>Instagram</a>{' '}
+              <a href={`https://instagram.com/${social.instagram}`}>
+                Instagram
+              </a>{' '}
               if you're interested.
             </p>
           </div>

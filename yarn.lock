@@ -6532,7 +6532,7 @@ gatsby-remark-smartypants@^2.0.5:
     retext-smartypants "^3.0.3"
     unist-util-visit "^1.4.1"
 
-gatsby-source-filesystem@^2.0.2:
+gatsby-source-filesystem@^2.0.2, gatsby-source-filesystem@^2.10.0:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.11.0.tgz#3fff5398796b17eb960e83d0eaa99e578b6e4ef1"
   integrity sha512-SLKksyfRvdMHyF0kb3YCr4ME6RW4Pje9zo1RVAJ1sqaBFDch0YUZzTE51QO586JSkrN00UeE8lU++ODXlm425g==
@@ -6550,6 +6550,14 @@ gatsby-source-filesystem@^2.0.2:
     progress "^2.0.3"
     valid-url "^1.0.9"
     xstate "^4.14.0"
+
+gatsby-source-remote-file@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/gatsby-source-remote-file/-/gatsby-source-remote-file-0.2.3.tgz#6700a5c04168e57ed17bc1220c1ee4cef743c304"
+  integrity sha512-bBIqwFe+Abpj5J3QozkCKFW92pRYDImXPeaY7luZb2AOITjjaGyD+SSn3RZcSUeP7DNkExvtmV0noAr0kvrhTw==
+  dependencies:
+    gatsby "^2.31.1"
+    gatsby-source-filesystem "^2.10.0"
 
 gatsby-telemetry@^1.10.0:
   version "1.10.0"
@@ -6621,7 +6629,7 @@ gatsby-transformer-yaml@^2.11.0:
     lodash "^4.17.20"
     unist-util-select "^1.5.0"
 
-gatsby@^2.0.19:
+gatsby@^2.0.19, gatsby@^2.31.1:
   version "2.32.4"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.32.4.tgz#2bfb7cc587c1ec7fda70e57ca2893ce5bbc6a4e9"
   integrity sha512-Jpqp8pwQJab6fpGdB3OmJk3UXqPvmYHH6YugF9CYfsTyJXy3yoOSxJ6hMzZeZxEnxeJ5RnJlGRyMEZJtpmy3ZQ==

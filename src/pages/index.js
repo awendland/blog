@@ -6,6 +6,59 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { rhythm } from '../utils/typography'
 
+const TimelineLinkEntry = ({ isoDate, humanDate, title, url, slug }) => {
+  return (
+    <div
+      key={String(isoDate) + title}
+      style={{
+        marginBottom: rhythm(0.25),
+        display: 'flex',
+        alignItems: 'flex-end',
+      }}
+    >
+      <time
+        datetime={isoDate}
+        title={isoDate}
+        style={{
+          display: `inline-block`,
+          width: `8em`,
+          flexShrink: '0',
+          opacity: `0.6`,
+          fontSize: rhythm(0.45),
+          lineHeight: rhythm(1),
+        }}
+      >
+        {humanDate}
+      </time>
+      {slug ? (
+        <Link
+          to={slug}
+          style={{
+            boxShadow: 'none',
+            whiteSpace: 'nowrap',
+            textOverflow: 'ellipsis',
+            overflow: 'hidden',
+          }}
+        >
+          {title}
+        </Link>
+      ) : (
+        <a
+          href={url}
+          style={{
+            boxShadow: 'none',
+            whiteSpace: 'nowrap',
+            textOverflow: 'ellipsis',
+            overflow: 'hidden',
+          }}
+        >
+          {title}
+        </a>
+      )}
+    </div>
+  )
+}
+
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
@@ -20,47 +73,16 @@ class BlogIndex extends React.Component {
       */
     ]
 
-    const posts = data.allMarkdownRemark.edges
+    const posts = data.posts.edges
     for (const { node: post } of posts) {
-      const title = post.frontmatter.title || post.fields.slug
       entries.push({
         date: String(post.frontmatter.isoDate),
-        jsx: (
-          <div
-            key={post.fields.slug}
-            style={{
-              marginBottom: rhythm(0.25),
-              display: 'flex',
-              alignItems: 'flex-end',
-            }}
-          >
-            <time
-              datetime={post.frontmatter.isoDate}
-              title={post.frontmatter.isoDate}
-              style={{
-                display: `inline-block`,
-                width: `6em`,
-                flexShrink: '0',
-                opacity: `0.6`,
-                fontSize: rhythm(0.45),
-                lineHeight: rhythm(1),
-              }}
-            >
-              {post.frontmatter.date}
-            </time>
-            <Link
-              style={{
-                boxShadow: 'none',
-                whiteSpace: 'nowrap',
-                textOverflow: 'ellipsis',
-                overflow: 'hidden',
-              }}
-              to={post.fields.slug}
-            >
-              {title}
-            </Link>
-          </div>
-        ),
+        jsx: TimelineLinkEntry({
+          isoDate: post.frontmatter.isoDate,
+          humanDate: post.frontmatter.humanDate,
+          title: post.frontmatter.title,
+          slug: post.fields.slug,
+        }),
       })
     }
 
@@ -95,7 +117,9 @@ class BlogIndex extends React.Component {
           keywords={['blog', 'web', 'tech', 'harvard', 'startup']}
         />
         <Bio />
-        {entries.sort((a, b) => -1 * a.date.localeCompare(b.date)).map(e => e.jsx)}
+        {entries
+          .sort((a, b) => -1 * a.date.localeCompare(b.date))
+          .map(e => e.jsx)}
       </Layout>
     )
   }
@@ -110,18 +134,18 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    posts: allMarkdownRemark {
       edges {
         node {
-          excerpt
+          html
           fields {
             slug
           }
           frontmatter {
-            date(formatString: "YYYY MMM")
+            humanDate: date(formatString: "YYYY MMM D")
             isoDate: date(formatString: "YYYY-MM-DD HH:mm:ssZ")
             title
-            era
+            layout
           }
         }
       }

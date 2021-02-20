@@ -52,15 +52,59 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+exports.onCreateNode = async ({ node, loadNodeContent, actions, getNode, createNodeId, createContentDigest }) => {
+  const { createNode, createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const value = node.frontmatter.slug || createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,
       node,
       value,
     })
+  }
+  
+  if (node.name === "collectedNotes") {
+    try {
+      const nodeContent = await loadNodeContent(node);
+      const collectedNotes = JSON.parse(nodeContent);
+  
+      collectedNotes.notes
+        .filter((note) => note.visibility === "public")
+        .forEach((note) => {
+        const childId = createNodeId(`${node.id}${note.id}`);
+        const noteNode = {
+          ...note,
+          noteId: note.id,
+          sourceInstanceName: node.name,
+          id: childId,
+          children: [],
+          parent: node.id,
+          internal: {
+            type: "CollectedNote",
+            contentDigest: createContentDigest(note),
+            // setting mediaType will cause gatsby-transformer-remark to process the internal.content field
+            mediaType: "text/markdown",
+            // Prefix content w/ json-formatted frontmatter (which is supported by gray-matter which is
+            // used by gatsby-transformer-remark as seen in https://github.com/jonschlinkert/gray-matter/blob/master/examples/json.js)
+            content: `\
+---json
+${JSON.stringify({
+  date: note.created_at,
+  layout: "note",
+  title: note.title,
+  featureimg: undefined,
+  originalUrl: note.url,
+  slug: `/${note.created_at.substr(0, 10)}-${note.path}/`,
+})}
+---
+${note.body.replace(/^\s*# .+/, "") /* remove title/header from body */}`,
+          },
+        };
+        createNode(noteNode);
+      });
+    } catch (error) {
+      console.error(error);
+    }
   }
 }
