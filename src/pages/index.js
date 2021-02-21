@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 
 import Bio from '../components/bio'
+import LongTermNotesSnippet from '../components/long-term-notes-snippet'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { rhythm } from '../utils/typography'
@@ -117,6 +118,7 @@ class BlogIndex extends React.Component {
           keywords={['blog', 'web', 'tech', 'harvard', 'startup']}
         />
         <Bio />
+        <LongTermNotesSnippet />
         {entries
           .sort((a, b) => -1 * a.date.localeCompare(b.date))
           .map(e => e.jsx)}
@@ -134,7 +136,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    posts: allMarkdownRemark {
+    posts: allMarkdownRemark(filter: { frontmatter: { layout: { eq: "post" } } }) {
       edges {
         node {
           html

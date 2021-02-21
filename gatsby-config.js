@@ -14,6 +14,11 @@ module.exports = {
   },
   plugins: [
     `gatsby-transformer-yaml`,
+
+    // #####################
+    // ## Content Sources ##
+    // #####################
+
     {
       // Intended to store YAML items in subdirs, which will be made available
       // in the GraphQL schema. For example:
@@ -48,12 +53,39 @@ module.exports = {
       },
     },
     {
+      // Fetches pages from my "Public Notes" folder in Google Drive. These will be
+      // converted into markdown, then converted into HTML and available under
+      // allMarkdownRemark. Their frontmatter is set by the "Info > Description" field
+      // in Google Drive. Page creation will be handled like it is for other markdown
+      // pages.
+      //
+      // NOTE: it appears that creating a note by "copying" another Google Doc will
+      // cause a `related___NODE` property to get added which will fail an invariant
+      // check because the specified ID won't exist. This is being tracked in
+      // https://github.com/cedricdelpoux/gatsby-source-google-docs/issues/103.
+      //
+      // NOTE: Make sure that a .env file is located in the repo populated with
+      // GOOGLE_OAUTH_CLIENT_ID, GOOGLE_OAUTH_CLIENT_SECRET, GOOGLE_DOCS_TOKEN.
+      // The first two values are from credentials in a Google Cloud project called
+      // awendland-personal-website.
+      resolve: "gatsby-source-google-docs",
+      options: {
+          // https://drive.google.com/drive/folders/FOLDER_ID
+          folder: "1juy0_GCMK9tW_H0itBBAN9H__ztC6Bpb",
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/assets`,
         name: 'assets',
       },
     },
+
+    // #############################
+    // ## Content Transformations ##
+    // #############################
+
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -94,6 +126,11 @@ module.exports = {
         code: `awendland`,
       },
     },
+
+    // ###################
+    // ## Misc. Add-Ons ##
+    // ###################
+
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
