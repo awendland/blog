@@ -1,0 +1,13 @@
+{
+  "name": "awendland.github.io--scripts",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "adm-zip": "^0.5.3",
+    "rambda": "^6.5.3",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {
+    "@types/yargs": "^16.0.0"
+  }
+}

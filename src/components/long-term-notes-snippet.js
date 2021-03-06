@@ -7,7 +7,7 @@ function LongTermNotesSnippet() {
   return (
     <StaticQuery
       query={longTermNotesQuery}
-      render={data => {
+      render={(data) => {
         const longTermNotes = data.longTermNotes.edges
         return (
           <p
@@ -35,7 +35,7 @@ function LongTermNotesSnippet() {
 const longTermNotesQuery = graphql`
   query LongTermNotesQuery {
     longTermNotes: allMarkdownRemark(
-      filter: { parent: { internal: { type: { eq: "GoogleDocs" } } } }
+      filter: { frontmatter: { layout: { eq: "note" } } }
       sort: { fields: [frontmatter___order], order: ASC }
     ) {
       edges {

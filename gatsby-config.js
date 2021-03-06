@@ -29,7 +29,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blurbs`,
-      }
+      },
     },
     {
       // Intended to store Markdown documents which will be made available in
@@ -46,10 +46,10 @@ module.exports = {
       // Fetches posts from Collected Notes. See https://collectednotes.com/awendland.
       // Thanks to the extra parsing in gatsby-node.js, these should be available under
       // allCollectedNote and in allMarkdownRemark (look for parent.internal.type == "CollectedNote")
-      resolve: "gatsby-source-remote-file",
+      resolve: 'gatsby-source-remote-file',
       options: {
-        url: "https://collectednotes.com/awendland.json",
-        name: "collectedNotes",
+        url: 'https://collectednotes.com/awendland.json',
+        name: 'collectedNotes',
       },
     },
     {
@@ -68,10 +68,23 @@ module.exports = {
       // GOOGLE_OAUTH_CLIENT_ID, GOOGLE_OAUTH_CLIENT_SECRET, GOOGLE_DOCS_TOKEN.
       // The first two values are from credentials in a Google Cloud project called
       // awendland-personal-website.
-      resolve: "gatsby-source-google-docs",
+      resolve: 'gatsby-source-google-docs',
       options: {
-          // https://drive.google.com/drive/folders/FOLDER_ID
-          folder: "1juy0_GCMK9tW_H0itBBAN9H__ztC6Bpb",
+        // https://drive.google.com/drive/folders/FOLDER_ID
+        folder: '1juy0_GCMK9tW_H0itBBAN9H__ztC6Bpb',
+      },
+    },
+    {
+      // Intended to store Markdown documents which are also long term notes,
+      // like those sourced from Google Docs > "Public Notes". These notes should be
+      // generated from tooling that can't automatically import, such as Bear notes.
+      //
+      // Sources:
+      // - Bear Notes - use `scripts/update-bear-notes.mjs`
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/notes`,
+        name: 'notes',
       },
     },
     {
