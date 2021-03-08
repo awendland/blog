@@ -4,7 +4,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "adm-zip": "^0.5.3",
-    "rambda": "^6.5.3",
+    "rambdax": "^7.2.0",
     "yargs": "^16.2.0"
   },
   "devDependencies": {

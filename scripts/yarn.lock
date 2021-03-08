@@ -72,10 +72,10 @@ is-fullwidth-code-point@^3.0.0:
   resolved "https://registry.yarnpkg.com/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz#f116f8064fe90b3f7844a38997c0b75051269f1d"
   integrity sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==
 
-rambda@^6.5.3:
-  version "6.5.3"
-  resolved "https://registry.yarnpkg.com/rambda/-/rambda-6.5.3.tgz#c83908b5c28ee39428ba049382ca040cbadf2f38"
-  integrity sha512-2CAMX4isM2QVOybyiKCCXlopEYIwWMc5nx6SD2PTFEgN4DLMJXjrwjlVsNOisMGeL2+akojuZEF7LuSHb2NMsQ==
+rambdax@^7.2.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-7.2.0.tgz#f2632cb96a89d330d05fa41b488c12185b46001a"
+  integrity sha512-l1r7tYf/oRIpCiw1BJB7kSYl9i7H4tJheKbnWq95DM83Q4CazmRYJ+WM/VRaffr09yvMCdgeF4n6Ya4uWBe/Aw==
 
 require-directory@^2.1.1:
   version "2.1.1"

@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import yargs from 'yargs'
 import AdmZip from 'adm-zip'
-import R from 'rambda'
+import R from 'rambdax'
 import * as libBear from './lib/bear.mjs'
 import * as libmd from './lib/md.mjs'
 import { __repo } from './lib/repo.mjs'
@@ -44,7 +44,8 @@ if (argv.logBundles)
   )
 
 // prepare Developer Resources
-const createDevResourcesMD = R.pipe(
+const devResourcesMarkdown = R.piped(
+  bearbkArchive.getEntries(),
   (entries) => entries.filter(libBear.onlyEntriesNamed(/Developer Resources/)),
   (entries) => entries.reduce(libBear.loadBundles, new Map()),
   libBear.onlyActiveBundles,
@@ -67,5 +68,5 @@ const createDevResourcesMD = R.pipe(
 )
 const devNotePath = path.join(argv.outputDir, 'notes--dev-resources.md')
 fs.mkdirSync(path.dirname(devNotePath), { recursive: true })
-fs.writeFileSync(devNotePath, createDevResourcesMD(bearbkArchive.getEntries()))
+fs.writeFileSync(devNotePath, devResourcesMarkdown)
 console.log(`Wrote Developer Resources notes to: ${devNotePath}`)
