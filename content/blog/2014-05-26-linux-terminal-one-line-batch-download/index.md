@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Linux Terminal Batch Download One Liner"
-date:   2014-05-26T17:11:16
-featureimg: "./2014-05-26_terminal-output.png"
+title: 'Linux Terminal Batch Download One Liner'
+date: 2014-05-26T17:11:16
+featureimg: './2014-05-26_terminal-output.png'
 visibility: public
 ---
 
@@ -11,7 +11,13 @@ More than once I've come across a situation where I've needed to download a set 
 I wanted to download all the (free, legal) mp3s from [www.itsmetrognome.com/music/](metrognome). Fortunately, they download links all followed the same general style:
 
 ```html
-<a class='btn_left  has-counter' rel='36' title='iPhone (MetroGnome Remix)' href='http://www.itsmetrognome.com/?wpdmact=process&did=MzYuaG90bGluaw=='  >Download</a>
+<a
+  class="btn_left  has-counter"
+  rel="36"
+  title="iPhone (MetroGnome Remix)"
+  href="http://www.itsmetrognome.com/?wpdmact=process&did=MzYuaG90bGluaw=="
+  >Download</a
+>
 ```
 
 Therefore it was relatively easy to come up with a regex pattern that would match them:

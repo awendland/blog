@@ -37,7 +37,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create blog posts pages.
   const blogPost = path.resolve('./src/templates/blog-post.js')
   const posts = result.data.allMarkdownRemark.edges.filter(
-    ({ node }) => node.frontmatter.layout == 'post'
+    ({ node }) => node.frontmatter.layout === 'post'
   )
   posts.forEach(({ node: post }, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
@@ -57,7 +57,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create long term notes pages.
   const longTermNote = path.resolve('./src/templates/long-term-note.js')
   const notes = result.data.allMarkdownRemark.edges.filter(
-    ({ node }) => node.frontmatter.layout == 'note'
+    ({ node }) => node.frontmatter.layout === 'note'
   )
   notes.forEach(({ node: note }) => {
     createPage({

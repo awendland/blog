@@ -2,10 +2,11 @@
 layout: post
 title: An Ongoing Comparison of Brackets and Sublime Text 3
 date: 2013-08-03
-featureimg: "./brackets_256.png"
+featureimg: './brackets_256.png'
 marquee: An Ongoing Comparison of Brackets and Sublime Text 3
 visibility: public
 ---
+
 ### Intro
 
 I've worked on a few frontend web projects before and mainly used Aptana Studios 3 for all my IDE/Text Editor needs. Mainly this was because Aptana is based on Eclipse and I have done a significant amount of development in Eclipse. Aptana suited most of my needs, I especially enjoyed the built in FTP syncing and code formatter, but lacks support for custom Javascript method completion and is a massive resource hog. As I began to research Angular JS to build my frontend web project on, I found that many of the tutorial creators were using Sublime Text 3. I hopped on over to the Sublime Text site and downloaded the beta. ST3 is a a much needed refresh from the traditional Eclipse-esque IDE development; it's so subtle and sleek without any of the clunk. ST3 seemed to be the answer!<!--break-->
@@ -23,6 +24,7 @@ Sublime Text 3 - <http://www.sublimetext.com/3>
 Brackets - <http://brackets.io/>
 
 #### Update 2 -- 2013-08-03 01:05 PST
+
 ![Brackets editing a JS file](./brackets_screenshot.png)
 
 A screenshot of Brackets with a Javascript file open
@@ -43,11 +45,11 @@ Brackets has some awesome shortcut-key combos. Here are my favorite:
 
 **ctrl/cmd + e** --- In the HTML editor, opens up the associated CSS markup for that class/id/element
 
-*I'm going to switch over to Sublime Text 3 now.*
+_I'm going to switch over to Sublime Text 3 now._
 
 #### Update 4 -- 2013-08-03 01:35 PST
 
-Brackets has a built in web server so that you can live preview all of your code changes... it's awesome! I have WampServer installed so I get *almost* the same functionality with Sublime Text 3. *But*, Brackets will live update CSS changes in Chrome *and* auto-reload the pages when the HTML or JS changes.
+Brackets has a built in web server so that you can live preview all of your code changes... it's awesome! I have WampServer installed so I get *almost* the same functionality with Sublime Text 3. _But_, Brackets will live update CSS changes in Chrome *and* auto-reload the pages when the HTML or JS changes.
 
 #### Update 5 -- 2013-08-03 02:22 PST
 
@@ -63,7 +65,7 @@ I'll keep searching to see if Sublime Text 3 proves me wrong.
 
 #### Update 7 -- 2013-08-03 02:28 PST
 
-I've got ST3 Package Control up and running [http://wbond.net/sublime_packages/pa...][1]! I knew that ST3 was beta software going in but I didn't know that it would have a vastly smaller selection of supported plugins ([https://github.com/wbond/sublime\_package\_con...][2]). I've also found a code formatter plugin, conveniently called CodeFormatter ([https://github.com/akalongman/subl...][3]).
+I've got ST3 Package Control up and running [http://wbond.net/sublime_packages/pa...][1]! I knew that ST3 was beta software going in but I didn't know that it would have a vastly smaller selection of supported plugins ([https://github.com/wbond/sublime_package_con...][2]). I've also found a code formatter plugin, conveniently called CodeFormatter ([https://github.com/akalongman/subl...][3]).
 
 #### Update 8 -- 2013-08-03 02:35 PST
 
@@ -73,6 +75,6 @@ I can't seem to get CodeFormatter working. It's installed according to Package C
 
 Well this is awesome! According to this StackOverflow—P.S. I love you StackOverflow—answer: <a title="Formatting HTML Code using Sublime Text 2" href="http://stackoverflow.com/questions/8839753/formatting-html-code-using-sublime-text-2" target="_blank">Formatting HTML Code using Subli...</a>, a simple form of code formatting is already built in! Just select all the lines you want formatted and then click **Edit > Line > Reindent** to make them all indent nicely. This isn't full scale code formatting but it definitely helps! The answer goes on to explain how to easily set it as a keybinding which I quickly did to great enjoyment!
 
- [1]: http://wbond.net/sublime_packages/package_control/installation#ST3
- [2]: https://github.com/wbond/sublime_package_control/wiki/Sublime-Text-3-Compatible-Packages
- [3]: https://github.com/akalongman/sublimetext-codeformatter
+[1]: http://wbond.net/sublime_packages/package_control/installation#ST3
+[2]: https://github.com/wbond/sublime_package_control/wiki/Sublime-Text-3-Compatible-Packages
+[3]: https://github.com/akalongman/sublimetext-codeformatter

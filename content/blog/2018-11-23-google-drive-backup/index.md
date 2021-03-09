@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "How to Backup Google Drive to S3/Hard-disk"
-date:   2018-11-23T23:37:30-0500
-featureimg: "./2018-11-23_google_drive_backup.jpg"
+title: 'How to Backup Google Drive to S3/Hard-disk'
+date: 2018-11-23T23:37:30-0500
+featureimg: './2018-11-23_google_drive_backup.jpg'
 visibility: public
 ---
 
@@ -24,10 +24,10 @@ Rclone is an amazing cli tool that can interface with pretty much all cloud stor
 
 Using the interactive `rclone config` it’s pretty easy to get things set up. For our purposes we were interested in syncing locally, TAR-ing and GZIP-ing the resulting folder, and then pushing that to S3 (and storing a copy in a local, physical hard drive). I’m not going to walk through the standard steps that the Rclone docs cover, but I will call out some of the special tweaks/decisions we made in the process:
 
-* If syncing to S3, or if you don’t want to dedicate your laptop to this task (it took about 60 minutes to transfer 15k files / 60 GB on a t2.medium from Drive straight to S3), spinning up an EC2 instance with a large EBS volume attached is a convenient alternative. It’s also pretty cheap since you’ll probably only need it for several hours.
-* Use a service account instead of tying to a specific user by following these steps [Service Account support](https://rclone.org/drive/#service-account-support)
-  * We found that the instructions were slightly wrong here, you needed to enter the email associated with the service account in the “Client Name” field, not the “Key Id” on the IAM dashboard.
-  * Grant access to list Team Drives to the service account by following the instructions in this Stackoverflow answer [https://stackoverflow.com/a/43264567]()
+- If syncing to S3, or if you don’t want to dedicate your laptop to this task (it took about 60 minutes to transfer 15k files / 60 GB on a t2.medium from Drive straight to S3), spinning up an EC2 instance with a large EBS volume attached is a convenient alternative. It’s also pretty cheap since you’ll probably only need it for several hours.
+- Use a service account instead of tying to a specific user by following these steps [Service Account support](https://rclone.org/drive/#service-account-support)
+  - We found that the instructions were slightly wrong here, you needed to enter the email associated with the service account in the “Client Name” field, not the “Key Id” on the IAM dashboard.
+  - Grant access to list Team Drives to the service account by following the instructions in this Stackoverflow answer [https://stackoverflow.com/a/43264567](https://stackoverflow.com/a/43264567)
 
 Then, to copy files to the local drive, use:
 
@@ -45,8 +45,7 @@ tar --use-compress-program=pigz -cf EXPORTED_BUNDLE_NAME.tgz EXPORTED_FOLDER/
 
 ## Benchmarks
 
-| Host | Locations | Duration | File Count | Files Size |
-| --- | --- | --- | --- | --- |
-| t2.medium | Drive → S3 | 1h3m | 15,000 | 60 GB |
-| MBP w/ 200 mbps dl/ul | Drive → hard drive | 1h57m | 21,300 | 93 GB |
-
+| Host                  | Locations          | Duration | File Count | Files Size |
+| --------------------- | ------------------ | -------- | ---------- | ---------- |
+| t2.medium             | Drive → S3         | 1h3m     | 15,000     | 60 GB      |
+| MBP w/ 200 mbps dl/ul | Drive → hard drive | 1h57m    | 21,300     | 93 GB      |

@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "The Second Quarter of 2015: Items"
-date:   2015-05-13T17:08:29
+title: 'The Second Quarter of 2015: Items'
+date: 2015-05-13T17:08:29
 visibility: public
 ---
 
@@ -58,6 +58,7 @@ Let's see how this works out!
 > The war raged across the galaxy. Billions had died, billions more were doomed. Moons, planets, the very stars themselves, faced destruction, cold-blooded, brutal, and worse, random. The Idirans fought for their Faith; the Culture for its moral right to exist.
 
 **Book:** ★★★★☆ [The Player of Games (Culture #2) - Iain M. Banks](https://www.goodreads.com/book/show/18630.The_Player_of_Games)
+
 > In the ancient, all-embracing Culture in which there is no disease or disaster, only the endless games, he has beaten them all. But an empire's challenge will teach him what the Game is really all about.
 
 **Book:** ★★★★☆ [Use of Weapons (Culture #3) - Iain M. Banks](https://www.goodreads.com/book/show/12007.Use_of_Weapons)
@@ -134,13 +135,13 @@ Let's see how this works out!
 
 **Tidbit:** [Easy Crontab Header](http://www.velvetcache.org/2008/01/10/easy-crontab-header)
 
-	# +--------- Minute (0-59)                    | Output Dumper: >/dev/null 2>&1
-	# | +------- Hour (0-23)                      | Multiple Values Use Commas: 3,12,47
-	# | | +----- Day Of Month (1-31)              | Do every X intervals: */X  -> Example: */15 * * * *  Is every 15 minutes
-	# | | | +--- Month (1 -12)                    | Aliases: @reboot -> Run once at startup; @hourly -> 0 * * * *;
-	# | | | | +- Day Of Week (0-6) (Sunday = 0)   | @daily -> 0 0 * * *; @weekly -> 0 0 * * 0; @monthly ->0 0 1 * *;
-	# | | | | |                                   | @yearly -> 0 0 1 1 *;
-	# * * * * * COMMAND                           |
+    # +--------- Minute (0-59)                    | Output Dumper: >/dev/null 2>&1
+    # | +------- Hour (0-23)                      | Multiple Values Use Commas: 3,12,47
+    # | | +----- Day Of Month (1-31)              | Do every X intervals: */X  -> Example: */15 * * * *  Is every 15 minutes
+    # | | | +--- Month (1 -12)                    | Aliases: @reboot -> Run once at startup; @hourly -> 0 * * * *;
+    # | | | | +- Day Of Week (0-6) (Sunday = 0)   | @daily -> 0 0 * * *; @weekly -> 0 0 * * 0; @monthly ->0 0 1 * *;
+    # | | | | |                                   | @yearly -> 0 0 1 1 *;
+    # * * * * * COMMAND                           |
 
 ### Android Resources
 

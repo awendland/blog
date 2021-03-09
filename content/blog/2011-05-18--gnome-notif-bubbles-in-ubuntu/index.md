@@ -5,7 +5,7 @@ layout: post
 visibility: public
 ---
 
-I followed this guide to greatly improve the Ubuntu Natty Narwhal notification system. This notification system has many great features such as stackable notifications, click to remove notificaitions, skip buttons to skip banshee songs, and theme-ability.  Source: <http://www.webupd8.org/2011/05/how-to-use-standard-gnome-notification.html>
+I followed this guide to greatly improve the Ubuntu Natty Narwhal notification system. This notification system has many great features such as stackable notifications, click to remove notificaitions, skip buttons to skip banshee songs, and theme-ability. Source: <http://www.webupd8.org/2011/05/how-to-use-standard-gnome-notification.html>
 
 > A while back we wrote about using the AWN notifications instead of Ubuntu's NotifyOSD which would allow you to position the notification bubbles in any screen corner you want (that's also possible with NotifyOSD [thanks to a PPA by Leolik](http://www.webupd8.org/2010/10/tweak-notifyosd-notifications-in-ubuntu.html) - but it hasn't been updated for Natty yet) and also get a close button for the notifications.
 >
@@ -37,15 +37,15 @@ I followed this guide to greatly improve the Ubuntu Natty Narwhal notification s
 >
 >     notification-properties
 >
-> If you use the "standard" theme, the GNOME Notifications will respect your current GTK theme colors.** Here are some screenshots:** \- Pop-up Notifications "Ubuntu theme" (multiple notifications): 
+> If you use the "standard" theme, the GNOME Notifications will respect your current GTK theme colors.** Here are some screenshots:** \- Pop-up Notifications "Ubuntu theme" (multiple notifications):
 >
 > ![Gnome notifications](https://lh6.googleusercontent.com/_1QSDkzYY2vc/TcFZ2EVUZxI/AAAAAAAAESs/69oKgt-jLpY/s400/notif-multi.png)
 >
-> \- Pop-up Notifications "standard" theme, some random GTK theme: 
+> \- Pop-up Notifications "standard" theme, some random GTK theme:
 >
 > ![Gnome notifications](https://lh3.googleusercontent.com/_1QSDkzYY2vc/TcFZ1ZGMEzI/AAAAAAAAESk/fb4JHGJbtFk/s400/notif1.png)
 >
-> \- Pop-up Notifications "standard" theme, some other random GTK theme: 
+> \- Pop-up Notifications "standard" theme, some other random GTK theme:
 >
 > ![Gnome notifications Ubuntu](https://lh5.googleusercontent.com/_1QSDkzYY2vc/TcFZ1YN-e0I/AAAAAAAAESg/BMn-72CYdkA/s400/notif2.png)
 >
@@ -58,7 +58,7 @@ I followed this guide to greatly improve the Ubuntu Natty Narwhal notification s
 > [ Then press ALT + F2 and type: ](http://www.webupd8.org/2011/05/how-to-use-standard-gnome-notification.html)
 >
 >     /usr/lib/notify-osd/notify-osd
-> 
+>
 > [ Try it out: ](http://www.webupd8.org/2011/05/how-to-use-standard-gnome-notification.html)
 >
 >     notify-send --icon=gtk-add Test "This is a test notification"

@@ -2,9 +2,10 @@
 layout: post
 title: A Foray Into AngularJS
 date: 2013-08-03
-featureimg: "./angularjs-375x360.u8.png"
+featureimg: './angularjs-375x360.u8.png'
 visibility: public
 ---
+
 ### Intro
 
 So I've recently finished the Java backend for a project that I'm working on and now I need to get the frontend up and running. I've done some meager frontend stuff before, basically a very very simple single-item POS system, but I found myself a tad disgusted with the JQuery-Constructor pattern I was using. There were so many callbacks, a complicated mish-mash of navigation-through-app-hierarchy handling, and general lack of cohesion between what was happenning where. As I read around for better models to follow, one figure kept appearing on the horizon. That figure was AngularJS. It promised the solution to all my answers but, upon first inspection from my Javascript-toddler eyes, appeared to be a new beast entirely. Thanks to massive amount of what-appears-to-be well deserved hype around it, thus began my quest to tame the best.<!--break-->

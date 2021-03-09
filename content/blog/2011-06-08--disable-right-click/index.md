@@ -47,7 +47,7 @@ else if (document.all&&!document.getElementById){
 document.oncontextmenu=new //Function("alert(message);return false")
 Function("return false")
 
-// --> 
+// -->
 </script>
 ```
 

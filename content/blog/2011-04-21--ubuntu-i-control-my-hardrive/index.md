@@ -5,7 +5,7 @@ layout: post
 visibility: public
 ---
 
-I have been suffering a problem with my NTFS partitions, I couldn't delete the files on them to trash! After trying many different things I finally found a solution. 
+I have been suffering a problem with my NTFS partitions, I couldn't delete the files on them to trash! After trying many different things I finally found a solution.
 
 > I install **PYSDM** from the Software Center and set the drives to auto-mount. Then I replaced this line in /etc/fstab
 >

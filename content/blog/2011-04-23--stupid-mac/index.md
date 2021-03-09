@@ -9,40 +9,44 @@ After successfully installing Mac OSX 10.6.6 on my brother's Sony VAIO, my dad n
 
 [Grub 2 Basics - http://ubuntuforums.org/showthread.php?t=1195275](http://ubuntuforums.org/showthread.php?t=1195275)
 
-> **Reinstalling GRUB 2 from LiveCD** If you cannot boot from GRUB 2 and need to reinstall it, here is the simple method. For more details or for advanced options, refer to the Ubuntu community documentation here: [Grub2 - Reinstalling GRUB 2](https://help.ubuntu.com/community/Grub2#Reinstalling%20GRUB%202): 
-> 
->   * Boot the Ubuntu Live CD (Try without installing).
->   * From the Desktop, open a terminal - Applications, Accessories, Terminal.
->   * Determine your normal system partition - `sudo fdisk -l` (That is a lowercase L)
->   * If you aren't sure, run `df -Th`. Look for the correct disk size and ext3 or ext4 format.
->   * Mount your normal system partition: 
+> **Reinstalling GRUB 2 from LiveCD** If you cannot boot from GRUB 2 and need to reinstall it, here is the simple method. For more details or for advanced options, refer to the Ubuntu community documentation here: [Grub2 - Reinstalling GRUB 2](https://help.ubuntu.com/community/Grub2#Reinstalling%20GRUB%202):
+>
+> - Boot the Ubuntu Live CD (Try without installing).
+> - From the Desktop, open a terminal - Applications, Accessories, Terminal.
+> - Determine your normal system partition - `sudo fdisk -l` (That is a lowercase L)
+> - If you aren't sure, run `df -Th`. Look for the correct disk size and ext3 or ext4 format.
+> - Mount your normal system partition:
+>
+>   ```
+>   sudo mount /dev/sdXY /mnt
+>   ```
+>
+>   - If you aren't sure if you mounted the correct partition, once it's mounted run "nautilus /mnt" to inspect the partition. If it is the correct partition, you should see the normal Ubuntu folders such as /bin, /boot, /etc, /home, etc
+>   - Example: sudo mount /dev/sda1/mnt
+>   - Note: The partition to mount is normally the partition on which Ubuntu was installed: sda1, sdb5, etc. If you have a separate /boot partition, use the device on which the /boot partition is located. Grub 2 works best when installed in the MBR of the drive to which BIOS boots. Also remember that you _mount_ the partition (including the number) in this step, but you do _not_ include the partition number when you run the "sudo grub-install" command later.
+>   - Note: GRUB 2 counts the first drive (X) as "0", but the first partition (Y) as "1"
+>
+> - Only if you have a separate boot partition:
+>   ```
+>   sudo mount /dev/sdXY /mnt/boot
+>   ```
+>   with sdXY being your /boot partition designation.
+> - Reinstall GRUB 2:
+>   ```
+>   sudo grub-install --root-directory=/mnt /dev/sdX
+>   ```
+>   Do NOT include the partition number.
+>   - Example: sudo grub-install --root-directory=/mnt /dev/sd*a*
+>   - Note: Substitute the device on which Ubuntu was installed - sda, sdb, etc. Do _not_ specify a partition number.
+> - Unmount the partition:
+>
+>   ```
+>   sudo umount /mnt
+>   ```
+>
+>   - Note: If you mounted a separate /boot partition, unmount it first:
 >     ```
->     sudo mount /dev/sdXY /mnt
+>     sudo umount /mnt/boot
 >     ```
 >
->     * If you aren't sure if you mounted the correct partition, once it's mounted run "nautilus /mnt" to inspect the partition. If it is the correct partition, you should see the normal Ubuntu folders such as /bin, /boot, /etc, /home, etc
->     * Example: sudo mount /dev/sda1/mnt
->     * Note: The partition to mount is normally the partition on which Ubuntu was installed: sda1, sdb5, etc. If you have a separate /boot partition, use the device on which the /boot partition is located. Grub 2 works best when installed in the MBR of the drive to which BIOS boots. Also remember that you _mount_ the partition (including the number) in this step, but you do _not_ include the partition number when you run the "sudo grub-install" command later.
->     * Note: GRUB 2 counts the first drive (X) as "0", but the first partition (Y) as "1"
->   * Only if you have a separate boot partition: 
->     ```
->     sudo mount /dev/sdXY /mnt/boot
->     ```
->     with sdXY being your /boot partition designation.
->   * Reinstall GRUB 2: 
->     ```
->     sudo grub-install --root-directory=/mnt /dev/sdX
->     ```
->     Do NOT include the partition number.
->     * Example: sudo grub-install --root-directory=/mnt /dev/sd_a_
->     * Note: Substitute the device on which Ubuntu was installed - sda, sdb, etc. Do _not_ specify a partition number.
->   * Unmount the partition: 
->     ```
->     sudo umount /mnt
->     ```
->       * Note: If you mounted a separate /boot partition, unmount it first: 
->         ```
->         sudo umount /mnt/boot
->         ```
->
->   * Reboot.
+> - Reboot.

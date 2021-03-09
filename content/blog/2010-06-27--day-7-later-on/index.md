@@ -5,9 +5,9 @@ layout: post
 visibility: public
 ---
 
-I've measured the amperage across the solar panel throughout the day, at 9:00 AM (.3 amps); 12:00 PM (.7 amps); 5:00 PM (.3 amps); or about .4 amps averaged from 9:00 to 3:00. So, (0.4 amps) * (12 volts) =  (4.8 watts) * (6 hours) = (28.8 watt hours / per day)
+I've measured the amperage across the solar panel throughout the day, at 9:00 AM (.3 amps); 12:00 PM (.7 amps); 5:00 PM (.3 amps); or about .4 amps averaged from 9:00 to 3:00. So, (0.4 amps) _ (12 volts) =  (4.8 watts) _ (6 hours) = (28.8 watt hours / per day)
 
-The inverter takes a consistent 1 watt. Which comes to, (1 watt) * (24 hours a day) = (24 watt hours / per day)
+The inverter takes a consistent 1 watt. Which comes to, (1 watt) \* (24 hours a day) = (24 watt hours / per day)
 
 (28.8 watt hours / per day) - (24 watt hours / per day) = (Only 4.4 watt hours to charge my devices with)
 

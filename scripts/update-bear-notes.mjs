@@ -59,6 +59,9 @@ const devResourcesMarkdown = R.piped(
   libmd.mapLines((line) =>
     line.match(/## /) ? line.replace('Developer Resources: ', '') : line
   ),
+  (md) => `\
+<!-- markdownlint-disable MD034 -->
+${md}`,
   libmd.withFrontmatter({
     layout: 'note',
     title: 'Developer Resources 💻',

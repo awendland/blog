@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "npm Install Hook Scripts: Intro (Part 1)"
-date:   2018-11-20T23:53:30-0500
-featureimg: "./2018-11-20_npm_panic.jpg"
+title: 'npm Install Hook Scripts: Intro (Part 1)'
+date: 2018-11-20T23:53:30-0500
+featureimg: './2018-11-20_npm_panic.jpg'
 visibility: public
 ---
 
@@ -26,13 +26,13 @@ In July of 2018, `eslint-escope` and `eslint-config-eslint` were modified of to 
 
 npm details the various scripts that are executed automatically during the install process at [cli/doc/misc/npm-scripts#e2346e7/](https://github.com/npm/cli/blob/e2346e7702acccefe6d711168c2b0e0e272e194a/doc/misc/npm-scripts.md). I've reflected the relevant script hooks here that are executed during the install process:
 
-> * preinstall:
+> - preinstall:
 >   Run BEFORE the package is installed
-> * install, postinstall:
+> - install, postinstall:
 >   Run AFTER the package is installed.
-> * preuninstall, uninstall:
+> - preuninstall, uninstall:
 >   Run BEFORE the package is uninstalled.
-> * postuninstall:
+> - postuninstall:
 >   Run AFTER the package is uninstalled.
 
 _~~(Note to self: create a test package to verify these hooks)~~ Test package located at [awendland/npm-install-hook-test](https://github.com/awendland/npm-install-hook-test)._
@@ -96,8 +96,8 @@ With the new uses of npm, it's not appropriate to expect all developers to be wa
 
 As the next step, I'm going to conduct a review of legitimate npm packages to see what an appropriate featureset for install hook scripts is. Two initial mitigation thoughts that came to mind were:
 
-* Creating a reduced execution environment for these install hooks, such as a DSL that only allows certain filesystem IO that's scoped only to the packages install directory and a temp folder.
-* Add a new parameter to dependencies that require install hook script execution so that the consumer has to explicitly authorize it (this would have protected against the eslint-worm[^3]), such as:
+- Creating a reduced execution environment for these install hooks, such as a DSL that only allows certain filesystem IO that's scoped only to the packages install directory and a temp folder.
+- Add a new parameter to dependencies that require install hook script execution so that the consumer has to explicitly authorize it (this would have protected against the eslint-worm[^3]), such as:
 
   ```json
     "dependencies": {

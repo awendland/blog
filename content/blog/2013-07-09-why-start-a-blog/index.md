@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why start a blog?"
+title: 'Why start a blog?'
 date: 2013-07-09
 visibility: public
 ---
@@ -18,5 +18,5 @@ Fortunately, coding may not be my only focus. I also have the privilege of not t
 And that concludes day 1 of this adventure! Until my next post, I leave you with this quote:
 
 > Success isn't a result of spontaneous combustion. You must [first] set yourself on fire.
-> 
+>
 > -Arnold H. Glasow

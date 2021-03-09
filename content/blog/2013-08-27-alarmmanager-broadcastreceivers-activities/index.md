@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "AlarmManager, BroadcastReceivers, Activities! Oh my!"
+title: 'AlarmManager, BroadcastReceivers, Activities! Oh my!'
 date: 2013-08-27
 visibility: public
 ---
+
 ### Intro
 
 This article is the result of hours of frustration, research and lack-of-understanding on my part. I went out with the simple goal of implementing a timer function using Android's AlarmManager class. With ease and efficiency, traits I have come to expect when using the Android APIs, I got it working in under 15 minutes. It was made of three classes, an activity containing the button for scheduling the alarm, a class to handle the AlarmManager interaction, and a BroadcastReceiver to handle the scheduled events. This was working excellently until I began to test this simple app's robustness in handling odd, but still possible, user-interactions.<!--break-->
@@ -48,6 +49,7 @@ public class MainActivity extends Activity {
         /* Cancel the alarm associated with that PendingIntent */
         manager.cancel(pending);
     }
+
 }
 {% endhighlight %}
 
@@ -63,6 +65,7 @@ Let's break it down:
         scheduleAlarm();
     }
     ...
+
 }{% endhighlight %}
 
 This is simply boilerplate code to get the activity running in addition to a single custom method call. The method call `scheduleAlarm()` is what will initiate the AlarmManager event.
@@ -75,9 +78,9 @@ This requests the AlarmManager service from the Android System. It runs on any a
 
 {% highlight java %}PendingIntent pending = PendingIntent.getBroadcast(this, 0, new Intent(this, AlarmReceiver.class), 0);{% endhighlight %}
 
-This creates a PendingIntent to be triggered by the AlarmManager. It takes any application or base context to create the internal Intent and wrapping PendingIntent. **Note: this launches our custom BroadcastReceiver, AlarmReceiver, explicitly. Because of this, there is less work required in the AndroidManifest.xml file.*
+This creates a PendingIntent to be triggered by the AlarmManager. It takes any application or base context to create the internal Intent and wrapping PendingIntent. \*_Note: this launches our custom BroadcastReceiver, AlarmReceiver, explicitly. Because of this, there is less work required in the AndroidManifest.xml file._
 
-{% highlight java %}manager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 5 * 1000, pending);{% endhighlight %}
+{% highlight java %}manager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 5 \* 1000, pending);{% endhighlight %}
 
 This schedules the PendingIntent to be launched by the AlarmManager. `AlarmManager.RTC_WAKEUP` signifies that we are providing a Unix Time long value for the time that the alarm will be triggered. In addition, the `WAKEUP` portion tells AlarmManager that even if the device is asleep, trigger this event. `System.currentTimeMillis() + 5 * 1000` is used to calculate the Unix Time long value for when to trigger the event: the current time + 20 seconds. `pending` is the PendingIntent that we want AlarmManager to launch.
 
@@ -90,22 +93,22 @@ Fortunately, this line is simple. All it does is cancel any events that are set 
 Now we shall setup the BroadcastReceiver to handle this alarm event:
 
 {% highlight java %}public class AlarmReceiver extends BroadcastReceiver {
-    /* Receives scheduled Alarm intents */
-    public void onReceive(Context context, Intent intent) {
-        /* Show a success toast*/
-        Toast.makeText(context, "Howdy partner", Toast.LENGTH_SHORT);
-        /* Launch the MainActivity, just for fun */
-        context.startActivity(new Intent(context, MainActivity.class));
-    }
+/_ Receives scheduled Alarm intents _/
+public void onReceive(Context context, Intent intent) {
+/_ Show a success toast_/
+Toast.makeText(context, "Howdy partner", Toast.LENGTH*SHORT);
+/* Launch the MainActivity, just for fun \_/
+context.startActivity(new Intent(context, MainActivity.class));
+}
 }{% endhighlight %}
 
 Once again, break it down:
 
 {% highlight java %}public class AlarmReceiver extends BroadcastReceiver {
-    /* Receives scheduled Alarm intents */
-    public void onReceive(Context context, Intent intent) {
-        ...
-    }
+/_ Receives scheduled Alarm intents _/
+public void onReceive(Context context, Intent intent) {
+...
+}
 }{% endhighlight %}
 
 This code is the basic boilerplate code for any BroadcastReceiver. We create our own class that extends BroadcastReceiver and implements `onReceive`. `onReceive` is the meat-and-potatoes of any BroadcastReceiver: it is the code that gets called when the broadcast is received. Any logic run by a BroadcastReceiver should go here.
@@ -131,7 +134,7 @@ For the final time, here follows the breakdown:
 {% highlight xml %}<activity android:name=".MainActivity">
 </activity>{% endhighlight %}
 
-This is standard procedure for declaring a normal, no intent-flag (*eg: not for launching from a homescreen, more for internal activity launching*), activity declaration. `android:name=".MainActivity"` declares the location of `MainActivity` to be in the root package, as signified by the prefix dot. The fun part is here:
+This is standard procedure for declaring a normal, no intent-flag (_eg: not for launching from a homescreen, more for internal activity launching_), activity declaration. `android:name=".MainActivity"` declares the location of `MainActivity` to be in the root package, as signified by the prefix dot. The fun part is here:
 
 {% highlight xml %}<receiver android:name=".AlarmReceiver" android:process=":remote">
 </receiver>{% endhighlight %}
@@ -140,11 +143,11 @@ Specifically, this line: `android:process=":remote"`. This part does a little bi
 
 Consider this:
 
-You create an alarm clock app. The user sets an alarm and the app schedules an AlarmManager event for that time. The user navigates away from the app, and like many irksome people, either decides to use the built in "Recent App History" screen to swipe-away your app, killing it, OR *event worse*, runs a Task Killer app to free up memory, also killing it. ****Normally, without this special line of code, the AlarmManager event would be cancelled!***
+You create an alarm clock app. The user sets an alarm and the app schedules an AlarmManager event for that time. The user navigates away from the app, and like many irksome people, either decides to use the built in "Recent App History" screen to swipe-away your app, killing it, OR _event worse_, runs a Task Killer app to free up memory, also killing it. \***_Normally, without this special line of code, the AlarmManager event would be cancelled!_**
 
 Huh? Why would Android remove an event *designed* for starting killed processes? Because the act of killing your application, through either the Task Killer or Recent History method, is interpreted as the User not wanting your app running, *at all.*
 
-And that is why they added `android:process=":remote";` to tell the Android System that, yes, this event is *really, really* important and needs to be run. (Ok, so maybe that isn't why they added it but still... it is an indirect side-affect of what `android:process=":remote"` does, and an important one at that!).
+And that is why they added `android:process=":remote";` to tell the Android System that, yes, this event is _really, really_ important and needs to be run. (Ok, so maybe that isn't why they added it but still... it is an indirect side-affect of what `android:process=":remote"` does, and an important one at that!).
 
 ### Wrap Up
 
@@ -154,4 +157,4 @@ And that's how you create a basic, user-proof, AlarmManager/BroadcastReceiver, s
 
 Use `android:process=":remote"` in you receiver's AndroidManifest.xml entry for separating BroadcastReceivers from the rest of your application life cycle when dealing with AlarmManager.
 
- [1]: http://developer.android.com/reference/android/content/Intent.html#filterEquals(android.content.Intent)
+[1]: http://developer.android.com/reference/android/content/Intent.html#filterEquals(android.content.Intent)

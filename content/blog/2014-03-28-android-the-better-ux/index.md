@@ -2,9 +2,10 @@
 layout: post
 title: Android, the better UX?
 date: 2014-03-28
-featureimg: "./2014-03-28_nexus-5.png"
+featureimg: './2014-03-28_nexus-5.png'
 visibility: public
 ---
+
 ### Intro
 
 What's the best looking smartphone? Quickly the obvious response is given, "iPhone". The leader in innovation, design, functionality, usability, friendliness... et cetara. I'd like to challenge this widespread assumptions and propose that, in fact, Android provides a better net user experience.<!--break-->
@@ -39,12 +40,12 @@ Watch this demo a couple times:
 
 This is what's happening:
 
-  1. An example notification drawer is shown filled with several representative common notifications: an upcoming calendar event, a text message, a screenshot, a received link, and an ongoing screencast.
-  2. The notifications are all expanded with a drag-down gesture in order to reveal their action items
-  3. The text message is marked read by clicking the 'Read' action item
-  4. The screenshot is opened for sharing by clicking the 'Share' action item
-  5. Both items remove themselves from the notification drawer once they are no longer relevent
-  
+1. An example notification drawer is shown filled with several representative common notifications: an upcoming calendar event, a text message, a screenshot, a received link, and an ongoing screencast.
+2. The notifications are all expanded with a drag-down gesture in order to reveal their action items
+3. The text message is marked read by clicking the 'Read' action item
+4. The screenshot is opened for sharing by clicking the 'Share' action item
+5. Both items remove themselves from the notification drawer once they are no longer relevent
+
 There's a couple important UX designs being implemented here. First off, notifications can take a wide variety of layouts. They can be compressed into easy-to-digest one-liners, then expand into complex layouts that are applicable to their purpose (e.g. the screenshot notification expands to contain a large thumbnail of the screenshot). Android notifications are able to provide the perfect amount of information for the user to act on.
 
 This leads into the second point, Android notifications fill a useful niche that exists between quick-updates and the need for a full-blown application. Many times, the event that just occurred ---be it an incoming text message, an ongoing phone call, or a calendar reminder--- only requires a quick, simple interaction (such as acknowledging a message as read, hanging up the phone call, or delaying the calendar reminder). These actions don't warrant a full context switch to a new app, they can easily be dealt with on the spot, and Android provides the means to do so.
@@ -113,16 +114,16 @@ When an Android user is browsing photos in their gallery and wishes to share the
 
 These can range from creating a new email, to posting on Facebook, to inserting it into a note with Evernote. There is a multitude of standardized actions like this that applications can register for on Android. Applications can handle common features such as photo sharing, but can also expand to more advanced actions, such as opening a PDF file from a file browser. These interactions between Android applications allow users to transition seamlessly between different applications that are better suited for various roles. Unlike iOS, where a user wishing to open an '.epub' file on their Google Drive account must:
 
-  1. instead open the eBook reading application
-  2. then hope that it has suport for loading files from Google Drive
-  3. and possibly have to install another app that does
-  
+1. instead open the eBook reading application
+2. then hope that it has suport for loading files from Google Drive
+3. and possibly have to install another app that does
+
 the Android user:
 
-  1. opens the Google Drive app
-  2. selects the file
-  3. and is effortlessly transitioned to the appropraite eBook reading application
-  
+1. opens the Google Drive app
+2. selects the file
+3. and is effortlessly transitioned to the appropraite eBook reading application
+
 The Android eBook application did not have to have explicit Google Drive support ---it didn't even need to know where the file came from--- all it had to do was open the file provided to it in the Intent sent from the Google Drive app. This feature allows Android to provide comprehensive support between the various services that a user can come across throughout their day.
 
 ![Android eBook Application opening a file from the Google Drive Application](./2014-03-28_android-gdrive-ebook.gif)
@@ -133,13 +134,13 @@ Android takes this feature even farther by allowing users to install application
 
 All-in-all, Android may not get the crown f0r "Most Beautiful mobile OS" (though it's coming closer with each new iteration), but it has a wide range of functionality that makes the entire user experience efficient, simple and cohesive. By:
 
-  1. not wrenching users away from their current context with encroaching alerts
-  2. providing a useful, up-to-date view of current activity
-  3. presenting a breadth of options to respond to that current activity
-  4. offering direct access to actions applying to the screen at-hand
-  5. creating an intrinsicly communicative framework through which every application can connect
-  
-*Android establishes a user experience that allows users to know what is going on, act on that information, quickly return to their task, do meaningul work, and seamlessly share the result.*
+1. not wrenching users away from their current context with encroaching alerts
+2. providing a useful, up-to-date view of current activity
+3. presenting a breadth of options to respond to that current activity
+4. offering direct access to actions applying to the screen at-hand
+5. creating an intrinsicly communicative framework through which every application can connect
+
+_Android establishes a user experience that allows users to know what is going on, act on that information, quickly return to their task, do meaningul work, and seamlessly share the result._
 
 [1]: http://developer.android.com/guide/components/intents-filters.html
 [2]: https://play.google.com/store/apps/details?id=com.hellotext.hello

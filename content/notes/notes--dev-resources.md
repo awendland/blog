@@ -2,9 +2,11 @@
 layout: note
 title: Developer Resources 💻
 order: 4
-modifiedTime: 2021-03-06T01:14:26.548Z
+modifiedTime: 2021-03-09T23:46:58.857Z
 visibility: public
 ---
+
+<!-- markdownlint-disable MD034 -->
 
 ## Learning + References
 
@@ -174,11 +176,10 @@ _Input field validation_
 - [Richard’s Toolbox](https://richardstoolbox.com/)
 - [Community-Built Tools for Webpage Performance](https://progressivetooling.com/)
   - https://webhint.io/
-
-* [Serveo: expose local servers to the internet using SSH](http://serveo.net)
-* [Simple text favicon generator | Favicon.io](https://favicon.io/)
-* [Favicon Generator | realfavicongenerator.net](https://realfavicongenerator.net/)
-* [Email Link Builder](https://email-link-builder.netlify.app/)
+- [Serveo: expose local servers to the internet using SSH](http://serveo.net)
+- [Simple text favicon generator | Favicon.io](https://favicon.io/)
+- [Favicon Generator | realfavicongenerator.net](https://realfavicongenerator.net/)
+- [Email Link Builder](https://email-link-builder.netlify.app/)
 
 #### JS Tools
 

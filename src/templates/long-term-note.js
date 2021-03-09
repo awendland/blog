@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Bio from '../components/bio'
 import Layout from '../components/layout'
@@ -23,7 +23,8 @@ class LongTermNoteTemplate extends React.Component {
             marginTop: rhythm(-1),
           }}
         >
-          Updated: <time
+          Updated:{' '}
+          <time
             datetime={note.frontmatter.modifiedTime}
             title={note.frontmatter.modifiedTime}
           >

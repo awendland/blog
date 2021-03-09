@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Particle Network Animations in JS"
-date:   2015-02-20T19:20:32
-featureimg: "./2015-02-20_network-blue.png"
+title: 'Particle Network Animations in JS'
+date: 2015-02-20T19:20:32
+featureimg: './2015-02-20_network-blue.png'
 visibility: public
 ---
 

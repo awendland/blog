@@ -17,11 +17,9 @@ Finally! I have tried so many so called "solutions" to get Ubuntu and Flash to p
 >
 > ## _Using Chome’s built-in Flash in Firefox_
 >
->   * _Open a Terminal session and navigate to the following directory: -_
->     * _**cd /usr/lib/firefox-addons/plugins**_
->   * _Now link the Flash player from Chrome to Firefox by running this command: -_
->     * _**sudo ln -s /opt/google/chrome/libgcflashplayer.so ./**_
-> _Now open Firefox, head to the ‘Add-ons > Plugins’ menu and disable the default version of Flash (if any)._
+> - _Open a Terminal session and navigate to the following directory: -_
+>   - _**cd /usr/lib/firefox-addons/plugins**_
+> - _Now link the Flash player from Chrome to Firefox by running this command: -_ \* _**sudo ln -s /opt/google/chrome/libgcflashplayer.so ./**_ > _Now open Firefox, head to the ‘Add-ons > Plugins’ menu and disable the default version of Flash (if any)._
 >
 > ![](https://cdn.omgubuntu.co.uk/wp-content/uploads/2010/11/Add-ons_007-500x390.png)
 >
