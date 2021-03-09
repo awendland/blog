@@ -2,7 +2,7 @@
 title: Mac, Ubuntu, Windows....Uh Oh, Can't Boot
 date: 2011-04-23T17:19:57
 layout: post
-era: "Middle School"
+visibility: public
 ---
 
 After successfully installing Mac OSX 10.6.6 on my brother's Sony VAIO, my dad needed the hard-drive **expanded** to install XCODE for Iphone dev. First, I tried shrinking the **Windows partition** and merging it into the **Mac partition**. I could shrink the Windows partition but unfortunatly couldn't merge it with the Mac one. I tried to create a new partition from the empty space in Ubuntu but it said it couldn't because **4 was the max unless it was an extended partition** :(. I then decided to delete the Ubuntu partition from windows and format it to **fat32, a universal filesystem**. Mac would be able to see it but, after  trying to boot back up, grub rescue> came up. Duh! Grub **was installed with Ubuntu**! It worked and I finally installed XCODE after I booted up from my USB Ubuntu Live CD and **reinstalled GRUB** with these instructions:

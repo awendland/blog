@@ -64,6 +64,7 @@ const devResourcesMarkdown = R.piped(
     title: 'Developer Resources 💻',
     order: 4,
     modifiedTime: new Date().toISOString(),
+    visibility: 'public',
   })
 )
 const devNotePath = path.join(argv.outputDir, 'notes--dev-resources.md')

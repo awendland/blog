@@ -2,7 +2,7 @@
 layout: post
 title: "STEM, training that matters"
 date: 2013-07-23
-era: "High School"
+visibility: public
 ---
 
 ### The Problem

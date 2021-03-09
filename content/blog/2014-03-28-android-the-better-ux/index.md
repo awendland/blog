@@ -3,7 +3,7 @@ layout: post
 title: Android, the better UX?
 date: 2014-03-28
 featureimg: "./2014-03-28_nexus-5.png"
-era: "High School"
+visibility: public
 ---
 ### Intro
 

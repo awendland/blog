@@ -3,7 +3,7 @@ layout: post
 title:  "npm Install Hook Scripts: Intro (Part 1)"
 date:   2018-11-20T23:53:30-0500
 featureimg: "./2018-11-20_npm_panic.jpg"
-era: "Back to College"
+visibility: public
 ---
 
 [npm](https://docs.npmjs.com/about-npm/index.html)[^1] is the de-facto package manager for JavaScript code. Though initially intended for use with node.js, it's expanded to managing dependencies on the frontend as well. npm makes a developer's life substantially more convenient, but it provides that convenience at the cost of security. In particular, npm is happy to auto-execute package scripts upon install, thanks to various install hook scripts.<!--break-->

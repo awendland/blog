@@ -2,7 +2,7 @@
 title: Ubuntu - I Control My Hardrive
 date: 2011-04-21T18:40:37
 layout: post
-era: "Middle School"
+visibility: public
 ---
 
 I have been suffering a problem with my NTFS partitions, I couldn't delete the files on them to trash! After trying many different things I finally found a solution. 

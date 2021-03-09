@@ -35,7 +35,12 @@ function LongTermNotesSnippet() {
 const longTermNotesQuery = graphql`
   query LongTermNotesQuery {
     longTermNotes: allMarkdownRemark(
-      filter: { frontmatter: { layout: { eq: "note" } } }
+      filter: {
+        frontmatter: {
+          layout: { eq: "note" }
+          visibility: { regex: "/(public)/" }
+        }
+      }
       sort: { fields: [frontmatter___order], order: ASC }
     ) {
       edges {

@@ -2,7 +2,7 @@
 title: Solar Panel - Day 7 Later On
 date: 2010-06-27T03:35:00
 layout: post
-era: "Middle School"
+visibility: public
 ---
 
 I've measured the amperage across the solar panel throughout the day, at 9:00 AM (.3 amps); 12:00 PM (.7 amps); 5:00 PM (.3 amps); or about .4 amps averaged from 9:00 to 3:00. So, (0.4 amps) * (12 volts) =  (4.8 watts) * (6 hours) = (28.8 watt hours / per day)

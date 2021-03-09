@@ -2,7 +2,7 @@
 title: Nautilus Elementary Breadcrumbs
 date: 2011-05-06T21:42:16
 layout: post
-era: "Middle School"
+visibility: public
 ---
 
 Nautilus Elementary lacked the nice breadcrumb layout when on the default Ambiance theme, so here is a simple fix to bring it to you.

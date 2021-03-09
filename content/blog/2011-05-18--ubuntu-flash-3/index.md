@@ -2,7 +2,7 @@
 title: Ubuntu + Flash = <3
 date: 2011-05-18T21:12:22
 layout: post
-era: "Middle School"
+visibility: public
 ---
 
 Finally! I have tried so many so called "solutions" to get Ubuntu and Flash to play nicely together to play Youtube.com fullscreen. After trying so many, the overload gpu trick, media.cfg, a Firefox app supposed to auto fix it, random lines of code, I've finally found a fix that works, at least for me. Well, its not very refined, I can't figure out which of these two following fixes did it, or if they both did, but here goes (btw I have tested this to work in Chromium): First follow the guide on [OMG!Ubuntu!](http://www.omgubuntu.co.uk/2010/11/use-chromes-auto-updated-flash-in-firefox/)

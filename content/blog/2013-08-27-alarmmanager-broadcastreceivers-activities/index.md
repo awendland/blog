@@ -2,7 +2,7 @@
 layout: post
 title: "AlarmManager, BroadcastReceivers, Activities! Oh my!"
 date: 2013-08-27
-era: "High School"
+visibility: public
 ---
 ### Intro
 

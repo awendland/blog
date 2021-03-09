@@ -2,7 +2,7 @@
 title: Solar Panel - Day 3
 date: 2010-06-22T01:13:00
 layout: post
-era: "Middle School"
+visibility: public
 ---
 
 I'm mounting the panel today, it's looking good so far! I've mounted it to my Tree Fort. I've had to add a beam across the front to support the right side of the panel. To keep the panel rotated I've added a strip of plummer's tape (the gray plastic strip on the left side) to the array.

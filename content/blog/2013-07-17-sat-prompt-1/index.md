@@ -2,7 +2,7 @@
 layout: post
 title: SAT Prompt 1
 date: 2013-07-17
-era: "High School"
+visibility: public
 ---
 
 Hello, again. I am quite disappointed in myself for not writing another blog post until now. Of course I can come up with a myriad of excuses, but the problem is simply that I didn't write anything and in hindsight that is all that matters to me. As a sorta-kinda form of punishment, today I am making myself write a post containing my response to an SAT prompt. After looking for SAT prompts I was very surprised to find that they are pretty interesting (and also, I get to try out WordPress's cool distraction free writing mode)! So here it goes:<!--break-->

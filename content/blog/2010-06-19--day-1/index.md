@@ -2,7 +2,7 @@
 title: Solar Panel - Day 1
 date: 2010-06-19T23:34:00
 layout: post
-era: "Middle School"
+visibility: public
 ---
 
 I have finished the mounting brackets. Can't wait to put them up!

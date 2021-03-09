@@ -2,7 +2,7 @@
 title: Xbox Goes RROD? Take some drill in your case!
 date: 2011-06-07T20:26:51
 layout: post
-era: "Middle School"
+visibility: public
 ---
 
 I'm so siked, I have fixed two XBOXs that have faced RROD (Red-Ring-of-Death) using these instructions. Both people had already bought new XBOXs, so I got to keep the fixed, and now working totally fine, old XBOXs. I started off by following this [guide](http://www.instructables.com/id/Fix-the-Red-Ring-of-Deathwithout-towels/) on Instructables.com and using the parts list there: 

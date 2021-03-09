@@ -121,7 +121,7 @@ class BlogIndex extends React.Component {
         <LongTermNotesSnippet />
         {entries
           .sort((a, b) => -1 * a.date.localeCompare(b.date))
-          .map(e => e.jsx)}
+          .map((e) => e.jsx)}
       </Layout>
     )
   }
@@ -136,7 +136,14 @@ export const pageQuery = graphql`
         title
       }
     }
-    posts: allMarkdownRemark(filter: { frontmatter: { layout: { eq: "post" } } }) {
+    posts: allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          layout: { eq: "post" }
+          visibility: { regex: "/(public)/" }
+        }
+      }
+    ) {
       edges {
         node {
           html
@@ -152,7 +159,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allBlurbsYaml {
+    allBlurbsYaml(filter: { visibility: { regex: "/(public)/" } }) {
       edges {
         node {
           date

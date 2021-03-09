@@ -2,7 +2,7 @@
 layout: post
 title: "Why start a blog?"
 date: 2013-07-09
-era: "High School"
+visibility: public
 ---
 
 Why would I dedicate time to writing a blog? Probably for the same reason many people dedicate their time towards writing their blogs: they hope to develop themselves further by sharing their thoughts and knowledge with others. At least that seems like a profound enough sounding reason for me :)

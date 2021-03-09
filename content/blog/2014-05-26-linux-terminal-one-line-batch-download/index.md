@@ -3,7 +3,7 @@ layout: post
 title:  "Linux Terminal Batch Download One Liner"
 date:   2014-05-26T17:11:16
 featureimg: "./2014-05-26_terminal-output.png"
-era: "High School"
+visibility: public
 ---
 
 More than once I've come across a situation where I've needed to download a set of files from a website, all on the same page, and all with a similar HTML markup pattern. Additionally, I've come to fall in love with the Linux Terminal and all of its easy-to-use commands. So, here's a mashup of the two!<!--break-->

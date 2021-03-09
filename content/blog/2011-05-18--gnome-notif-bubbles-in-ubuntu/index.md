@@ -2,7 +2,7 @@
 title: How To Use Standard Gnome Notification Bubbles in Ubuntu
 date: 2011-05-18T20:54:28
 layout: post
-era: "Middle School"
+visibility: public
 ---
 
 I followed this guide to greatly improve the Ubuntu Natty Narwhal notification system. This notification system has many great features such as stackable notifications, click to remove notificaitions, skip buttons to skip banshee songs, and theme-ability.  Source: <http://www.webupd8.org/2011/05/how-to-use-standard-gnome-notification.html>

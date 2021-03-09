@@ -2,7 +2,7 @@
 layout: post
 title: "Robotics, a subject that's lacking"
 date: 2013-07-27
-era: "High School"
+visibility: public
 ---
 
 In light of the lack of STEM and modern technologies training, such as Programming, Computer Architecture and other High-Tech areas, I would like to do my part by starting a weekly Robotics class.<!--break-->

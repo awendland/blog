@@ -10,6 +10,9 @@ exports.createPages = async ({ graphql, actions }) => {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
+          filter: {
+            frontmatter: { visibility: { regex: "/(public|unlisted)/" } }
+          }
         ) {
           edges {
             node {
@@ -33,8 +36,10 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Create blog posts pages.
   const blogPost = path.resolve('./src/templates/blog-post.js')
-  const posts = result.data.allMarkdownRemark.edges.filter(({node}) => node.frontmatter.layout == "post")
-  posts.forEach(({node: post}, index) => {
+  const posts = result.data.allMarkdownRemark.edges.filter(
+    ({ node }) => node.frontmatter.layout == 'post'
+  )
+  posts.forEach(({ node: post }, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
 
@@ -51,8 +56,10 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Create long term notes pages.
   const longTermNote = path.resolve('./src/templates/long-term-note.js')
-  const notes = result.data.allMarkdownRemark.edges.filter(({node}) => node.frontmatter.layout == "note")
-  notes.forEach(({node: note}) => {
+  const notes = result.data.allMarkdownRemark.edges.filter(
+    ({ node }) => node.frontmatter.layout == 'note'
+  )
+  notes.forEach(({ node: note }) => {
     createPage({
       path: note.fields.slug,
       component: longTermNote,
@@ -75,7 +82,7 @@ exports.onCreateNode = async ({
 
   if (node.internal.type === `MarkdownRemark`) {
     let slug = node.frontmatter.slug || createFilePath({ node, getNode })
-    slug = `/${slug.replace(/^\//, "").replace(/\/$/, "")}/` // Ensure slugs start and end with slashes
+    slug = `/${slug.replace(/^\//, '').replace(/\/$/, '')}/` // Ensure slugs start and end with slashes
     createNodeField({
       name: `slug`,
       node,
@@ -88,25 +95,23 @@ exports.onCreateNode = async ({
       const nodeContent = await loadNodeContent(node)
       const collectedNotes = JSON.parse(nodeContent)
 
-      collectedNotes.notes
-        .filter(note => note.visibility === 'public')
-        .forEach(note => {
-          const childId = createNodeId(`${node.id}${note.id}`)
-          const noteNode = {
-            ...note,
-            noteId: note.id,
-            sourceInstanceName: node.name,
-            id: childId,
-            children: [],
-            parent: node.id,
-            internal: {
-              type: 'CollectedNote',
-              contentDigest: createContentDigest(note),
-              // setting mediaType will cause gatsby-transformer-remark to process the internal.content field
-              mediaType: 'text/markdown',
-              // Prefix content w/ json-formatted frontmatter (which is supported by gray-matter which is
-              // used by gatsby-transformer-remark as seen in https://github.com/jonschlinkert/gray-matter/blob/master/examples/json.js)
-              content: `\
+      collectedNotes.notes.forEach((note) => {
+        const childId = createNodeId(`${node.id}${note.id}`)
+        const noteNode = {
+          ...note,
+          noteId: note.id,
+          sourceInstanceName: node.name,
+          id: childId,
+          children: [],
+          parent: node.id,
+          internal: {
+            type: 'CollectedNote',
+            contentDigest: createContentDigest(note),
+            // setting mediaType will cause gatsby-transformer-remark to process the internal.content field
+            mediaType: 'text/markdown',
+            // Prefix content w/ json-formatted frontmatter (which is supported by gray-matter which is
+            // used by gatsby-transformer-remark as seen in https://github.com/jonschlinkert/gray-matter/blob/master/examples/json.js)
+            content: `\
 ---json
 ${JSON.stringify({
   date: note.created_at,
@@ -115,13 +120,14 @@ ${JSON.stringify({
   featureimg: undefined,
   originalUrl: note.url,
   slug: `/${note.created_at.substr(0, 10)}-${note.path}/`,
+  visibility: note.visibility,
 })}
 ---
 ${note.body.replace(/^\s*# .+/, '') /* remove title/header from body */}`,
-            },
-          }
-          createNode(noteNode)
-        })
+          },
+        }
+        createNode(noteNode)
+      })
     } catch (error) {
       console.error(error)
     }

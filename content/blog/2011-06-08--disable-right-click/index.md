@@ -2,7 +2,7 @@
 title: Disable Right Click
 date: 2011-06-08T22:31:49
 layout: post
-era: "Middle School"
+visibility: public
 ---
 
 Here is some code I modified from DynamicDrive to disable right clicking on my school website:

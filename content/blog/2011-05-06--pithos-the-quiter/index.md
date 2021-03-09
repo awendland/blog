@@ -2,7 +2,7 @@
 title: Pithos the Quiter
 date: 2011-05-06T20:57:40
 layout: post
-era: "Middle School"
+visibility: public
 ---
 
 **Pithos**, a Linux app the streams **Pandora Radio** natively without the clunky flash webapp or any sort of browser being open, would consistantly crash after a few songs and would have to be restarted to continue playing. I found a fix on this website: [Pithos Launchpad](https://bugs.launchpad.net/pithos/+bug/705271). The fix requires creating a file with the name **_pithos.patch_** and then putting this text inside (Updated with a link to the file. Wordpress wouldn't display the code right. You can retrieve it using **wget https://launchpadlibrarian.net/70116767/pithos.patch)**: 

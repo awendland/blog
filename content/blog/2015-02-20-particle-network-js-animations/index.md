@@ -3,7 +3,7 @@ layout: post
 title:  "Particle Network Animations in JS"
 date:   2015-02-20T19:20:32
 featureimg: "./2015-02-20_network-blue.png"
-era: "High School"
+visibility: public
 ---
 
 I just did a minor revamp of the TEC Club homepage in order to include a live, JS generated network of floating dots. Opaque interconnections will pop to life when the dots travel within 100 pixels of each other. On mouse over, the connections will fade away and the dots will grow increase in opacity. It can be quite entertaining to watch. I enjoy playing [this](http://s.codepen.io/awendland/debug/XJExGv?) version in full screen and just watching it.

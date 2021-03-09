@@ -3,7 +3,7 @@ layout: post
 title: A Foray Into AngularJS
 date: 2013-08-03
 featureimg: "./angularjs-375x360.u8.png"
-era: "High School"
+visibility: public
 ---
 ### Intro
 
