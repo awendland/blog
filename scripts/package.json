@@ -1,7 +1,8 @@
 {
-  "name": "awendland.github.io--scripts",
+  "name": "blog-scripts",
   "version": "1.0.0",
   "license": "UNLICENSED",
+  "private": true,
   "dependencies": {
     "adm-zip": "^0.5.3",
     "rambdax": "^7.2.0",

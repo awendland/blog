@@ -1,14 +1,15 @@
 {
-  "name": "awendland.github.io",
+  "name": "blog",
   "description": "Alex Wendland's Blog",
   "version": "1.0.0",
   "author": "Alex Wendland <me@alexwendland.com>",
   "homepage": "https://blog.alexwendland.com",
   "license": "UNLICENSED",
+  "private": true,
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/awendland/awendland.github.io"
+    "url": "git+https://github.com/awendland/blog"
   },
   "scripts": {
     "dev": "gatsby develop",
