@@ -1,0 +1,49 @@
+repos:
+  - repo: git://github.com/pre-commit/pre-commit-hooks
+    rev: v3.1.0
+    hooks:
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: detect-private-key
+
+  - repo: git://github.com/luminopia/pre-commit-hooks
+    rev: v0.0.11
+    hooks:
+      - id: enforce-action-comments
+
+  - repo: git://github.com/pre-commit/mirrors-prettier
+    rev: v2.2.1
+    hooks:
+      - id: prettier
+
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: 'v7.21.0'
+    hooks:
+      - id: eslint
+        additional_dependencies:
+          # -   eslint@4.19.1
+          # -   eslint-config-google@0.7.1
+          # -   eslint-loader@1.6.1
+          - eslint-plugin-react@7.22.0
+          - eslint-config-react-app@6.0.0
+        # -   babel-eslint@6.1.2
+
+  - repo: local
+    hooks:
+      # https://github.com/koalaman/shellcheck
+      - id: shellcheck-lint
+        name: Shellcheck
+        language: docker_image
+        entry: koalaman/shellcheck:v0.7.1
+        types: [shell]
+
+        # https://github.com/igorshubovych/markdownlint-cli
+      - id: markdown-lint
+        name: Markdown Lint
+        language: node
+        additional_dependencies: [markdownlint-cli]
+        entry: markdownlint
+        types: [markdown]
+        args: [--config, .markdownlintrc]
+        exclude: content/blog/201[0-5] # ignore markdown styling for old 2010-2015 blog posts

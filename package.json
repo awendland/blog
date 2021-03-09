@@ -12,13 +12,11 @@
   },
   "scripts": {
     "dev": "gatsby develop",
-    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write '**/*.js' '**/*.md'",
     "start": "echo \"Use 'yarn dev' to create a localhost instance\"",
     "build": "gatsby build",
-    "build:ci": "node scripts/ci-base64-env-to-file.mjs GOOGLE_DOCS_AUTH_BASE64 .env && yarn build",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+    "build:ci": "node scripts/ci-base64-env-to-file.mjs GOOGLE_DOCS_AUTH_BASE64 .env && yarn build"
   },
   "dependencies": {
     "gatsby": "^2.0.19",
@@ -54,9 +52,5 @@
     "typography": "^0.16.17",
     "typography-theme-wordpress-2016": "^0.15.10"
   },
-  "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-plugin-react": "^7.11.1",
-    "prettier": "^1.14.2"
-  }
+  "devDependencies": {}
 }
