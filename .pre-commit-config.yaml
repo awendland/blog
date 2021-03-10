@@ -22,12 +22,9 @@ repos:
     hooks:
       - id: eslint
         additional_dependencies:
-          # -   eslint@4.19.1
-          # -   eslint-config-google@0.7.1
-          # -   eslint-loader@1.6.1
           - eslint-plugin-react@7.22.0
           - eslint-config-react-app@6.0.0
-        # -   babel-eslint@6.1.2
+          - eslint-plugin-jsx-a11y@6.4.1
 
   - repo: local
     hooks:

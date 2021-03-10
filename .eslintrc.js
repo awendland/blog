@@ -1,10 +1,10 @@
 module.exports = {
-  extends: 'react-app',
+  extends: ['react-app', 'plugin:jsx-a11y/strict'],
   env: {
     browser: true,
     es6: true,
   },
-  plugins: ['react'],
+  plugins: ['react', 'jsx-a11y'],
   globals: {
     graphql: false,
     __PATH_PREFIX__: true,
