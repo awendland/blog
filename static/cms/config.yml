@@ -1,6 +1,9 @@
 backend:
   name: github
   repo: awendland/blog
+  branch: main
+
+publish_mode: editorial_workflow
 
 media_folder: 'content/assets'
 public_folder: '/static'
