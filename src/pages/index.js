@@ -7,7 +7,14 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { rhythm } from '../utils/typography'
 
-const TimelineLinkEntry = ({ isoDate, humanDate, title, url, slug }) => {
+const TimelineLinkEntry = ({
+  isoDate,
+  humanDate,
+  title,
+  url,
+  slug,
+  emoji = '',
+}) => {
   return (
     <div
       key={String(isoDate) + title}
@@ -22,7 +29,7 @@ const TimelineLinkEntry = ({ isoDate, humanDate, title, url, slug }) => {
         title={isoDate}
         style={{
           display: `inline-block`,
-          width: `8em`,
+          width: rhythm(3.25),
           flexShrink: '0',
           opacity: `0.6`,
           fontSize: rhythm(0.45),
@@ -31,6 +38,16 @@ const TimelineLinkEntry = ({ isoDate, humanDate, title, url, slug }) => {
       >
         {humanDate}
       </time>
+      <span
+        style={{
+          width: `2em`,
+          flexShrink: '0',
+          display: `inline-block`,
+          fontSize: 'small',
+        }}
+      >
+        {emoji}
+      </span>
       {slug ? (
         <Link
           to={slug}
@@ -83,6 +100,7 @@ class BlogIndex extends React.Component {
           humanDate: post.frontmatter.humanDate,
           title: post.frontmatter.title,
           slug: post.fields.slug,
+          emoji: post.frontmatter.emoji,
         }),
       })
     }
@@ -155,6 +173,7 @@ export const pageQuery = graphql`
             isoDate: date(formatString: "YYYY-MM-DD HH:mm:ssZ")
             title
             layout
+            emoji
           }
         }
       }
