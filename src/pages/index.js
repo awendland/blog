@@ -21,7 +21,7 @@ const TimelineLinkEntry = ({
       style={{
         marginBottom: rhythm(0.25),
         display: 'flex',
-        alignItems: 'flex-end',
+        alignItems: 'center',
       }}
     >
       <time
@@ -29,10 +29,10 @@ const TimelineLinkEntry = ({
         title={isoDate}
         style={{
           display: `inline-block`,
-          width: rhythm(3.25),
+          width: `7em`,
           flexShrink: '0',
           opacity: `0.6`,
-          fontSize: rhythm(0.45),
+          fontSize: `0.8em`,
           lineHeight: rhythm(1),
         }}
       >
@@ -53,6 +53,7 @@ const TimelineLinkEntry = ({
           to={slug}
           style={{
             boxShadow: 'none',
+            textDecoration: 'none',
             whiteSpace: 'nowrap',
             textOverflow: 'ellipsis',
             overflow: 'hidden',
@@ -65,6 +66,7 @@ const TimelineLinkEntry = ({
           href={url}
           style={{
             boxShadow: 'none',
+            textDecoration: 'none',
             whiteSpace: 'nowrap',
             textOverflow: 'ellipsis',
             overflow: 'hidden',

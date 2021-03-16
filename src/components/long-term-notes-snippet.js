@@ -18,7 +18,10 @@ function LongTermNotesSnippet() {
             {'I maintain a collection of long-term notes on: '}
             {longTermNotes.map(({ node }, i) => (
               <>
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                <Link
+                  style={{ boxShadow: 'none', textDecoration: 'none' }}
+                  to={node.fields.slug}
+                >
                   {node.frontmatter.title}
                 </Link>
                 {i === longTermNotes.length - 1 ? '' : ', '}
