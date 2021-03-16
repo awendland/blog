@@ -70,7 +70,7 @@ ${md}`,
     visibility: 'public',
   })
 )
-const devNotePath = path.join(argv.outputDir, 'notes--dev-resources.md')
+const devNotePath = path.join(argv.outputDir, 'notes-dev-resources.md')
 fs.mkdirSync(path.dirname(devNotePath), { recursive: true })
 fs.writeFileSync(devNotePath, devResourcesMarkdown)
 console.log(`Wrote Developer Resources notes to: ${devNotePath}`)
