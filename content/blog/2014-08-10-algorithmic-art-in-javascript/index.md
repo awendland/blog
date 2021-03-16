@@ -8,6 +8,8 @@ custom:
   css:
     - /app/math_art/math_art.css
 visibility: public
+redirect_from:
+  - /2014/algorithmic-art-in-javascript/
 ---
 
 I was reading the solution to a problem on Stackoverflow when this thread caught my eye [http://codegolf.stackexchange.com/questions/35569/tweetable-mathematical-art/][tweetable mathematical art]. People were challenged to come up with concise functions for Red, Green and Blue to be called on each pixel in a 1024x1024 image. Furthermore, the functions had to total less than 140 bytes, short enough to fit into a tweet.<!--break-->

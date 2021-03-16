@@ -140,6 +140,14 @@ module.exports = {
       },
     },
 
+    // ####################
+    // ## URL durability ##
+    // ####################
+
+    `gatsby-plugin-sitemap`,
+    `gatsby-redirect-from`,
+    `gatsby-plugin-netlify`,
+
     // ###################
     // ## Misc. Add-Ons ##
     // ###################

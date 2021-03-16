@@ -4,6 +4,8 @@ title: 'How to Backup Google Drive to S3/Hard-disk'
 date: 2018-11-23T23:37:30-0500
 featureimg: './2018-11-23_google_drive_backup.jpg'
 visibility: public
+redirect_from:
+  - /2018/google-drive-backup/
 ---
 
 As reliable as Google is, it can be worrisome to depend solely on one company to maintain all of your data. In both my personal and startup life, I’ve kept all of my non-code data in Google Drive. Besides two instances in the past 4 years, during which Google Drive was inaccessible for a cumulative 6 hours when I needed it, everything has been operating smoothly and quickly.

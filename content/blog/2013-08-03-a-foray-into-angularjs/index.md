@@ -4,6 +4,8 @@ title: A Foray Into AngularJS
 date: 2013-08-03
 featureimg: './angularjs-375x360.u8.png'
 visibility: public
+redirect_from:
+  - /2013/a-foray-into-angularjs/
 ---
 
 ### Intro

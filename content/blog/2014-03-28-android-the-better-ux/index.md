@@ -4,6 +4,8 @@ title: Android, the better UX?
 date: 2014-03-28
 featureimg: './2014-03-28_nexus-5.png'
 visibility: public
+redirect_from:
+  - /2014/android-the-better-ux/
 ---
 
 ### Intro

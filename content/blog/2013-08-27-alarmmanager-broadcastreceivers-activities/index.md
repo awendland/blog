@@ -3,6 +3,8 @@ layout: post
 title: 'AlarmManager, BroadcastReceivers, Activities! Oh my!'
 date: 2013-08-27
 visibility: public
+redirect_from:
+  - /2013/alarmmanager-broadcastreceivers-activities/
 ---
 
 ### Intro

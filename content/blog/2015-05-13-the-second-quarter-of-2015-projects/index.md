@@ -4,6 +4,8 @@ title: 'The Second Quarter of 2015: Projects'
 date: 2015-05-13T18:38:45
 featureimg: './2015-05-13_mcconnell-glossary-output.png'
 visibility: public
+redirect_from:
+  - /2015/the-second-quarter-of-2015-projects/
 ---
 
 Following the spirit of [The Second Quarter of 2015: Items](../../2015/the-second-quarter-of-2015-projects/), I'm going to also post an infrequent summary of the projects that I have been working on and other transgressions that have occurred as of late.

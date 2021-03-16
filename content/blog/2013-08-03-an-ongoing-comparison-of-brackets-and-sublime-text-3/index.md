@@ -5,6 +5,8 @@ date: 2013-08-03
 featureimg: './brackets_256.png'
 marquee: An Ongoing Comparison of Brackets and Sublime Text 3
 visibility: public
+redirect_from:
+  - /2013/an-ongoing-comparison-of-brackets-and-sublime-text-3/
 ---
 
 ### Intro

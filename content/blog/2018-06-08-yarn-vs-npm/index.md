@@ -4,6 +4,8 @@ title: '2018 Yarn vs. NPM'
 date: 2018-06-08T16:21:30
 featureimg: './2018-06-08_yarn_npm.png'
 visibility: public
+redirect_from:
+  - /2018/yarn-vs-npm/
 ---
 
 With NPM's recent [acquisition of ^Lift Security and the Node Security Platform](https://medium.com/npm-inc/npm-acquires-lift-security-258e257ef639), as well as the release of their [package-lock.json](https://blog.npmjs.org/post/161081169345/v500) and the [`npm ci` command](https://blog.npmjs.org/post/171556855892/introducing-npm-ci-for-faster-more-reliable) for reliable CI installations, it seemed like a compelling time to reavaluate the value proposition of [Yarn](https://yarnpkg.com). Plus, for some reason Yarn kept giving me 401s on our CI two weekends ago for some unknown reason, so it made me think about NPM for the first time in a long time, and I got curious what the state-of-the-world is.

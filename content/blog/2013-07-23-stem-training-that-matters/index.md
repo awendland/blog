@@ -3,6 +3,8 @@ layout: post
 title: 'STEM, training that matters'
 date: 2013-07-23
 visibility: public
+redirect_from:
+  - /2013/stem-training-that-matters/
 ---
 
 ### The Problem

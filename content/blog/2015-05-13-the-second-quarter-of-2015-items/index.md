@@ -3,6 +3,8 @@ layout: post
 title: 'The Second Quarter of 2015: Items'
 date: 2015-05-13T17:08:29
 visibility: public
+redirect_from:
+  - /2015/the-second-quarter-of-2015-items/
 ---
 
 I was inspired by a website I stumbled across on called [My Faults My Own by Ross Rheingans-Yoo](http://blog.rossry.net/reading/) in which he keeps a live post for each month where he lists worthwhile articles he's read and other things he _"would like to signal-boost, but won't take the time to do full writeups on"_. I enjoy the idea substantially, and with this post am commencing along the path he blazed.
