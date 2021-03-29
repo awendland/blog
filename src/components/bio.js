@@ -28,8 +28,9 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong>, who is currently studenting
-              at Harvard College. Here's a{' '}
+              Written by <strong>{author}</strong>, who is currently exploring
+              fintech at <a href={`https://www.getpinwheel.com`}>Pinwheel</a>.
+              Here's a{' '}
               <a href={`https://twitter.com/${social.twitter}`}>
                 Twitter handle
               </a>
