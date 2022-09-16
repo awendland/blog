@@ -16,6 +16,15 @@ Wordpress2016.overrideThemeStyles = (
     // Cancel out noticeable <a> styling
     boxShadow: `none`,
   },
+  'li': {
+    marginBottom: rhythm(1/2),
+  },
+  'li > ul': {
+    marginTop: rhythm(1/4),
+  },
+  'li > p': {
+    marginBottom: rhythm(1/4),
+  },
 })
 
 delete Wordpress2016.googleFonts

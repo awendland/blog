@@ -12,7 +12,7 @@ class LongTermNoteTemplate extends React.Component {
     const siteTitle = this.props.data.site.siteMetadata.title
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location} title={siteTitle} type="long-term-note">
         <SEO title={note.frontmatter.title} description={note.excerpt} />
         <h1>{note.frontmatter.title}</h1>
         <p
