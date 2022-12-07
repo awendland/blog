@@ -13,3 +13,10 @@ FIX
 
     * Archived CME page - https://web.archive.org/web/20210120110346/https://www.cmegroup.com/confluence/display/EPICSANDBOX/Standard+Header+-+Client+System+to+CME+Globex
     * btobits page - https://btobits.com/fixopaedia/fixdic44/index.html
+* Drop Copy + Compliance Feeds
+
+  * https://library.tradingtechnologies.com/tt-fix/drop-copy/fix-drop-copy-overview.html
+* Parsing libraries
+
+  * https://github.com/wannabegeek/PyFIX
+  *
