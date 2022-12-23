@@ -6,6 +6,7 @@ import LongTermNotesSnippet from '../components/long-term-notes-snippet'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { rhythm } from '../utils/typography'
+import * as styles from './index.module.css'
 
 const TimelineLinkEntry = ({
   isoDate,
@@ -16,25 +17,11 @@ const TimelineLinkEntry = ({
   emoji = '',
 }) => {
   return (
-    <div
-      key={String(isoDate) + title}
-      style={{
-        marginBottom: rhythm(0.25),
-        display: 'flex',
-        alignItems: 'flex-end',
-      }}
-    >
+    <div key={String(isoDate) + title} className={styles.timelineLinkEntry}>
       <time
         datetime={isoDate}
         title={isoDate}
-        style={{
-          display: `inline-block`,
-          width: rhythm(3.25),
-          flexShrink: '0',
-          opacity: `0.6`,
-          fontSize: rhythm(0.45),
-          lineHeight: rhythm(1),
-        }}
+        className={styles.timelineLinkEntry_time}
       >
         {humanDate}
       </time>
@@ -49,27 +36,11 @@ const TimelineLinkEntry = ({
         {emoji}
       </span>
       {slug ? (
-        <Link
-          to={slug}
-          style={{
-            boxShadow: 'none',
-            whiteSpace: 'nowrap',
-            textOverflow: 'ellipsis',
-            overflow: 'hidden',
-          }}
-        >
+        <Link to={slug} className={styles.timelineLinkEntry_title}>
           {title}
         </Link>
       ) : (
-        <a
-          href={url}
-          style={{
-            boxShadow: 'none',
-            whiteSpace: 'nowrap',
-            textOverflow: 'ellipsis',
-            overflow: 'hidden',
-          }}
-        >
+        <a href={url} className={styles.timelineLinkEntry_title}>
           {title}
         </a>
       )}
