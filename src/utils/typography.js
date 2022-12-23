@@ -12,13 +12,26 @@ Wordpress2016.overrideThemeStyles = (
   'a.gatsby-resp-image-link': {
     boxShadow: 'none',
   },
-  'a.anchor': {
+  a: {
     // Cancel out noticeable <a> styling
     boxShadow: `none`,
+  },
+  'h1,h2,h3,h4,h5,h6': {
+    marginTop: rhythm(1.3333333),
+  },
+  ':root': {
+    '--rhythm': rhythm(1),
+  },
+  '@media only screen and (max-width:768px)': {
+    html: {
+      fontSize: '15px',
+    },
   },
 })
 
 delete Wordpress2016.googleFonts
+
+Wordpress2016.baseLineHeight = 1.5
 
 const typography = new Typography(Wordpress2016)
 
