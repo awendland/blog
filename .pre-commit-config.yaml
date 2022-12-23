@@ -12,15 +12,6 @@ repos:
     hooks:
       - id: prettier
 
-  - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: 'v7.21.0'
-    hooks:
-      - id: eslint
-        additional_dependencies:
-          - eslint-plugin-react@7.22.0
-          - eslint-config-react-app@6.0.0
-          - eslint-plugin-jsx-a11y@6.4.1
-
   - repo: local
     hooks:
       # https://github.com/koalaman/shellcheck
@@ -39,3 +30,15 @@ repos:
         types: [markdown]
         args: [--config, .markdownlintrc]
         exclude: content/blog/201[0-5] # ignore markdown styling for old 2010-2015 blog posts
+
+      # https://github.com/pre-commit/mirrors-eslint/issues/10#issuecomment-344976316
+      - id: eslint
+        name: eslint
+        entry: eslint
+        language: node
+        types: [javascript]
+        additional_dependencies:
+          - eslint@7.21.0
+          - eslint-plugin-react@7.22.0
+          - eslint-config-react-app@6.0.0
+          - eslint-plugin-jsx-a11y@6.4.1
