@@ -76,7 +76,7 @@ Yes, centipedes and gnats. I dealt with the gnats using yellow sticky traps and 
 
 ### My plants keep dying, what am I doing wrong?
 
-You're probably over-watering them and they're getting root rot. This is problem >90% of the time. See my [maintenance tips](#maintenance-tips).
+You're probably over-watering them and they're getting root rot. See my [maintenance tips](#maintenance-tips) about overflow trays.
 
 ### Should I have plants?
 
