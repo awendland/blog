@@ -1,7 +1,7 @@
 ---
 layout: post
 visibility: public
-title: 30+ houseplants in an NYC cave
+title: 30+ houseplants in a New York City apartment
 date: 2022-12-22T19:51:24.024Z
 featureimg: bedroom_annotated_lights.jpg
 ---
