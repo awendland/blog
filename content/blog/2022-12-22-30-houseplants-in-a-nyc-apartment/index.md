@@ -10,12 +10,18 @@ As of December 2022, I've got 34 houseplants[^1] in my 14' x 14' apartment in Ma
 
 ![A before and after photos. The before photo shows a bare-walled bedroom with only a standing desk and a bed. The after photo still has the desk and bed, but the photo is overflowing with green plants, which cover most surfaces.](bedroom_before_and_after.jpg)
 
+I'll run through my [maintenance tips](#maintenance-tips), [unique challenges I faced in my NYC apartment](#challenges), and [FAQs I get about my plants](#faqs).
+
+## Maintenance Tips
+
 I've learned 2 tricks for easy maintenance:
 
 - **Watering trays** - Keep plants in pots that drain into overflow trays. Water them consistently, ~1 per week, with as much water is needed to overflow into the tray.
 - **Evergreen plants** - Don't bother picking plants that are impressive, pick plants that are consistently good-enough. A plant that doesn't lose any leaves or flowers and stays green all the time will look better than the orchid you forget to water for 3 weeks.
 
-These tricks are good general advice, but my living situation in Manhattan has brought 3 additional challenges.
+## Challenges
+
+Those tips are good general advice, but my living situation in Manhattan has brought 3 additional challenges.
 
 ### Challenge #1: No Sunlight
 
@@ -54,7 +60,25 @@ In particular, look how withered the vines ended up:
 
 A key mistake I made on that trip was leaving the lights on. This increases water usage by the plants. For future trips, I leave the lights off to extend the impact of my pre-trip watering. Then, I coordinate with a roommate to water every ~2 weeks while I'm away, which usually means one watering in the middle of my trip. I put all the shelf plants on the ground to make them easier to water.
 
-## Should you get plants?
+## FAQs
+
+### You have so many... they must be hard to maintain?
+
+Nope! See my [maintenance tips](#maintenance-tips).
+
+### Do you get lots of oxygen from them?
+
+Maybe a little! Some students measured the CO2 reduction of various houseplants and found statistically significant results, [Suhaimi, et al, 2017](https://www.researchgate.net/publication/315968651_Effectiveness_of_Indoor_Plant_to_Reduce_CO_2_in_Indoor_Environment).
+
+### Have you had any pests?
+
+Yes, centipedes and gnats. I dealt with the gnats using yellow sticky traps and I killed the centipedes by throwing out their host plant. I now isolate all new plants for a few weeks to mitigate the risk of them introducing new pests.
+
+### My plants keep dying, what am I doing wrong?
+
+You're probably over-watering them and they're getting root rot. This is problem >90% of the time. See my [maintenance tips](#maintenance-tips).
+
+### Should I have plants?
 
 Yes! They're pretty great. 🪴
 
