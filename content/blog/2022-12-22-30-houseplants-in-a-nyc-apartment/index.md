@@ -5,7 +5,6 @@ title: 30+ houseplants in a New York City apartment
 date: 2022-12-22T19:51:24.024Z
 featureimg: bedroom_annotated_lights.jpg
 ---
-
 As of December 2022, I've got 34 houseplants[^1] in my 14' x 14' apartment in Manhattan. They take <3 hours of maintenance per month and bring freshness and nature into my life.
 
 ![A before and after photos. The before photo shows a bare-walled bedroom with only a standing desk and a bed. The after photo still has the desk and bed, but the photo is overflowing with green plants, which cover most surfaces.](bedroom_before_and_after.jpg)
@@ -16,8 +15,8 @@ I'll run through my [maintenance tips](#maintenance-tips), [unique challenges I 
 
 I've learned 2 tricks for easy maintenance:
 
-- **Watering trays** - Keep plants in pots that drain into overflow trays. Water them consistently, ~1 per week, with as much water is needed to overflow into the tray.
-- **Evergreen plants** - Don't bother picking plants that are impressive, pick plants that are consistently good-enough. A plant that doesn't lose any leaves or flowers and stays green all the time will look better than the orchid you forget to water for 3 weeks.
+* **Watering trays** - Keep plants in pots that drain into overflow trays. Water them consistently, ~1 per week, with as much water is needed to overflow into the tray.
+* **Evergreen plants** - Don't bother picking plants that are impressive, pick plants that are consistently good-enough. A plant that doesn't lose any leaves or flowers and stays green all the time will look better than the orchid you forget to water for 3 weeks.
 
 ## Challenges
 
@@ -37,12 +36,12 @@ Directly under the bulbs can be too bright. See this leaf on a monstera delicios
 
 ### Challenge #2: Limited Space
 
-**Challenge**: I have a 14'x14' bedroom, of which my bed + desk take up ~50% of the space. That leaves just enough room to walk around in and have floor space for ~8 plants.
+**Challenge**: I have a 14'x14' bedroom, of which my bed + desk take up \~50% of the space. That leaves just enough room to walk around in and have floor space for \~8 plants.
 
 **Solution**: Shelves. Shelves are amazing, and Ikea has many options that are low cost and easy to mount. I've double-layered shelves on my main wall, providing me with ample space for additional plants (about 24 more). I buy plants that fall into one of two buckets:
 
-- _Floor plants_ - these need to be big, both tall and voluminous, with lots of leaves.
-- _Shelf plants_ - these should be viny, with long, leafy vines that drape off the shelf's edge.
+* *Floor plants* - these need to be big, both tall and voluminous, with lots of leaves.
+* *Shelf plants* - these should be viny, with long, leafy vines that drape off the shelf's edge.
 
 ### Challenge #3: Travel
 
@@ -62,11 +61,11 @@ A key mistake I made on that trip was leaving the lights on. This increases wate
 
 ## FAQs
 
-### You have so many... they must be hard to maintain?
+### You have so many plants... they must be hard to maintain?
 
 Nope! See my [maintenance tips](#maintenance-tips).
 
-### Do you get lots of oxygen from them?
+### Do you get lots of oxygen from the plants?
 
 Maybe a little! Some students measured the CO2 reduction of various houseplants and found statistically significant results, [Suhaimi, et al, 2017](https://www.researchgate.net/publication/315968651_Effectiveness_of_Indoor_Plant_to_Reduce_CO_2_in_Indoor_Environment).
 
