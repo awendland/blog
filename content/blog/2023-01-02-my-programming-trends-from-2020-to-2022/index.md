@@ -30,4 +30,4 @@ Wakatime stats for 2020, 2021, and 2022. 2022 is missing ~40 hours of work that 
 
 [^1]: In addition to Wakatime I use Rescuetime. Wakatime tracks IDE usage, which repo you're working on, and the languages of the files you're editing. Rescuetime tracks which desktop apps and websites you're actively using.
 
-\[﻿^2]: Based on a quick review of the past 2 months. I coded on 26 days, grossing an average of 1.5 hours per day. According to the commit log, I released a workable feature on most coding days.
+[^2]: Based on a quick review of the past 2 months. I coded on 26 days, grossing an average of 1.5 hours per day. According to the commit log, I released a workable feature on most coding days.
