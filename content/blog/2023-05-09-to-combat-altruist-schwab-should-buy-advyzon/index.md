@@ -72,7 +72,7 @@ Possibly. The [2023 T3/Inside Information Advisor Software Survey](https://t3tec
 
 Advyzon is probably acquirable for <$60M. Why? Advyzon claims ~1,200 customers. A reasonable estimate for Advyzon's average contract size per customer is $10,000 / year[^12], resulting in $12 million of annual revenue. Advyzon's CAGR is ~10%[^13], placing them in a [startup valuation bucket of 1-5x revenue](https://web.archive.org/web/20230208203015/https://microcap.co/startup-valuation-revenue-multiple/). Outside investors would probably value them at <$60M.
 
-**Schwab or Fidelity could acquire Advyzon, forgo the $12M in revenue Advyzon generates each year, and offer Advyzon for free to advisors.**
+**Schwab or Fidelity should acquire Advyzon, forgo the $12M in revenue Advyzon generates each year, and offer Advyzon for free to advisors.**
 
 **Match Altruist toe-to-toe.**
 
