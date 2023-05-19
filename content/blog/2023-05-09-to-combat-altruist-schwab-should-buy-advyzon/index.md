@@ -1,6 +1,6 @@
 ---
 layout: post
-visibility: unlisted
+visibility: public
 title: To combat Altruist, Schwab should buy Advyzon
 date: 2023-05-08T20:53:36.428Z
 ---
