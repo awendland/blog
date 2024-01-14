@@ -14,7 +14,6 @@
   "scripts": {
     "dev": "gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write '**/*.js' '**/*.md'",
     "start": "echo \"Use 'yarn dev' to create a localhost instance\"",
     "build": "gatsby build",
     "build:ci": "node scripts/ci-base64-env-to-file.mjs GOOGLE_DOCS_AUTH_BASE64 .env && yarn build"
