@@ -1,0 +1,29 @@
+{{ define "main" }}
+	<details><summary>Page Data</summary>
+		<pre>{{ jsonify (dict "indent" "  ") . }}</pre>
+	</details>
+	<main>
+		<article>
+			<h1>{{ .Title }}</h1>
+			{{ if ne .Lastmod .PublishDate }}Updated: {{end}}<time datetime="{{ .Date.Format .Site.Params.dateFormat.iso }}">{{ .Date.Format .Site.Params.dateFormat.humanDate }}</time>
+			<div>
+				{{ .Content }}
+			</div>
+			{{ with .Params.tags }}
+			<div>
+				<ul id="tags">
+					{{ range . }}
+					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+					{{ end }}
+				</ul>
+			</div>
+			{{ end }}
+			{{ with .Site.DisqusShortname }}
+			<div>
+				{{ template "_internal/disqus.html" . }}
+			</div>
+			{{ end }}
+		</article>
+	</main>
+{{ partial "sidebar.html" . }}
+{{ end }}

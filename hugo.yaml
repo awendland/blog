@@ -1,0 +1,18 @@
+baseURL: https://blog.alexwendland.com
+languageCode: en-us
+title: Alex W.'s Blog
+
+permalinks:
+    posts: '/:filename/'
+    notes: '/:filename/'
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  dateFormat:
+    iso: "2006-01-02T15:04:05Z"
+    humanDateShort: "2006 Jan 02"
+    humanDate: "January 2, 2006"

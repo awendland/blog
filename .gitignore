@@ -1,3 +1,6 @@
+# Hugo
+.hugo_build.lock
+
 # Logs
 logs
 *.log

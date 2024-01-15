@@ -2,7 +2,7 @@
 layout: note
 title: Developer Resources 💻
 order: 4
-modifiedTime: 2021-03-09T23:46:58.857Z
+lastmod: 2021-03-09T23:46:58.857Z
 visibility: public
 ---
 

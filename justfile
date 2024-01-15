@@ -19,13 +19,13 @@ setup: setup-pre-commit
 lint:
     pre-commit run --all-files
 
-# Run a command inside an ephemeral Docker container
-run *args:
-    #!/usr/bin/env bash
-    set -euxo pipefail
-    docker_build_hash=$(docker build -q .)
-    docker run --rm -it -v $(PWD)/content:/blog/content -v $(PWD)/package.json:/blog/package.json -v $(PWD)/yarn.lock:/blog/yarn.lock $docker_build_hash {{args}}
+HUGO_VERSION := "0.121.2"
 
-# Generate google docs auth
-google-docs-auth:
-    npx --package=gatsby-source-google-docs gatsby-source-google-docs-token
+# Run Hugo, isolated via Docker for reproducibility
+run *args:
+    docker run --rm -it -v $(PWD):/src hugomods/hugo:base-{{HUGO_VERSION}} {{args}}
+
+# Serve the site locally for development
+serve-dev:
+    docker run --rm -it -p 3113:3113 -v $(PWD):/src hugomods/hugo:base-{{HUGO_VERSION}} hugo server --bind 0.0.0.0 --buildDrafts --port 3113
+
