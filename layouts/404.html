@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main>
+  <h1>404: Not Found</h1>
+  <p>
+    You can check the Wayback Machine to see if this page used to exist.
+    In fact, let me just throw this URL your way to get things
+    rolling&nbsp;
+    {{ $waybackUrl := "https://web.archive.org/web/*/" }}
+    <a href="{{ $waybackUrl }}">{{ $waybackUrl }}</a>.
+  </p>
+  <p>
+    In the meantime, here's a comic for you (courtesy of
+    <a href=" https://www.smbc-comics.com/comic/wants">SMBC</a>):
+  </p>
+  {{ $smbcPic := resources.Get "smbc-wants.png" }}
+  <img src="{{ $smbcPic.RelPermalink }}" alt="BUT THIS TINY BLIP ON AN ELECTION PREDICTION GRAPH IS REALLY IMPORTANT"
+    style="max-width: 500px;" />
+</main>
+{{ end }}
