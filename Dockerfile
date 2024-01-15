@@ -1,5 +1,5 @@
 # Use the official Node.js 18.19.0 image as a base
-FROM node:18.19.0
+FROM node:12.18.0
 
 # Set the working directory
 WORKDIR /blog

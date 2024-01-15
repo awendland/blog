@@ -23,6 +23,7 @@ lint:
 run *args:
     #!/usr/bin/env bash
     set -euxo pipefail
+    export DOCKER_DEFAULT_PLATFORM=linux/amd64
     docker_build_hash=$(docker build -q .)
     docker run --rm -it -v $(PWD)/content:/blog/content -v $(PWD)/package.json:/blog/package.json -v $(PWD)/yarn.lock:/blog/yarn.lock $docker_build_hash {{args}}
 
