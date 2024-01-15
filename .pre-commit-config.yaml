@@ -7,6 +7,7 @@ repos:
       - id: check-symlinks
       - id: detect-private-key
 
+  # TODO: does prettier work for html with golang templating?
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v2.2.1
     hooks:
@@ -30,6 +31,10 @@ repos:
         types: [markdown]
         args: [--config, .markdownlintrc]
         exclude: content/blog/201[0-5] # ignore markdown styling for old 2010-2015 blog posts
+
+      # TODO: check for Hugo linters
+      # TODO: remove eslint which is used by Gatsby
+      # TODO: see what my latest pre-commit config looks like
 
       # https://github.com/pre-commit/mirrors-eslint/issues/10#issuecomment-344976316
       - id: eslint

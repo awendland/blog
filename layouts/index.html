@@ -25,12 +25,11 @@
         .timelineLinkEntry {
             margin-bottom: calc(0.35 * var(--rhythm));
             display: flex;
-            align-items: flex-end;
         }
 
         .timelineLinkEntry_time {
             display: inline-block;
-            width: calc(3.8 * var(--rhythm));
+            width: calc(4.2 * var(--rhythm));
             flex-shrink: 0;
             opacity: 0.6;
             font-size: 0.8em;
@@ -44,16 +43,15 @@
         }
     }
 </style>
-<details><summary>Page Data</summary>
-
-<pre>{{ jsonify (dict "indent" "  ") .Site.RegularPages }}</pre>
-</details>
+{{ if .Site.Params.dev.showPageData }}<p>{{ partial "debug-data.html" .Site.RegularPages }}</p>{{ end }}
 <main>
+    <p>{{ partial "bio.html" . }}</p>
     <p>
         {{ $notes := (where .Site.RegularPages "Type" "in" "notes") }}
         I maintain a collection of long-term notes on:
         {{ range $i, $n := $notes }}<a href="{{ .Permalink }}">{{ .Title }}</a>{{ if ne (add $i 1) (len $notes) }}, {{end}}{{ end }}.
     </p>
+    <!-- TODO: use .Site.Params.mainSections + "blurbs" -->
     {{ $t := slice "posts" "blurbs" }}
     {{ range (where .Site.RegularPages "Type" "in" $t) }}
         {{ if eq .Type "blurbs" }}
@@ -70,5 +68,4 @@
         {{ end }}
     {{ end }}
 </main>
-{{ partial "sidebar.html" . }}
 {{ end }}

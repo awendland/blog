@@ -6,13 +6,31 @@ permalinks:
     posts: '/:filename/'
     notes: '/:filename/'
 
+# TODO: the PR will be squashed with the commit "meta: Migrate to Hugo, Gatsby was too fad-y"
+
+# TODO: change page titles (in browser tab UI) to be the post titles
+
 markup:
+  # TODO: autolink headers
   goldmark:
     renderer:
       unsafe: true
 
 params:
+  author: Alex Wendland
   dateFormat:
     iso: "2006-01-02T15:04:05Z"
     humanDateShort: "2006 Jan 02"
     humanDate: "January 2, 2006"
+  mainSections:
+    - posts
+    # TODO: create Github Action that checks collected notes daily (hourly?) to look for notes not in content/collected-notes and then adds + commits any missing entries to `main` automatically
+    - collected-notes
+  social:
+    twitter: alexrwendland
+    github: awendland
+    linkedin: alexrwendland
+    facebook: alexrwendland
+    instagram: alexrwendland
+  dev:
+    showPageData: false # Set this to `true` to render a "Page Data" dropdown on most pages which will show the page's data as JSON
