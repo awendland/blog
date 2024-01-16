@@ -33,4 +33,4 @@ params:
     facebook: alexrwendland
     instagram: alexrwendland
   dev:
-    showPageData: false # Set this to `true` to render a "Page Data" dropdown on most pages which will show the page's data as JSON
+    showPageData: true # Set this to `true` to render a "Page Data" dropdown on most pages which will show the page's data as JSON

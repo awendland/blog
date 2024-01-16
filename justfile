@@ -22,10 +22,20 @@ lint:
 HUGO_VERSION := "0.121.2"
 
 # Run Hugo, isolated via Docker for reproducibility
-run *args:
-    docker run --rm -it -v $(PWD):/src hugomods/hugo:base-{{HUGO_VERSION}} {{args}}
+docker-hugo *args:
+    docker run --rm --interactive --tty --volume $(PWD):/src hugomods/hugo:base-{{HUGO_VERSION}} {{args}}
 
 # Serve the site locally for development
 serve-dev:
-    docker run --rm -it -p 3113:3113 -v $(PWD):/src hugomods/hugo:base-{{HUGO_VERSION}} hugo server --bind 0.0.0.0 --buildDrafts --port 3113
+    docker run --rm --interactive --tty --volume $(PWD):/src -p 3113:3113 hugomods/hugo:base-{{HUGO_VERSION}} hugo server --bind 0.0.0.0 --buildDrafts --port 3113
+
+DENO_VERSION := "1.39.4"
+
+# Run Deno, isolated via Docker for reproducibility
+docker-deno *args:
+    docker run --rm --interactive --tty --volume $(PWD):/app --workdir /app denoland/deno:{{DENO_VERSION}} {{args}}
+
+# Script: Create Markdown files for each Collected Note
+script-retrieve-collected-notes:
+    @just docker-deno deno run --allow-read --allow-write --allow-net scripts/retrieve-collected-notes.ts
 
