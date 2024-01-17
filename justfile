@@ -33,9 +33,13 @@ DENO_VERSION := "1.39.4"
 
 # Run Deno, isolated via Docker for reproducibility
 docker-deno *args:
-    docker run --rm --interactive --tty --volume $(PWD):/app --workdir /app denoland/deno:{{DENO_VERSION}} {{args}}
+    docker run --rm --interactive --tty --volume $(PWD)/.cache/deno:/deno-dir --volume $(PWD):/app --workdir /app denoland/deno:{{DENO_VERSION}} {{args}}
 
 # Script: Create Markdown files for each Collected Note
-script-retrieve-collected-notes:
-    @just docker-deno deno run --allow-read --allow-write --allow-net scripts/retrieve-collected-notes.ts
+script-retrieve-collected-notes *args:
+    @just docker-deno deno run --allow-read --allow-write --allow-net scripts/retrieve-collected-notes.ts {{args}}
+
+# Script: Create Markdown files from an HTML export of a Google Doc
+script-convert-gdoc html_file:
+    @just docker-deno deno run --allow-read --allow-write scripts/convert-gdoc.ts {{html_file}}
 
