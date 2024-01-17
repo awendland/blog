@@ -6,6 +6,11 @@ permalinks:
     posts: '/:filename/'
     notes: '/:filename/'
 
+outputFormats:
+  RSS:
+    mediaType: "application/rss+xml"
+    baseName: "rss.xml"
+
 # TODO: the PR will be squashed with the commit "meta: Migrate to Hugo, Gatsby was too fad-y"
 
 # TODO: change page titles (in browser tab UI) to be the post titles
