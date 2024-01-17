@@ -1,9 +1,16 @@
+import { parseArgs } from "https://deno.land/std@0.212.0/cli/parse_args.ts";
 import * as path from 'https://deno.land/std@0.212.0/path/mod.ts'
+
+// Retrieve notes from collectednotes.com and save them as markdown files.
+//
+// Pass --preview-data to print out the data retrieved from collectednotes.com, but not write any files.
 
 const COLLECTED_NOTES_JSON_URL = 'https://collectednotes.com/awendland.json'
 const COLLECTED_NOTES_OUTPUT_DIR =
   path.dirname(path.fromFileUrl(import.meta.url)) +
   '/../content/collected-notes'
+
+const args = parseArgs(Deno.args)
 
 try {
   Deno.mkdirSync(COLLECTED_NOTES_OUTPUT_DIR, { recursive: true })
@@ -11,14 +18,20 @@ try {
   const response = await fetch(COLLECTED_NOTES_JSON_URL)
   const collectedNotes = await response.json()
 
+  if (args['preview-data']) {
+    console.log(collectedNotes)
+    Deno.exit(0)
+  }
+
   await Promise.all(
     collectedNotes.notes.map(async (note) => {
       const slug = `${note.created_at.substr(0, 10)}-${note.path}`
       const noteMd = `\
 ${JSON.stringify({
-  date: note.created_at,
-  layout: 'post',
   title: note.title,
+  date: note.created_at,
+  lastmod: note.updated_at,
+  layout: 'post',
   featureimg: undefined,
   originalUrl: note.url,
   visibility: note.visibility,
