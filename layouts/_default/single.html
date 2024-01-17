@@ -1,22 +1,24 @@
 {{ define "main" }}
-	<style>
-		article img {
-			max-width: 100%;
-		}
-	</style>
+<style>
+	article img {
+		max-width: 100%;
+	}
+</style>
 
-	{{ if .Site.Params.dev.showPageData }}<p>{{ partial "debug-data.html" . }}</p>{{ end }}
+{{ if .Site.Params.dev.showPageData }}<p>{{ partial "debug-data.html" . }}</p>{{ end }}
 
-	<main>
-		<article>
-			<h1>{{ .Title }}</h1>
-			{{ if ne .Lastmod .PublishDate }}Updated: {{end}}
-			<time style="font-style: italic;" datetime="{{ .Date.Format .Site.Params.dateFormat.iso }}" title="{{ .Date.Format .Site.Params.dateFormat.iso }}">{{ .Date.Format .Site.Params.dateFormat.humanDate }}</time>
-			<div>
-				{{ .Content }}
-			</div>
-		</article>
-	</main>
+<main>
+	<article>
+		<h1>{{ .Title }}</h1>
+		<span style="font-style: italic;">{{ if ne .Lastmod .PublishDate }}Updated: {{end}}
+			<time datetime="{{ .Date.Format .Site.Params.dateFormat.iso }}"
+				title="{{ .Date.Format .Site.Params.dateFormat.iso }}">{{ .Date.Format .Site.Params.dateFormat.humanDate
+				}}</time></span>
+		<div>
+			{{ .Content }}
+		</div>
+	</article>
+</main>
 <aside>
 	<hr />
 	<p>{{ partial "bio.html" . }}</p>
