@@ -2,15 +2,14 @@
 <main>
   <h1>404: Not Found</h1>
   <p>
-    You can check the Wayback Machine to see if this page used to exist.
-    In fact, let me just throw this URL your way to get things
-    rolling
+    You can check the Wayback Machine to see if this page used to exist. In
+    fact, let me just throw this URL your way to get things rolling
     <a id="link-wayback" href="#">[JavaScript will update this link]</a>.
     <script>
       var waybackLink = document.querySelector("a#link-wayback");
       var waybackUrl = `https://web.archive.org/web/*/${location.href}`;
-      waybackLink.textContent = waybackUrl
-      waybackLink.href = waybackUrl
+      waybackLink.textContent = waybackUrl;
+      waybackLink.href = waybackUrl;
     </script>
   </p>
   <p>
@@ -18,7 +17,10 @@
     <a href=" https://www.smbc-comics.com/comic/wants">SMBC</a>):
   </p>
   {{ $smbcPic := resources.Get "smbc-wants.png" }}
-  <img src="{{ $smbcPic.RelPermalink }}" alt="BUT THIS TINY BLIP ON AN ELECTION PREDICTION GRAPH IS REALLY IMPORTANT"
-    style="max-width: 500px;" />
+  <img
+    src="{{ $smbcPic.RelPermalink }}"
+    alt="BUT THIS TINY BLIP ON AN ELECTION PREDICTION GRAPH IS REALLY IMPORTANT"
+    style="max-width: 500px"
+  />
 </main>
 {{ end }}

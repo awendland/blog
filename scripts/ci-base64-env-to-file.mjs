@@ -6,18 +6,20 @@
  * 2. Decode it using base64
  * 3. Write the decoded value to <filePath>
  */
-import { writeFileSync } from 'fs'
+import { writeFileSync } from "fs";
 
-const [envKey, filePath] = process.argv.slice(2)
-if (!envKey)
-  throw new Error(`Missing 1st arg = name of the environment variable`)
-if (!filePath)
-  throw new Error(`Missing 2nd arg = path to write decoded base64 data`)
-
-const envVal = process.env[envKey]
-if (!envVal) {
-  console.error(`Unable to find ${envKey} in the environment:`, process.env)
-  process.exit(1)
+const [envKey, filePath] = process.argv.slice(2);
+if (!envKey) {
+  throw new Error(`Missing 1st arg = name of the environment variable`);
+}
+if (!filePath) {
+  throw new Error(`Missing 2nd arg = path to write decoded base64 data`);
 }
 
-writeFileSync(filePath, Buffer.from(envVal, 'base64'))
+const envVal = process.env[envKey];
+if (!envVal) {
+  console.error(`Unable to find ${envKey} in the environment:`, process.env);
+  process.exit(1);
+}
+
+writeFileSync(filePath, Buffer.from(envVal, "base64"));
