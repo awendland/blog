@@ -19,7 +19,7 @@ setup: setup-pre-commit
 lint:
     pre-commit run --all-files
 
-HUGO_VERSION := "0.121.2"
+HUGO_VERSION := "0.121.2" # NOTE: ensure this matches netlify.toml
 
 # Run Hugo, isolated via Docker for reproducibility
 docker-hugo *args:
