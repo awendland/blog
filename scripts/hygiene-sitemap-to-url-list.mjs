@@ -8,14 +8,14 @@
  * been added/removed/changed/etc. to make sure that URLs are
  * stable.
  */
-import { readFileSync } from 'fs'
+import { readFileSync } from "fs";
 
-const sitemapPath = process.argv[3] || 'public/sitemap.xml'
+const sitemapPath = process.argv[3] || "public/sitemap.xml";
 
-const urls = readFileSync(sitemapPath, 'utf8')
-  .split('\n')
+const urls = readFileSync(sitemapPath, "utf8")
+  .split("\n")
   .map((l) => l.match(/<loc>(.+?)<\/loc>/))
   .filter((match) => !!match)
-  .map((match) => match[1])
+  .map((match) => match[1]);
 
-process.stdout.write(urls.join('\n'))
+process.stdout.write(urls.join("\n"));

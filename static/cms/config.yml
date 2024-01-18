@@ -5,33 +5,37 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: 'content/assets'
-public_folder: '/static'
+media_folder: "/assets"
+public_folder: "/static"
 
 collections:
-  - name: 'posts' # Used in routes, e.g., /cms/collections/posts
-    label: 'Posts' # Used in the UI
-    folder: 'content/blog' # The path to the folder where the documents are stored
+  - name: "posts" # Used in routes, e.g., /cms/collections/posts
+    label: "Posts" # Used in the UI
+    folder: "content/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # URI template
-    path: '{{slug}}/index' # Filename template ("slug" refers to the newly set slug param)
-    media_folder: '' # Relative path to store media (images)
-    public_folder: ''
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # URI template
+    path: "{{slug}}/index" # Filename template ("slug" refers to the newly set slug param)
+    media_folder: "" # Relative path to store media (images)
+    public_folder: ""
     fields: # The fields for each document, usually in front matter
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
-      - {
-          label: 'Visibility',
-          name: 'visibility',
-          widget: 'select',
-          options: ['public', 'unlisted', 'hidden'],
-        }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Emoji', name: 'emoji', widget: 'string', required: false }
-      - {
-          label: 'Featured Image',
-          name: 'featureimg',
-          widget: 'image',
-          required: false,
-        }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: "Visibility"
+        name: "visibility"
+        widget: "select"
+        options: ["public", "unlisted", "hidden"]
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Emoji"
+        name: "emoji"
+        widget: "string"
+        required: false
+      - label: "Featured Image"
+        name: "featureimg"
+        widget: "image"
+        required: false
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
