@@ -52,7 +52,7 @@
     {{ $notes := (where .Site.RegularPages "Type" "in" "notes") }} I maintain a
     collection of long-term notes on: {{ range $i, $n := $notes }}<a
       href="{{ .RelPermalink }}"
-      >{{ .Title }}</a
+      ><span style="display: inline-block">{{ .Title }}</span></a
     >{{ if ne (add $i 1) (len $notes) }}, {{end}}{{ end }}.
   </p>
   <!-- TODO: use .Site.Params.mainSections + "blurbs" -->
