@@ -1,0 +1,16 @@
+# How do I disable the linter when a false positive is occurring?
+# https://yamllint.readthedocs.io/en/stable/disable_with_comments.html
+#
+# What configuration options are available?
+# https://yamllint.readthedocs.io/en/stable/rules.html
+
+extends: default
+
+rules:
+  comments:
+    min-spaces-from-content: 1 # Why? Align with Prettier's defaults.
+  document-start: disable # Why? Our yaml files correspond 1:1 with documents.
+  line-length: disable
+
+ignore: |
+  yarn.lock

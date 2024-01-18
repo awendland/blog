@@ -1,0 +1,7 @@
+yarn.lock
+deno.lock
+# scripts/ is managed by deno fmt
+scripts/
+content/
+# TODO: fix layout parsing, possibly using https://github.com/NiklasPor/prettier-plugin-go-template
+layouts/

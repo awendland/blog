@@ -43,3 +43,6 @@ script-retrieve-collected-notes *args:
 script-convert-gdoc html_file:
     @just docker-deno deno run --allow-read --allow-write scripts/convert-gdoc.ts {{html_file}}
 
+# Lint any Deno scripts
+script-lint:
+    docker run --rm --volume $(PWD)/.cache/deno:/deno-dir --volume $(PWD):/app --workdir /app denoland/deno:{{DENO_VERSION}} bash -c "cd scripts && deno lint && deno fmt && deno check *.ts"
