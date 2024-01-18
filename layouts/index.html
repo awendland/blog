@@ -51,7 +51,7 @@
   <p>
     {{ $notes := (where .Site.RegularPages "Type" "in" "notes") }} I maintain a
     collection of long-term notes on: {{ range $i, $n := $notes }}<a
-      href="{{ .Permalink }}"
+      href="{{ .RelPermalink }}"
       >{{ .Title }}</a
     >{{ if ne (add $i 1) (len $notes) }}, {{end}}{{ end }}.
   </p>
@@ -79,7 +79,7 @@
       "
       >{{ .Params.emoji }}</span
     >
-    <a class="timelineLinkEntry_title" href="{{ .Permalink }}">{{ .Title }}</a>
+    <a class="timelineLinkEntry_title" href="{{ .RelPermalink }}">{{ .Title }}</a>
   </div>
   {{ end }} {{ end }}
 </main>
