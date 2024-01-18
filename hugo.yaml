@@ -11,12 +11,10 @@ outputFormats:
     mediaType: "application/rss+xml"
     baseName: "rss.xml"
 
-# TODO: the PR will be squashed with the commit "meta: Migrate to Hugo, Gatsby was too fad-y"
-
 # TODO: change page titles (in browser tab UI) to be the post titles
 
 markup:
-  # TODO: autolink headers
+  # TODO: autolink headers - https://natclark.com/tutorials/hugo-linked-headers/
   goldmark:
     renderer:
       unsafe: true
@@ -38,4 +36,4 @@ params:
     facebook: alexrwendland
     instagram: alexrwendland
   dev:
-    showPageData: true # Set this to `true` to render a "Page Data" dropdown on most pages which will show the page's data as JSON
+    showPageData: false # Set this to `true` to render a "Page Data" dropdown on most pages which will show the page's data as JSON

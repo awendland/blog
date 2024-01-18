@@ -55,7 +55,6 @@
       ><span style="display: inline-block">{{ .Title }}</span></a
     >{{ if ne (add $i 1) (len $notes) }}, {{end}}{{ end }}.
   </p>
-  <!-- TODO: use .Site.Params.mainSections + "blurbs" -->
   {{ $t := slice "blurbs" }} {{ $t = $t | append .Site.Params.mainSections }} {{
   range (where .Site.RegularPages "Type" "in" $t) }} {{ if eq .Type "blurbs" }}
   <h3>{{ .Params.heading }}</h3>
