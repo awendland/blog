@@ -1,0 +1,19 @@
+name: Check Commit
+
+on: # yamllint disable-line rule:truthy
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  pre-commit:
+    name: "run pre-commit"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Add brew to PATH # https://github.com/actions/runner-images/issues/6283
+        if: runner.os == 'Linux'
+        run: echo "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin" >> $GITHUB_PATH
+      - name: Install just
+        run: brew install just
+      - uses: pre-commit/action@v3.0.0
