@@ -64,4 +64,5 @@
 	</div>
 </body>
 
-</html>
+{{ "<!-- Page Built: " | safeHTML }}{{ time.Now | time.Format .Site.Params.dateFormat.iso }} {{ "-->" | safeHTML }}
+<l>
