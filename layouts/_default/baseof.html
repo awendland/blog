@@ -53,6 +53,23 @@
 		h1, h2, h3, h4, h5, h6 {
 			margin-top: calc(1.3333333 * var(--rhythm));
 		}
+
+		.highlight pre {
+			overflow-x: scroll;
+		}
+
+		code {
+			font-size: 0.9em;
+		}
+
+		/* Fixes iOS font sizing anomaly */
+		/* https://github.com/adityatelange/hugo-PaperMod/issues/828#issuecomment-1171994855 */
+		code {
+			text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+			-moz-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+		}
 	</style>
 </head>
 

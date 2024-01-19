@@ -18,6 +18,8 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+  highlight:
+    style: arduino
 
 params:
   author: Alex Wendland
