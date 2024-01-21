@@ -3,6 +3,8 @@ title: Healthcare 🩺
 order: 1
 lastmod: 2023-03-16T01:51:52.641Z
 visibility: public
+aliases:
+- /notes-healthcare/
 ---
 
 ## Resources

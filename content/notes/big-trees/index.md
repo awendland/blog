@@ -3,6 +3,8 @@ title: Big Trees 🌳
 order: 2
 lastmod: 2021-04-21T01:20:25.854Z
 visibility: public
+aliases:
+- /notes-big-trees/
 ---
 
 Other great big tree websites: [Gathering Growth Foundation](https://www.google.com/url?q=https://www.gatheringgrowth.org/champion-trees&sa=D&source=editors&ust=1705382884188700&usg=AOvVaw37iqn%5FinYwTvMJD9ywiQ-T)

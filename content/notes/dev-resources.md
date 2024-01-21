@@ -4,6 +4,8 @@ title: Developer Resources 💻
 order: 4
 lastmod: 2021-03-09T23:46:58.857Z
 visibility: public
+aliases:
+- /notes-dev-resources/
 ---
 
 <!-- markdownlint-disable MD034 -->

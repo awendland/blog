@@ -4,7 +4,13 @@ title: Alex W.'s Blog
 
 permalinks:
   posts: "/:filename/"
-  notes: "/note-:filename/"
+  collected-notes: "/:filename/"
+  notes: "/:filename/"
+
+disableKinds:
+  - "taxonomy"
+  - "term"
+  - "section"
 
 outputFormats:
   RSS:

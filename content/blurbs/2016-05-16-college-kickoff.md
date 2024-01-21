@@ -2,6 +2,10 @@
 date: '2016-05-16'
 heading: 'College Kickoff'
 visibility: public
+# `render: link` to include this page in .Site.RegularPages but not write it to disk, `sitemap_exclude: true` to filter it out in layouts/_default/sitemap.xml
+sitemap_exclude: true
+_build:
+  render: link
 ---
 
 Woohoo! Fun college things! One of those fun college things was

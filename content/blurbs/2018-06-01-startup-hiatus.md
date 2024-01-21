@@ -2,6 +2,10 @@
 date: '2018-06-01'
 heading: '3 Year Startup Hiatus'
 visibility: public
+# `render: link` to include this page in .Site.RegularPages but not write it to disk, `sitemap_exclude: true` to filter it out in layouts/_default/sitemap.xml
+sitemap_exclude: true
+_build:
+  render: link
 ---
 
 Co-founder and CTO at <a href="https://luminopia.com">Luminopia</a>, where we were working to cure lazy

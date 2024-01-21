@@ -10,7 +10,7 @@
  */
 import { readFileSync } from "fs";
 
-const sitemapPath = process.argv[3] || "public/sitemap.xml";
+const sitemapPath = process.argv[2] || "public/sitemap.xml";
 
 const urls = readFileSync(sitemapPath, "utf8")
   .split("\n")
