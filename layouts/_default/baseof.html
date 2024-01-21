@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>{{ .Title }}</title>
+	<title>{{ .Title }}{{ if ne .Title .Site.Title}} | {{ .Site.Title }}{{end}}</title>
 	{{ with .Site.Params.description }}
 	<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}
