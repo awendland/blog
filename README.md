@@ -21,7 +21,7 @@ The blog is hosted with Netlify. It is rendered via the Netlify hugo integration
 | Type           | Description                                       | Sources                                                                                      |
 | -------------- | ------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | post           | page for standard immutable blog post             | Written locally as markdown. Consider editing via <https://blog.alexwendland.com/cms>.       |
-| note           | page for long term mutable note                   | Imported from Bear using `update-bear-notes.mjs` or imported (one-of) from Google Docs.      |
+| note           | page for long term mutable note                   | Imported from Bear using `update-bear-notes.mjs` or imported (one-off) from Google Docs.     |
 | collected-note | page for terse note imported from collected-notes | Imported from <https://collectednotes.com/awendland.json> via `retrieve-collected-notes.ts`. |
 | blurb          | page-less timeline entry for homepage             | Written locally in markdown.                                                                 |
 
