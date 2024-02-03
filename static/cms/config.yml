@@ -21,7 +21,7 @@ collections:
       - label: "Visibility"
         name: "visibility"
         widget: "select"
-        options: ["public", "unlisted", "hidden"]
+        options: ["public", "unlisted"]
       - label: "Title"
         name: "title"
         widget: "string"
