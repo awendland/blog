@@ -35,14 +35,18 @@ DENO_VERSION := "1.39.4"
 docker-deno *args:
     docker run --rm --interactive --tty --volume $PWD/.cache/deno:/deno-dir --volume $PWD:/app --workdir /app denoland/deno:{{DENO_VERSION}} {{args}}
 
+# Run Deno, isolated via Docker for reproducibility, without a TTY
+docker-deno-no-tty *args:
+    docker run --rm --interactive --volume $PWD/.cache/deno:/deno-dir --volume $PWD:/app --workdir /app denoland/deno:{{DENO_VERSION}} {{args}}
+
 # Script: Create Markdown files for each Collected Note
 script-retrieve-collected-notes *args:
-    @just docker-deno deno run --allow-read --allow-write --allow-net scripts/retrieve-collected-notes.ts {{args}}
+    @just docker-deno-no-tty deno run --allow-read --allow-write --allow-net scripts/retrieve-collected-notes.ts {{args}}
 
 # Script: Create Markdown files from an HTML export of a Google Doc
 script-convert-gdoc html_file:
-    @just docker-deno deno run --allow-read --allow-write scripts/convert-gdoc.ts {{html_file}}
+    @just docker-deno-no-tty deno run --allow-read --allow-write scripts/convert-gdoc.ts {{html_file}}
 
 # Lint any Deno scripts
 script-lint:
-    docker run --rm --volume $PWD/.cache/deno:/deno-dir --volume $PWD:/app --workdir /app denoland/deno:{{DENO_VERSION}} bash -c "cd scripts && deno lint && deno fmt && deno check *.ts"
+    @just docker-deno-no-tty bash -c "cd scripts && deno lint && deno fmt && deno check *.ts"
