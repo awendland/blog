@@ -20,12 +20,11 @@ outputFormats:
 # TODO: change page titles (in browser tab UI) to be the post titles
 
 markup:
-  # TODO: autolink headers - https://natclark.com/tutorials/hugo-linked-headers/
   goldmark:
     renderer:
       unsafe: true
   highlight:
-    style: arduino
+    style: rose-pine-down
 
 params:
   author: Alex Wendland
