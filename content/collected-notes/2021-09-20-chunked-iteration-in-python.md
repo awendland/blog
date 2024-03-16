@@ -1,14 +1,15 @@
 {
   "title": "Chunked Iteration in Python",
   "date": "2021-09-20T19:16:33.400Z",
-  "lastmod": "2021-09-20T19:16:33.400Z",
+  "lastmod": "2024-03-16T17:23:39.633Z",
   "layout": "post",
   "originalUrl": "https://collectednotes.com/awendland/chunked-iteration-in-python",
   "visibility": "public"
 }
 
 ```python
-from typings import Generator, Iterable, TypeVar
+import itertools
+from typing import Generator, Iterable, TypeVar
 
 ChunkT = TypeVar("ChunkT")
 
