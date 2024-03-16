@@ -49,4 +49,4 @@ script-convert-gdoc html_file:
 
 # Lint any Deno scripts
 script-lint:
-    @just docker-deno-no-tty bash -c "cd scripts && deno lint && deno fmt && deno check *.ts"
+    @just docker-deno-no-tty 'bash -c "cd scripts && deno lint && deno fmt && deno check *.ts"'
