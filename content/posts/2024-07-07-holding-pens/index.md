@@ -1,11 +1,11 @@
 ---
-title: "How to avoid losing items? Holding pens."
+visibility: public
+title: How to avoid losing items? Holding pens.
 date: 2024-07-07T23:40:13.183Z
 ---
-
 > I put it in a safe spot.
 >
-> -- a phrase my mom would always say when she'd lost something.
+> \-- a phrase my mom would always say when she'd lost something.
 
 **Why do we lose things inside our homes?**
 
@@ -17,7 +17,7 @@ However, we regularly run into 1.) items which are too transient/unimportant to 
 
 **Solution**
 
-_Holding Pens_: designated areas in every room which explicitly exist hold anchorless items.
+*Holding Pens*: designated areas in every room which exist to hold anchorless items.
 
 A holding pen:
 
