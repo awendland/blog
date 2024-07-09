@@ -58,6 +58,7 @@
   {{ $t := slice "blurbs" }}
   {{ $t = $t | append .Site.Params.mainSections }}
   {{ $p := where .Site.RegularPages "Type" "in" $t }}
+  {{ $p := where $p ".Date.Unix" "gt" 1633113673 }}
   {{ range (where $p ".Params.visibility" "ne" "unlisted") }}
     {{ if eq .Type "blurbs" }}
       <h3>{{ .Params.heading }}</h3>
