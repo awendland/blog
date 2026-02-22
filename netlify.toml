@@ -4,3 +4,24 @@
 
 [build.environment]
   HUGO_VERSION = "0.121.2"
+
+# Temporary redirects from old /notes/ paths to blog posts
+[[redirects]]
+  from = "/healthcare/"
+  to = "/2023-03-16-healthcare/"
+  status = 302
+
+[[redirects]]
+  from = "/notes-healthcare/"
+  to = "/2023-03-16-healthcare/"
+  status = 302
+
+[[redirects]]
+  from = "/dev-resources/"
+  to = "/2021-03-09-dev-resources/"
+  status = 302
+
+[[redirects]]
+  from = "/notes-dev-resources/"
+  to = "/2021-03-09-dev-resources/"
+  status = 302

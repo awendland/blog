@@ -1,11 +1,7 @@
 ---
-layout: note
-title: Developer Resources 💻
-order: 4
-lastmod: 2021-03-09T23:46:58.857Z
 visibility: public
-aliases:
-- /notes-dev-resources/
+title: Developer Resources 💻
+date: 2021-03-09T23:46:58.857Z
 ---
 
 <!-- markdownlint-disable MD034 -->
@@ -23,11 +19,11 @@ aliases:
   - [The Majestic Monolith - Signal v. Noise](https://m.signalvnoise.com/the-majestic-monolith/)
   - [The Architecture of Open Source Applications: a 2 volume series overviewing systems like PyPy, RammitMQ, nginx, and many more](http://www.aosabook.org/en/index.html)
   - [Build your own X: tutorials for various projects](https://github.com/danistefanovic/build-your-own-x)
-  - [CloudPosse’s reference architectures for AWS](https://docs.cloudposse.com/reference-architectures/)
+  - [CloudPosse's reference architectures for AWS](https://docs.cloudposse.com/reference-architectures/)
 - AWS
   - [AWS Open Guide](https://github.com/open-guides/og-aws/)
 - Cheat sheets
-  - [Rico’s Cheatsheets](https://devhints.io/)
+  - [Rico's Cheatsheets](https://devhints.io/)
   - [Cheatsheet | Programming-Idioms](https://www.programming-idioms.org/about#about-block-cheatsheets)
 - CLI
   - awk intro - [Learn by Example - GNU awk](https://github.com/learnbyexample/Command-line-text-processing/blob/master/gnu_awk.md)
@@ -39,9 +35,9 @@ aliases:
   - Content Guidance
     - [Writing system software: code comments. - <antirez>](http://antirez.com/news/124)
     - [Bullet point dev project-guidelines](https://github.com/elsewhencode/project-guidelines/blob/master/README.md)
-    - “Speak up to the reader, don’t dumb things down. Assume an intelligent reader who is busy.” -John Collison (Stripe)
+    - "Speak up to the reader, don't dumb things down. Assume an intelligent reader who is busy." -John Collison (Stripe)
   - Educational
-    - “For a concise explanation of Learning Objectives (which we're calling Goals in this book), read UC Denver's [Assessment & Instructional Alignment Tutorial](http://www.ucdenver.edu/faculty_staff/faculty/center-for-faculty-development/Documents/tutorials/Assessment/module3/index.htm). Try to make your learning objectives [Specific, observable and measurable](http://www.ucdenver.edu/faculty_staff/faculty/center-for-faculty-development/Documents/tutorials/Assessment/module3/good_objectives.htm) and heed their tip to use the list of verbs in the [taxonomy table worksheet](http://www.ucdenver.edu/faculty_staff/faculty/center-for-faculty-development/Documents/tutorials/Assessment/documents/examples_verbs_cognitive_process_level.pdf) to help you choose observable behaviors for your course learning objectives.” from [The IPFS Primer: Note for Contributors](https://dweb-primer.ipfs.io/#note-for-contributors)
+    - "For a concise explanation of Learning Objectives (which we're calling Goals in this book), read UC Denver's [Assessment & Instructional Alignment Tutorial](http://www.ucdenver.edu/faculty_staff/faculty/center-for-faculty-development/Documents/tutorials/Assessment/module3/index.htm). Try to make your learning objectives [Specific, observable and measurable](http://www.ucdenver.edu/faculty_staff/faculty/center-for-faculty-development/Documents/tutorials/Assessment/module3/good_objectives.htm) and heed their tip to use the list of verbs in the [taxonomy table worksheet](http://www.ucdenver.edu/faculty_staff/faculty/center-for-faculty-development/Documents/tutorials/Assessment/documents/examples_verbs_cognitive_process_level.pdf) to help you choose observable behaviors for your course learning objectives." from [The IPFS Primer: Note for Contributors](https://dweb-primer.ipfs.io/#note-for-contributors)
   - Generators
     - [Reach for Markdown, not LaTeX - Bits, Bytes, and Words](https://blog.jez.io/reach-for-markdown/)
 - DBs
@@ -70,10 +66,10 @@ aliases:
   - [teachyourselfcs.com and an HN thread](https://news.ycombinator.com/item?id=23588896)
   - [Why duplication is preferable to the wrong abstraction](https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction)
   - [Explanatory quiz where you guess at the speed of various software operations (such as decoding JSON or grep-ing for data](http://computers-are-fast.github.io/)
-  - [Thoughtwork’s—a SWE consulting firm—rolling guidance on processes, frameworks, and tools to use](https://www.thoughtworks.com/radar/techniques)
+  - [Thoughtwork's—a SWE consulting firm—rolling guidance on processes, frameworks, and tools to use](https://www.thoughtworks.com/radar/techniques)
   - [Management-oriented framing of what technical debt is](https://daverupert.com/2020/11/technical-debt-as-a-lack-of-understanding/)
-  - [Flow-diagram demonstrating the real decision-tree complexity of a seemingly simple feature like Slack’s “send user notifications”](https://pbs.twimg.com/media/C6ROe0mU0AEmpzz?format=jpg)
-  - [A reminder that computers can be understood: “you will never understand every detail of the implementation of every level on that stack; but you can understand all of them to some level of abstraction, and any specific layer to essentially any depth necessary for any purpose.”](https://blog.nelhage.com/post/computers-can-be-understood/)
+  - [Flow-diagram demonstrating the real decision-tree complexity of a seemingly simple feature like Slack's "send user notifications"](https://pbs.twimg.com/media/C6ROe0mU0AEmpzz?format=jpg)
+  - [A reminder that computers can be understood: "you will never understand every detail of the implementation of every level on that stack; but you can understand all of them to some level of abstraction, and any specific layer to essentially any depth necessary for any purpose."](https://blog.nelhage.com/post/computers-can-be-understood/)
 - Git
   - Intro
     - [Merging vs. Rebasing | Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
@@ -97,7 +93,7 @@ aliases:
   - Advanced
     - [How JavaScript works: inside the V8 engine + 5 tips on how to write optimized code](https://blog.sessionstack.com/how-javascript-works-inside-the-v8-engine-5-tips-on-how-to-write-optimized-code-ac089e62b12e)
 - Libraries
-  - [Should I “Rebuild or Report” this buggy 3rd party library?](https://blog.photoeditorsdk.com/rebuild-or-report-211d6ac6e787)
+  - [Should I "Rebuild or Report" this buggy 3rd party library?](https://blog.photoeditorsdk.com/rebuild-or-report-211d6ac6e787)
 - Matplotlib
   - [Matplotlib | From Beginner to Intermediate](https://realpython.com/python-matplotlib-guide/)
 - Python
@@ -114,12 +110,12 @@ aliases:
   - [RustStarterKit2020](https://wiki.alopex.li/RustStarterKit2020)
   - [A half-hour to learn Rust syntax](https://fasterthanli.me/articles/a-half-hour-to-learn-rust)
 - Security
-  - [PagerDuty’s Open Security Training](https://sudo.pagerduty.com/)
+  - [PagerDuty's Open Security Training](https://sudo.pagerduty.com/)
   - [Digital Standard - Privacy & Security standard w/ criteria, indicators, etc.](https://www.thedigitalstandard.org/the-standard)
 - Site Reliability Engineering (SRE)
   - [SRE meta-list: collection of SRE blog posts from dozens of companies](https://github.com/upgundecha/howtheysre)
 - Lists/Talks/Podcasts/Recurring Content
-  - [Clojure Founder’s Best Talks](https://changelog.com/posts/rich-hickeys-greatest-hits)
+  - [Clojure Founder's Best Talks](https://changelog.com/posts/rich-hickeys-greatest-hits)
   - [Changelog | Blog](https://changelog.com/posts)
   - [The best developer videos from YouTube – on DevTube](https://dev.tube)
   - [Collection of SWE essays that Ben Kuhn liked, accompanied by short summaries and key takeaways](https://www.benkuhn.net/progessays/)
@@ -137,10 +133,10 @@ aliases:
       - [Different approaches to responsive tables](https://elvery.net/demo/responsive-tables/)
     - Performance
       - [The Cost Of JavaScript In 2018](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4)
-      - [Using a library in your webpack project? Here’s how to optimize it | GoogleChromeLabs](https://github.com/GoogleChromeLabs/webpack-libs-optimizations)
+      - [Using a library in your webpack project? Here's how to optimize it | GoogleChromeLabs](https://github.com/GoogleChromeLabs/webpack-libs-optimizations)
     - React
       - [React lifecycle methods diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
-      - [The complete guide to static typing in “React & Redux” apps using TypeScript | piotrwitek](https://github.com/piotrwitek/react-redux-typescript-guide)
+      - [The complete guide to static typing in "React & Redux" apps using TypeScript | piotrwitek](https://github.com/piotrwitek/react-redux-typescript-guide)
     - CSS
       - [CSS Snippets - 30 Seconds of CSS](https://atomiks.github.io/30-seconds-of-css/)
     - Potential Simple Web App Frameworks
@@ -175,7 +171,7 @@ _Input field validation_
 
 #### Web Tools
 
-- [Richard’s Toolbox](https://richardstoolbox.com/)
+- [Richard's Toolbox](https://richardstoolbox.com/)
 - [Community-Built Tools for Webpage Performance](https://progressivetooling.com/)
   - https://webhint.io/
 - [Serveo: expose local servers to the internet using SSH](http://serveo.net)

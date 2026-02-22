@@ -1,25 +1,22 @@
 ---
-title: Healthcare 🩺
-order: 1
-lastmod: 2023-03-16T01:51:52.641Z
 visibility: public
-aliases:
-- /notes-healthcare/
+title: Healthcare 🩺
+date: 2023-03-16T01:51:52.641Z
 ---
 
 ## Resources
 
-Of the 100s of articles/podcasts/books I’ve read, these are the best concentrations of healthcare knowledge that I’ve come across:
+Of the 100s of articles/podcasts/books I've read, these are the best concentrations of healthcare knowledge that I've come across:
 
 * [EconTalk | Podcast | Vivian Lee: The Long Fix](https://www.google.com/url?q=https://castro.fm/episode/aXE4ZS&sa=D&source=editors&ust=1705382822067430&usg=AOvVaw3acWtlmjzx2Bc0z3kekUC0) \- overview of hospital procedure pricing and broken market incentives in healthcare
 * [EconTalk | Podcast | Adam Caifu: Ending Medical Reversal](https://www.google.com/url?q=https://castro.fm/episode/neOrin&sa=D&source=editors&ust=1705382822067760&usg=AOvVaw0IkN6lKxvMNPK%5Fo0RMI46g) \- discussion about the observational/anecdotal evidence used to justify most medical procedures
 * [EconTalk | Podcast | Robin Feldman on Drugs, Money, and Secret Handshakes](https://www.google.com/url?q=https://castro.fm/episode/5lbpgK&sa=D&source=editors&ust=1705382822067993&usg=AOvVaw3GzBNzi8ebFMz1-NECONXD) \- PBMs explained
 * [McKinsey | Report | Walking out of the hospital: The continued rise of ambulatory care… (2020)](https://www.google.com/url?q=https://www.mckinsey.com/industries/healthcare-systems-and-services/our-insights/walking-out-of-the-hospital-the-continued-rise-of-ambulatory-care-and-how-to-take-advantage-of-it&sa=D&source=editors&ust=1705382822068302&usg=AOvVaw3g6mDwCz%5FX2gy-dCw6otYd)
-* [Clayton Christensen | Book | The Innovator’s Prescription](https://www.google.com/url?q=https://www.goodreads.com/book/show/3487850-innovator-s-prescription&sa=D&source=editors&ust=1705382822068548&usg=AOvVaw0oBwuzzB2bMW35ckJgTeUi)
-    * “The current value network in healthcare” - how current employer-sponsored insurance packages result in general hospitals getting used as primary care providers and why out-of-network care is so expensive
-    * “Relative abilities to reduce costs and prices” pg 201 - how physician guilds have captured the reimbursement system and keep out Physicians Assistants and Nurse Practitioners
-    * “Relative abilities to reduce costs and prices” pg 202 - summary of how Medicare pricing is determined
-    * “Employers as integrators” pg 203 - overview of how and why employers are incentivized to improve healthcare outcomes and pricing
+* [Clayton Christensen | Book | The Innovator's Prescription](https://www.google.com/url?q=https://www.goodreads.com/book/show/3487850-innovator-s-prescription&sa=D&source=editors&ust=1705382822068548&usg=AOvVaw0oBwuzzB2bMW35ckJgTeUi)
+    * "The current value network in healthcare" - how current employer-sponsored insurance packages result in general hospitals getting used as primary care providers and why out-of-network care is so expensive
+    * "Relative abilities to reduce costs and prices" pg 201 - how physician guilds have captured the reimbursement system and keep out Physicians Assistants and Nurse Practitioners
+    * "Relative abilities to reduce costs and prices" pg 202 - summary of how Medicare pricing is determined
+    * "Employers as integrators" pg 203 - overview of how and why employers are incentivized to improve healthcare outcomes and pricing
 
 ## Salient Observations
 
@@ -37,8 +34,8 @@ Of the 100s of articles/podcasts/books I’ve read, these are the best concentra
 ## Ridiculous Observations
 
 * Billed rates are frequently >5x the reimbursed cost ([analysis of Medicare PUF CY2018](https://www.google.com/url?q=https://twitter.com/AlexRWendland/status/1366569037677821953?s%3D20&sa=D&source=editors&ust=1705382822071520&usg=AOvVaw0TeRiqGjBxKjz59ht5TY3O))
-* “There are more than 9,000 billing codes for individual procedures and units of care. But there is not a single billing code for patient adherence or improvement, or for helping patients stay well.” (pg 150, The Innovator’s Prescription)
-* The average annual turnover for members in health plans is 17%, ie., each patient is a member for roughly 5-years. This disincentivizes preventative care for issues that manifest outside a short (<5 year) timeframe. (pg 206, The Innovator’s Prescription)
+* "There are more than 9,000 billing codes for individual procedures and units of care. But there is not a single billing code for patient adherence or improvement, or for helping patients stay well." (pg 150, The Innovator's Prescription)
+* The average annual turnover for members in health plans is 17%, ie., each patient is a member for roughly 5-years. This disincentivizes preventative care for issues that manifest outside a short (<5 year) timeframe. (pg 206, The Innovator's Prescription)
 
 ## Questions
 
@@ -48,5 +45,5 @@ Of the 100s of articles/podcasts/books I’ve read, these are the best concentra
 * How are hospitals collecting data in order to accurately price services (for value-based reimbursement)?
 * How are PCPs incentivized to be gatekeepers in HMOs/ACOs?
 * How many self-insured employers directly employ physicians to handle care coordination (or non-physician care coordinators)? Why or why not? Do any TPAs offer this?
-* Who is running Amazon’s healthcare initiatives? What complementary businesses do they need to exist (to create the value network) to provide their services?
-* Review “Competition in Health Care: It’s Evolution over the Past Decade”, Health Affairs (2005) - discusses capitation systems and the problem with it being an approach to value-based care
+* Who is running Amazon's healthcare initiatives? What complementary businesses do they need to exist (to create the value network) to provide their services?
+* Review "Competition in Health Care: It's Evolution over the Past Decade", Health Affairs (2005) - discusses capitation systems and the problem with it being an approach to value-based care
